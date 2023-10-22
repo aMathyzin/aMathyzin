@@ -9,7 +9,7 @@ const geoip = require('geoip-lite');
 
 dotenv.config();
 
-const logFilePath = path.join(__dirname, 'Geral', 'logs.txt');
+const logFilePath = path.join(__dirname, 'logs.txt');
 let lastConnectionTimes = {};
 let isBotStable = true;
 
