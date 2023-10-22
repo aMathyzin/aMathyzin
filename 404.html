@@ -8,10 +8,17 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            text-align: center;
             margin: 0;
             padding: 0;
+            overflow: hidden;
+        }
+        #water-effect {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
         }
         .container {
             display: flex;
@@ -53,11 +60,23 @@
     </style>
 </head>
 <body>
+    <div id="water-effect"></div>
     <div class="container">
         <img class="icon" src="https://media.discordapp.net/attachments/1119715186073411705/1134190559947407481/channels4_profile2.png" alt="Ícone">
         <h1>ERRO 404</h1>
         <p>A página que você está procurando não foi encontrada.</p>
         <a href="/">Voltar para a página inicial</a>
     </div>
+    <script>
+        const waterEffect = document.getElementById('water-effect');
+        const speed = 0.02;
+
+        document.addEventListener('mousemove', (e) => {
+            const xOffset = (window.innerWidth / 2 - e.clientX) * speed;
+            const yOffset = (window.innerHeight / 2 - e.clientY) * speed;
+
+            waterEffect.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
+        });
+    </script>
 </body>
 </html>
