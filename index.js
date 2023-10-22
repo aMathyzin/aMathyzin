@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
 
 // Rota para a página de downloads com URL amigável
 app.get('/downloads', (req, res) => {
-  res.sendFile(path.join(__dirname, 'downloads.html'));
+  res.sendFile(path.join(__dirname, 'downloads'));
 });
 
 // Rota para qualquer outra página
