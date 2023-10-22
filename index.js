@@ -28,11 +28,15 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.get('/downloads.html', (req, res) => {
+// Rota para a página de downloads com URL amigável
+app.get('/downloads', (req, res) => {
   res.sendFile(path.join(__dirname, 'downloads.html'));
 });
 
-
+// Rota para qualquer outra página
+app.get('/:page', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
 
 io.on('connection', (socket) => {
   const clientIp = socket.handshake.headers['x-forwarded-for'] || socket.handshake.address;
