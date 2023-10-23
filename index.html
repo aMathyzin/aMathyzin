@@ -139,35 +139,46 @@
           <img class="icon knifebay-img" src="https://media.discordapp.net/attachments/1119715186073411705/1122878604007714816/knifeBay.png" alt="KnifeBay">
         </a>
       `;
-    });
-  </script>
-</head>
-<body>
-  <div class="navbar">
-    <div class="left">
-      <span class="logo">
-        <img class="icon" src="https://cdn.discordapp.com/attachments/841874572118327326/1125115918486355968/channels4_profile.jpg" alt="aMathyzin">
-        aMathyzin
-      </span>
+    </script>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="left">
+        <span class="logo">
+          <img class="icon" src="https://cdn.discordapp.com/attachments/841874572118327326/1125115918486355968/channels4_profile.jpg" alt="aMathyzin">
+          aMathyzin
+        </span>
+      </div>
+      <div class="right">
+        <a href="https://www.youtube.com/@aMathyzin" target="_blank" class="icon-link">
+          <img class="icon" src="https://cdn.discordapp.com/attachments/1119715186073411705/1122872840614580344/youtube.png" alt="YouTube">
+        </a>
+        <a href="https://discord.gg/kNxXJZeA" target="_blank" class="icon-link">
+          <img class="icon" src="https://media.discordapp.net/attachments/1119715186073411705/1122872863704219710/discord.png" alt="Discord">
+        </a>
+        <a href="https://knifebay.lojavirtualnuvem.com.br/" target="_blank" class="icon-link">
+          <img class="icon knifebay-img" src="https://media.discordapp.net/attachments/1119715186073411705/1122878604007714816/knifeBay.png" alt="KnifeBay">
+        </a>
+        <!-- Aba "Downloads" com link para a página de downloads -->
+        <a href="/downloads" class="icon-link">
+          <img class="icon" src="https://media.discordapp.net/attachments/1119715186073411705/1165499978081374308/189249.png?ex=65471370&is=65349e70&hm=f0b642ae858d731047f0944a&=&width=409&height=409" alt="Downloads">
+          Downloads
+        </a>
+      </div>
     </div>
-    <div class="right">
-      <a href="https://www.youtube.com/@aMathyzin" target="_blank" class="icon-link">
-        <img class="icon" src="https://cdn.discordapp.com/attachments/1119715186073411705/1122872840614580344/youtube.png" alt="YouTube">
-      </a>
-      <a href="https://discord.gg/kNxXJZeA" target="_blank" class="icon-link">
-        <img class="icon" src="https://media.discordapp.net/attachments/1119715186073411705/1122872863704219710/discord.png" alt="Discord">
-      </a>
-      <a href="https://knifebay.lojavirtualnuvem.com.br/" target="_blank" class="icon-link">
-        <img class="icon knifebay-img" src="https://media.discordapp.net/attachments/1119715186073411705/1122878604007714816/knifeBay.png" alt="KnifeBay">
-      </a>
-      <!-- Aba "Downloads" com link para a página de downloads -->
-      <a href="/downloads" class="icon-link">
-        <img class="icon" src="https://media.discordapp.net/attachments/1119715186073411705/1165499978081374308/189249.png?ex=65471370&is=65349e70&hm=f0b642ae858d731047f0944a&=&width=409&height=409" alt="Downloads">
-        Downloads
-      </a>
+    <!-- Vídeo do YouTube incorporado -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/0J4nhSur9DI" frameborder="0" allowfullscreen></iframe>
+    <div id="loader-overlay">
+      <div id="loader-content">
+        <iframe src="loading.html" width="100%" height="100%"></iframe>
+      </div>
     </div>
-  </div>
-  <!-- Vídeo do YouTube incorporado -->
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/0J4nhSur9DI" frameborder="0" allowfullscreen></iframe>
-</body>
+    <script>
+      // Exibir o loading.html por 3 segundos
+      const loaderOverlay = document.getElementById('loader-overlay');
+      setTimeout(() => {
+        loaderOverlay.style.display = 'none';
+      }, 3000);
+    </script>
+  </body>
 </html>
