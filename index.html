@@ -165,6 +165,16 @@
   </style>
   <script>
     const socket = io();
+    const audio = document.getElementById('myaudio');
+    const audioCheckbox = document.getElementById('audio-checkbox');
+
+    audioCheckbox.addEventListener('change', () => {
+      if (audioCheckbox.checked) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    });
 
     socket.on('connect', () => {
       console.log('Conectado ao servidor Socket.IO');
@@ -195,7 +205,8 @@
           <img class="icon" src="https://cdn.discordapp.com/attachments/1119715186073411705/1122872840614580344/youtube.png" alt="YouTube">
           YouTube
         </a>
-      
+      `;
+
       knifeBayElement.innerHTML = `
         <a href="https://knifebay.lojavirtualnuvem.com.br/" target="_blank">
           <img class="icon knifebay-img" src="https://media.discordapp.net/attachments/1119715186073411705/1122878604007714816/knifeBay.png" alt="KnifeBay">
@@ -211,7 +222,7 @@
         <img class="icon" src="https://cdn.discordapp.com/attachments/841874572118327326/1125115918486355968/channels4_profile.jpg" alt="aMathyzin">
         aMathyzin
         <label class="switch">
-          <input type="checkbox">
+          <input type="checkbox" id="audio-checkbox">
           <span class="slider round"></span>
         </label>
       </span>
@@ -231,5 +242,8 @@
   <div class="content">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/0J4nhSur9DI" frameborder="0" allowfullscreen></iframe>
   </div>
+  <audio id="myaudio">
+    <source src="https://cdn.discordapp.com/attachments/1119715186073411705/1143370347228438678/2_Minute_Timer_Lofi_320_kbps.mp3" type="audio/mp3">
+  </audio>
 </body>
 </html>
