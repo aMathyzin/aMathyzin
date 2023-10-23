@@ -54,14 +54,22 @@
       margin-right: 5px;
     }
 
-    .navbar .left .logo .switch {
+    .navbar .left .logo .switch-container {
       position: relative;
       display: flex;
       align-items: center;
       margin-left: 10px;
     }
 
-    .navbar .left .logo .switch input {
+    .navbar .left .logo .switch-container label {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+      margin: 0;
+    }
+
+    .navbar .left .logo .switch-container input {
       display: none;
     }
 
@@ -76,7 +84,6 @@
       -webkit-transition: .2s;
       transition: opacity .2s;
       border-radius: 34px;
-      margin: 0 10px;
     }
 
     .slider::-webkit-slider-thumb {
@@ -200,10 +207,12 @@
       <span class="logo">
         <img class="icon" src="https://cdn.discordapp.com/attachments/841874572118327326/1125115918486355968/channels4_profile.jpg" alt="aMathyzin">
         aMathyzin
-        <label class="switch">
-          <input type="checkbox" id="audio-checkbox">
-          <span class="slider"></span>
-        </label>
+        <div class="switch-container">
+          <label class="switch">
+            <input type="checkbox" id="audio-checkbox">
+            <span class="slider"></span>
+          </label>
+        </div>
       </span>
     </div>
     <div class="right">
