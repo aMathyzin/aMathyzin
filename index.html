@@ -99,26 +99,48 @@
         background-position: 0% 50%;
       }
     }
-
-    /* CSS para a tela de carregamento em tela cheia */
-    #loader-overlay {
-      display: none;
-      justify-content: center;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.7);
-    }
-
-    #loader-content {
-      /* Modifique o tamanho do iframe conforme necessário */
-      width: 100%;
-      height: 100%;
-    }
   </style>
+  <script>
+    const socket = io();
+
+    socket.on('connect', () => {
+      console.log('Conectado ao servidor Socket.IO');
+    });
+
+    socket.on('update', (data) => {
+      const pingElement = document.getElementById('ping');
+      const uptimeElement = document.getElementById('uptime');
+      const infoElement = document.getElementById('info');
+      const inviteLinkElement = document.getElementById('invite-link');
+      const youtubeLinkElement = document.getElementById('youtube-link');
+      const knifeBayElement = document.getElementById('knifebay-link');
+
+      pingElement.innerText = `Ping: ${data.ping} ms`;
+      uptimeElement.innerText = `Uptime: ${data.uptime}`;
+      infoElement.innerText = "Este site será atualizado assim que eu concertar meu pc, e será um painel administrativo com o bot aMathyzin - escrito por aMathyzin.";
+      infoElement.style.fontWeight = "bold"; // Adiciona a propriedade fontWeight com valor "bold"
+
+      inviteLinkElement.innerHTML = `
+        <a href="https://discord.gg/UE2DcGe5" target="_blank">
+          <img class="icon" src="https://media.discordapp.net/attachments/1119715186073411705/1122872863704219710/discord.png" alt="Discord">
+          Discord
+        </a>
+      `;
+
+      youtubeLinkElement.innerHTML = `
+        <a href="https://www.youtube.com/@aMathyzin" target="_blank">
+          <img class="icon" src="https://cdn.discordapp.com/attachments/1119715186073411705/1122872840614580344/youtube.png" alt="YouTube">
+          YouTube
+        </a>
+      `;
+      
+      knifeBayElement.innerHTML = `
+        <a href="https://knifebay.lojavirtualnuvem.com.br/" target="_blank">
+          <img class="icon knifebay-img" src="https://media.discordapp.net/attachments/1119715186073411705/1122878604007714816/knifeBay.png" alt="KnifeBay">
+        </a>
+      `;
+    });
+  </script>
 </head>
 <body>
   <div class="navbar">
@@ -147,21 +169,5 @@
   </div>
   <!-- Vídeo do YouTube incorporado -->
   <iframe width="560" height="315" src="https://www.youtube.com/embed/0J4nhSur9DI" frameborder="0" allowfullscreen></iframe>
-  <!-- Tela de carregamento -->
-  <div id="loader-overlay">
-    <div id="loader-content">
-      <iframe src="loading.html" width="100%" height="100%"></iframe>
-    </div>
-  </div>
-  <script>
-    // Exibir o loading.html por 3 segundos
-    const loaderOverlay = document.getElementById('loader-overlay');
-    setTimeout(() => {
-      loaderOverlay.style.display = 'flex';
-    }, 0); // Definido como 0 para exibir imediatamente
-    setTimeout(() => {
-      loaderOverlay.style.display = 'none';
-    }, 3000);
-  </script>
 </body>
 </html>
