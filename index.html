@@ -19,7 +19,7 @@
     }
 
     .icon-link:hover .icon {
-      box-shadow: 0 2px 5px rgba(255, 255,255, 0.6);
+      box-shadow: 0 2px 5px rgba(255, 255, 255, 0.6);
     }
 
     .knifebay-img {
@@ -44,7 +44,7 @@
     .navbar .left .logo {
       font-weight: bold;
       display: flex;
-      align-items: center; /* Alinha o texto com a checkbox */
+      align-items: center;
     }
 
     .navbar .left .logo .icon {
@@ -54,29 +54,58 @@
       margin-right: 5px;
     }
 
-    .navbar .left .logo label {
-      display: inline-block;
+    .navbar .left .logo .switch {
       position: relative;
-      width: 50px; /* Largura da checkbox */
-      height: 24px; /* Altura da checkbox */
-      background-color: #ccc;
-      border-radius: 34px;
-      cursor: pointer;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+      margin-left: 10px;
     }
 
-    .navbar .left .logo label .slider {
+    .navbar .left .logo .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .navbar .left .logo .switch .slider {
       position: absolute;
+      cursor: pointer;
       top: 0;
       left: 0;
-      width: 50px; /* Largura da checkbox */
-      height: 24px; /* Altura da checkbox */
-      background-color: #fff;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
       border-radius: 34px;
-      transition: 0.4s;
     }
 
-    .navbar .left .logo label input {
-      display: none; /* Esconde a checkbox padrão */
+    .navbar .left .logo .switch .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: #fff;
+      -webkit-transition: .4s;
+      transition: .4s;
+      border-radius: 50%;
+    }
+
+    .navbar .left .logo .switch input:checked + .slider {
+      background-color: #00C853;
+    }
+
+    .navbar .left .logo .switch input:focus + .slider {
+      box-shadow: 0 0 1px #00C853;
+    }
+
+    .navbar .left .logo .switch input:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
     }
 
     .navbar .right {
@@ -114,36 +143,24 @@
       text-decoration: none;
     }
 
-    /* Estilização do vídeo */
     iframe {
       width: 560px;
       height: 315px;
       max-width: 100%;
       max-height: 100%;
-      margin: 0 auto; /* Centraliza o vídeo horizontalmente */
+      margin: 0 auto;
     }
 
-    /* Botão Slider para música */
-    .slider-container {
-      position: fixed;
-      top: 0;
-      right: 20px;
-      padding: 10px;
-      z-index: 1000;
-      background: #333; /* Cor de fundo escura */
-      border-radius: 20px;
-    }
-
-    .slider.round {
-      border-radius: 34px;
-    }
-
-    .slider input {
-      display: none; /* Esconde a checkbox padrão */
-    }
-
-    .slider input:checked + .slider.round {
-      background-color: #00C853; /* Cor quando ligado */
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
     }
   </style>
   <script>
@@ -163,8 +180,8 @@
 
       pingElement.innerText = `Ping: ${data.ping} ms`;
       uptimeElement.innerText = `Uptime: ${data.uptime}`;
-      infoElement.innerText = "Este site será atualizado assim que eu concertar meu PC, e será um painel administrativo com o bot aMathyzin - escrito por aMathyzin.";
-      infoElement.style.fontWeight = "bold"; // Adiciona a propriedade fontWeight com valor "bold"
+      infoElement.innerText = "Este site será atualizado assim que eu consertar meu PC, e será um painel administrativo com o bot aMathyzin - escrito por aMathyzin.";
+      infoElement.style.fontWeight = "bold";
 
       inviteLinkElement.innerHTML = `
         <a href="https://discord.gg/UE2DcGe5" target="_blank">
@@ -193,8 +210,8 @@
       <span class="logo">
         <img class="icon" src="https://cdn.discordapp.com/attachments/841874572118327326/1125115918486355968/channels4_profile.jpg" alt="aMathyzin">
         aMathyzin
-        <label class="slider-container">
-          <input type="checkbox" id="musicToggle">
+        <label class="switch">
+          <input type="checkbox">
           <span class="slider round"></span>
         </label>
       </span>
@@ -209,32 +226,10 @@
       <a href="https://knifebay.lojavirtualnuvem.com.br/" target="_blank" class="icon-link">
         <img class="icon knifebay-img" src="https://media.discordapp.net/attachments/1119715186073411705/1122878604007714816/knifeBay.png" alt="KnifeBay">
       </a>
-      <!-- Aba "Downloads" com link para a página de downloads -->
-      <a href="/downloads" class="icon-link">
-        <img class="icon" src="https://media.discordapp.net/attachments/1119715186073411705/1165499978081374308/189249.png?ex=65471370&is=65349e70&hm=f0b642ae858d731047f0944a&=&width=409&height=409" alt="Downloads">
-        Downloads
-      </a>
     </div>
   </div>
   <div class="content">
-    <!-- Vídeo do YouTube incorporado -->
     <iframe width="560" height="315" src="https://www.youtube.com/embed/0J4nhSur9DI" frameborder="0" allowfullscreen></iframe>
   </div>
-  <!-- Botão Slider para música -->
-  <audio id="myaudio">
-    <source src="https://cdn.discordapp.com/attachments/1119715186073411705/1143370347228438678/2_Minute_Timer_Lofi_320_kbps.mp3" type="audio/mp3">
-  </audio>
-  <script>
-    const musicToggle = document.getElementById("musicToggle");
-    const myaudio = document.getElementById("myaudio");
-
-    musicToggle.addEventListener("change", () => {
-      if (musicToggle.checked) {
-        myaudio.play();
-      } else {
-        myaudio.pause();
-      }
-    });
-  </script>
 </body>
 </html>
