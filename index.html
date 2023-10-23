@@ -19,7 +19,7 @@
     }
 
     .icon-link:hover .icon {
-      box-shadow: 0 2px 5px rgba(255, 255, 255, 0.6);
+      box-shadow: 0 2px 5px rgba(255, 255,255, 0.6);
     }
 
     .knifebay-img {
@@ -43,6 +43,8 @@
 
     .navbar .left .logo {
       font-weight: bold;
+      display: flex;
+      align-items: center; /* Alinha o texto com a checkbox */
     }
 
     .navbar .left .logo .icon {
@@ -50,6 +52,31 @@
       height: 20px;
       vertical-align: middle;
       margin-right: 5px;
+    }
+
+    .navbar .left .logo label {
+      display: inline-block;
+      position: relative;
+      width: 50px; /* Largura da checkbox */
+      height: 24px; /* Altura da checkbox */
+      background-color: #ccc;
+      border-radius: 34px;
+      cursor: pointer;
+    }
+
+    .navbar .left .logo label .slider {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50px; /* Largura da checkbox */
+      height: 24px; /* Altura da checkbox */
+      background-color: #fff;
+      border-radius: 34px;
+      transition: 0.4s;
+    }
+
+    .navbar .left .logo label input {
+      display: none; /* Esconde a checkbox padrão */
     }
 
     .navbar .right {
@@ -105,17 +132,6 @@
       z-index: 1000;
       background: #333; /* Cor de fundo escura */
       border-radius: 20px;
-      cursor: pointer;
-    }
-
-    .slider {
-      position: relative;
-      display: inline-block;
-      width: 50px;
-      height: 24px;
-      background-color: #ccc;
-      border-radius: 34px;
-      transition: background-color 0.4s;
     }
 
     .slider.round {
@@ -123,9 +139,7 @@
     }
 
     .slider input {
-      opacity: 0;
-      width: 0;
-      height: 0;
+      display: none; /* Esconde a checkbox padrão */
     }
 
     .slider input:checked + .slider.round {
@@ -164,63 +178,63 @@
           <img class="icon" src="https://cdn.discordapp.com/attachments/1119715186073411705/1122872840614580344/youtube.png" alt="YouTube">
           YouTube
         </a>
-      `;
       
       knifeBayElement.innerHTML = `
         <a href="https://knifebay.lojavirtualnuvem.com.br/" target="_blank">
           <img class="icon knifebay-img" src="https://media.discordapp.net/attachments/1119715186073411705/1122878604007714816/knifeBay.png" alt="KnifeBay">
         </a>
       `;
-    </script>
-  </head>
-  <body>
-    <div class="navbar">
-      <div class="left">
-        <span class="logo">
-          <img class="icon" src="https://cdn.discordapp.com/attachments/841874572118327326/1125115918486355968/channels4_profile.jpg" alt="aMathyzin">
-          aMathyzin
-        </span>
-      </div>
-      <div class="right">
-        <a href="https://www.youtube.com/@aMathyzin" target="_blank" class="icon-link">
-          <img class="icon" src="https://cdn.discordapp.com/attachments/1119715186073411705/1122872840614580344/youtube.png" alt="YouTube">
-        </a>
-        <a href="https://discord.gg/kNxXJZeA" target="_blank" class="icon-link">
-          <img class="icon" src="https://media.discordapp.net/attachments/1119715186073411705/1122872863704219710/discord.png" alt="Discord">
-        </a>
-        <a href="https://knifebay.lojavirtualnuvem.com.br/" target="_blank" class="icon-link">
-          <img class="icon knifebay-img" src="https://media.discordapp.net/attachments/1119715186073411705/1122878604007714816/knifeBay.png" alt="KnifeBay">
-        </a>
-        <!-- Aba "Downloads" com link para a página de downloads -->
-        <a href="/downloads" class="icon-link">
-          <img class="icon" src="https://media.discordapp.net/attachments/1119715186073411705/1165499978081374308/189249.png?ex=65471370&is=65349e70&hm=f0b642ae858d731047f0944a&=&width=409&height=409" alt="Downloads">
-          Downloads
-        </a>
-      </div>
+    });
+  </script>
+</head>
+<body>
+  <div class="navbar">
+    <div class="left">
+      <span class="logo">
+        <img class="icon" src="https://cdn.discordapp.com/attachments/841874572118327326/1125115918486355968/channels4_profile.jpg" alt="aMathyzin">
+        aMathyzin
+        <label class="slider-container">
+          <input type="checkbox" id="musicToggle">
+          <span class="slider round"></span>
+        </label>
+      </span>
     </div>
-    <div class="content">
-      <!-- Vídeo do YouTube incorporado -->
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/0J4nhSur9DI" frameborder="0" allowfullscreen></iframe>
+    <div class="right">
+      <a href="https://www.youtube.com/@aMathyzin" target="_blank" class="icon-link">
+        <img class="icon" src="https://cdn.discordapp.com/attachments/1119715186073411705/1122872840614580344/youtube.png" alt="YouTube">
+      </a>
+      <a href="https://discord.gg/kNxXJZeA" target="_blank" class="icon-link">
+        <img class="icon" src="https://media.discordapp.net/attachments/1119715186073411705/1122872863704219710/discord.png" alt="Discord">
+      </a>
+      <a href="https://knifebay.lojavirtualnuvem.com.br/" target="_blank" class="icon-link">
+        <img class="icon knifebay-img" src="https://media.discordapp.net/attachments/1119715186073411705/1122878604007714816/knifeBay.png" alt="KnifeBay">
+      </a>
+      <!-- Aba "Downloads" com link para a página de downloads -->
+      <a href="/downloads" class="icon-link">
+        <img class="icon" src="https://media.discordapp.net/attachments/1119715186073411705/1165499978081374308/189249.png?ex=65471370&is=65349e70&hm=f0b642ae858d731047f0944a&=&width=409&height=409" alt="Downloads">
+        Downloads
+      </a>
     </div>
-    <!-- Botão Slider para música -->
-    <label class="slider-container">
-      <input type="checkbox" id="musicToggle">
-      <span class="slider round"></span>
-    </label>
-    <audio id="myaudio">
-      <source src="https://cdn.discordapp.com/attachments/1119715186073411705/1143370347228438678/2_Minute_Timer_Lofi_320_kbps.mp3" type="audio/mp3">
-    </audio>
-    <script>
-      const musicToggle = document.getElementById("musicToggle");
-      const myaudio = document.getElementById("myaudio");
+  </div>
+  <div class="content">
+    <!-- Vídeo do YouTube incorporado -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/0J4nhSur9DI" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <!-- Botão Slider para música -->
+  <audio id="myaudio">
+    <source src="https://cdn.discordapp.com/attachments/1119715186073411705/1143370347228438678/2_Minute_Timer_Lofi_320_kbps.mp3" type="audio/mp3">
+  </audio>
+  <script>
+    const musicToggle = document.getElementById("musicToggle");
+    const myaudio = document.getElementById("myaudio");
 
-      musicToggle.addEventListener("change", () => {
-        if (musicToggle.checked) {
-          myaudio.play();
-        } else {
-          myaudio.pause();
-        }
-      });
-    </script>
-  </body>
+    musicToggle.addEventListener("change", () => {
+      if (musicToggle.checked) {
+        myaudio.play();
+      } else {
+        myaudio.pause();
+      }
+    });
+  </script>
+</body>
 </html>
