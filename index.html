@@ -66,8 +66,6 @@
       height: 100vh;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
     }
 
     h1, p {
@@ -85,13 +83,7 @@
       height: 315px;
       max-width: 100%;
       max-height: 100%;
-    }
-
-    /* Estilização para manter a barra lateral no topo */
-    .content {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
+      margin: 0 auto; /* Centraliza o vídeo horizontalmente */
     }
   </style>
   <script>
@@ -147,9 +139,11 @@
     <div class="right">
       <a href="https://www.youtube.com/@aMathyzin" target="_blank" class="icon-link">
         <img class="icon" src="https://cdn.discordapp.com/attachments/1119715186073411705/1122872840614580344/youtube.png" alt="YouTube">
+        
       </a>
       <a href="https://discord.gg/kNxXJZeA" target="_blank" class="icon-link">
         <img class="icon" src="https://media.discordapp.net/attachments/1119715186073411705/1122872863704219710/discord.png" alt="Discord">
+        
       </a>
       <a href="https://knifebay.lojavirtualnuvem.com.br/" target="_blank" class="icon-link">
         <img class="icon knifebay-img" src="https://media.discordapp.net/attachments/1119715186073411705/1122878604007714816/knifeBay.png" alt="KnifeBay">
@@ -161,9 +155,7 @@
       </a>
     </div>
   </div>
-  <!-- Vídeo do YouTube incorporado no meio da tela -->
-  <div class="content">
-    <iframe src="https://www.youtube.com/embed/0J4nhSur9DI" frameborder="0" allowfullscreen></iframe>
-  </div>
+  <!-- Vídeo do YouTube incorporado -->
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/0J4nhSur9DI" frameborder="0" allowfullscreen></iframe>
 </body>
 </html>
