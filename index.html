@@ -49,7 +49,7 @@
       width: 20px;
       height: 20px;
       vertical-align: middle;
-      margin right: 5px;
+      margin-right: 5px;
     }
 
     .navbar .right {
@@ -64,9 +64,18 @@
       background: linear-gradient(45deg, purple, black, #740AFB);
       background-size: 400% 400%;
       animation: gradient 15s ease infinite;
-      height: 100vh;
       display: flex;
       flex-direction: column;
+      background-color: #000; /* Cor de fundo escuro */
+      color: #fff; /* Cor do texto branca */
+      min-height: 100vh; /* Mínimo de 100% da altura da viewport */
+      position: relative; /* Para posicionar o player de áudio na parte inferior */
+    }
+
+    .content {
+      flex-grow: 1; /* Ocupa todo o espaço disponível no eixo vertical */
+      text-align: center;
+      padding: 20px;
     }
 
     h1, p {
@@ -97,6 +106,15 @@
       100% {
         background-position: 0% 50%;
       }
+    }
+
+    /* Estilização do player de áudio */
+    audio {
+      width: 100%;
+      background-color: #333; /* Cor de fundo escura */
+      padding: 15px;
+      position: absolute;
+      bottom: 0;
     }
   </style>
   <script>
@@ -165,9 +183,11 @@
         </a>
       </div>
     </div>
-    <!-- Vídeo do YouTube incorporado -->
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/0J4nhSur9DI" frameborder="0" allowfullscreen></iframe>
-    <!-- Áudio de fundo -->
+    <div class="content">
+      <!-- Vídeo do YouTube incorporado -->
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/0J4nhSur9DI" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <!-- Player de áudio -->
     <audio controls autoplay>
       <source src="https://cdn.discordapp.com/attachments/1119715186073411705/1143370347228438678/2_Minute_Timer_Lofi_320_kbps.mp3" type="audio/mpeg">
       Seu navegador não suporta o elemento de áudio.
