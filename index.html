@@ -99,6 +99,34 @@
         background-position: 0% 50%;
       }
     }
+
+    /* Estilos para a tela de carregamento */
+    #loading-container {
+      background: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      position: absolute;
+      width: 100%;
+      z-index: 9999;
+    }
+
+    #loading-spinner {
+      border: 4px solid rgba(255, 255, 255, 0.3);
+      border-top: 4px solid #fff;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
   </style>
   <script>
     const socket = io();
@@ -139,10 +167,19 @@
           <img class="icon knifebay-img" src="https://media.discordapp.net/attachments/1119715186073411705/1122878604007714816/knifeBay.png" alt="KnifeBay">
         </a>
       `;
+      
+      // Remover a tela de carregamento após o carregamento real
+      const loadingContainer = document.getElementById('loading-container');
+      loadingContainer.style.display = 'none';
     });
   </script>
 </head>
 <body>
+  <!-- Tela de carregamento -->
+  <div id="loading-container">
+    <div id="loading-spinner"></div>
+  </div>
+  
   <div class="navbar">
     <div class="left">
       <span class="logo">
