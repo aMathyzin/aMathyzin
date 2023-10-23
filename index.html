@@ -239,6 +239,264 @@
   <div class="content">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/0J4nhSur9DI" frameborder="0" allowfullscreen></iframe>
   </div>
+  <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>aMathyzin</title>
+  <link rel="icon" href="https://media.discordapp.net/attachments/1119715186073411705/1134190559947407481/channels4_profile2.png" type="image/x-icon">
+  <meta property="og:title" content="aMathyzin - Central">
+  <meta property="og:description" content="Site principal do canal aMathyzin">
+  <meta property="og:image" content="https://media.discordapp.net/attachments/1119715186073411705/1134190559947407481/channels4_profile2.png">
+  <meta property="og:url" content="https://amathyzin.tech">
+  <meta property="og:type" content="website">
+  <style>
+    .icon {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+      margin-right: 5px;
+      border-radius: 50%;
+    }
+
+    .icon-link:hover .icon {
+      box-shadow: 0 2px 5px rgba(255, 255, 255, 0.6);
+    }
+
+    .knifebay-img {
+      width: 100px;
+      height: auto;
+    }
+
+    .navbar {
+      background-color: #000000;
+      color: #ffffff;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar .left {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar .left .logo {
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar .left .logo .icon {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+
+    .navbar .left .logo .switch-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+    }
+
+    .navbar .left .logo .switch-container label {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+      margin: 0;
+    }
+
+    .navbar .left .logo .switch-container input {
+      display: none;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+      border-radius: 34px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
+
+    .navbar .right {
+      display: flex;
+      align-items: center;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(45deg, purple, black, #740AFB);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      display: flex;
+      flex-direction: column;
+      background-color: #000;
+      color: #fff;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    .content {
+      flex-grow: 1;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1, p {
+      margin: 10px;
+    }
+
+    a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    iframe {
+      width: 560px;
+      height: 315px;
+      max-width: 100%;
+      max-height: 100%;
+      margin: 0 auto;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+  <script>
+    const socket = io();
+
+    socket.on('connect', () => {
+      console.log('Conectado ao servidor Socket.IO');
+    });
+
+    socket.on('update', (data) => {
+      const pingElement = document.getElementById('ping');
+      const uptimeElement = document.getElementById('uptime');
+      const infoElement = document.getElementById('info');
+      const inviteLinkElement = document.getElementById('invite-link');
+      const youtubeLinkElement = document.getElementById('youtube-link');
+      const knifeBayElement = document.getElementById('knifebay-link');
+
+      pingElement.innerText = `Ping: ${data.ping} ms`;
+      uptimeElement.innerText = `Uptime: ${data.uptime}`;
+      infoElement.innerText = "Este site será atualizado assim que eu consertar meu PC, e será um painel administrativo com o bot aMathyzin - escrito por aMathyzin.";
+      infoElement.style.fontWeight = "bold";
+
+      inviteLinkElement.innerHTML = `
+        <a href="https://discord.gg/UE2DcGe5" target="_blank">
+          <img class="icon" src="https://media.discordapp.net/attachments/1119715186073411705/1122872863704219710/discord.png" alt="Discord">
+          Discord
+        </a>
+      `;
+
+      youtubeLinkElement.innerHTML = `
+        <a href="https://www.youtube.com/@aMathyzin" target="_blank">
+          <img class="icon" src="https://cdn.discordapp.com/attachments/1119715186073411705/1122872840614580344/youtube.png" alt="YouTube">
+          YouTube
+        </a>
+      `;
+
+      knifeBayElement.innerHTML = `
+        <a href="https://knifebay.lojavirtualnuvem.com.br/" target="_blank">
+          <img class="icon knifebay-img" src="https://media.discordapp.net/attachments/1119715186073411705/1122878604007714816/knifeBay.png" alt="KnifeBay">
+        </a>
+      `;
+    });
+  </script>
+</head>
+<body>
+  <div class="navbar">
+    <div class="left">
+      <span class="logo">
+        <img class="icon" src="https://cdn.discordapp.com/attachments/841874572118327326/1125115918486355968/channels4_profile.jpg" alt="aMathyzin">
+        aMathyzin
+        <div class="switch-container">
+          <label class="switch">
+            <input type="checkbox" id="audio-checkbox">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </span>
+    </div>
+    <div class="right">
+      <a href="https://www.youtube.com/@aMathyzin" target="_blank" class="icon-link">
+        <img class="icon" src="https://cdn.discordapp.com/attachments/1119715186073411705/1122872840614580344/youtube.png" alt="YouTube">
+      </a>
+      <a href="https://discord.gg/kNxXJZeA" target="_blank" class="icon-link">
+        <img class="icon" src="https://media.discordapp.net/attachments/1119715186073411705/1122872863704219710/discord.png" alt="Discord">
+      </a>
+      <a href="https://knifebay.lojavirtualnuvem.com.br/" target="_blank" class "icon-link">
+        <img class="icon knifebay-img" src="https://media.discordapp.net/attachments/1119715186073411705/1122878604007714816/knifeBay.png" alt="KnifeBay">
+      </a>
+    </div>
+  </div>
+  <div class="content">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/0J4nhSur9DI" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <audio id="myaudio">
+    <source src="https://cdn.discordapp.com/attachments/1119715186073411705/1143370347228438678/2_Minute_Timer_Lofi_320_kbps.mp3" type="audio/mp3">
+  </audio>
+  <script>
+    const audio = document.getElementById('myaudio');
+    const audioCheckbox = document.getElementById('audio-checkbox');
+
+    audioCheckbox.addEventListener('change', () => {
+      if (audioCheckbox.checked) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    });
+  </script>
+</body>
+</html>
   <audio id="myaudio">
     <source src="https://cdn.discordapp.com/attachments/1119715186073411705/1143370347228438678/2_Minute_Timer_Lofi_320_kbps.mp3" type="audio/mp3">
   </audio>
