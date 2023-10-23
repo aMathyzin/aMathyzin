@@ -9,7 +9,6 @@
   <meta property="og:image" content="https://media.discordapp.net/attachments/1119715186073411705/1134190559947407481/channels4_profile2.png">
   <meta property="og:url" content="https://amathyzin.tech">
   <meta property="og:type" content="website">
-  <script src="https://cdn.socket.io/4.4.1/socket.io.js"></script>
   <style>
     .icon {
       width: 20px;
@@ -102,30 +101,18 @@
 
     /* Estilos para a tela de carregamento */
     #loading-container {
-      background: #000;
+      background: rgba(0, 0, 0, 0.8);
       color: #fff;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      position: absolute;
+      position: fixed;
+      top: 0;
+      left: 0;
       width: 100%;
+      height: 100%;
       z-index: 9999;
-    }
-
-    #loading-spinner {
-      border: 4px solid rgba(255, 255, 255, 0.3);
-      border-top: 4px solid #fff;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      animation: spin 2s linear infinite;
-    }
-
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
     }
   </style>
   <script>
@@ -177,7 +164,7 @@
 <body>
   <!-- Tela de carregamento -->
   <div id="loading-container">
-    <div id="loading-spinner"></div>
+    <div id="loading-spinner">Carregando...</div>
   </div>
   
   <div class="navbar">
