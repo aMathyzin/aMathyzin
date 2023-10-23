@@ -9,7 +9,7 @@ const geoip = require('geoip-lite');
 
 dotenv.config();
 
-const logFilePath = path.join(__dirname, 'Geral', 'logs.txt');
+const logFilePath = path.join(__dirname, 'logs.txt');
 let lastConnectionTimes = {};
 let isBotStable = true;
 
@@ -25,11 +25,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Rota inicial do site
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, 'index'));
 });
 
 app.get('/downloads.html', (req, res) => {
-  res.sendFile(path.join(__dirname, 'downloads.html'));
+  res.sendFile(path.join(__dirname, 'downloads'));
 });
 
 
