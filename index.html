@@ -74,34 +74,43 @@
     }
 
     .slider {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 60px;
-      height: 34px;
-      background: #ccc;
-      outline: none;
-      opacity: 0.7;
-      -webkit-transition: .2s;
-      transition: opacity .2s;
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
       border-radius: 34px;
     }
 
-    .slider::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 26px;
+    .slider:before {
+      position: absolute;
+      content: "";
       height: 26px;
-      background: #fff;
-      cursor: pointer;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
       border-radius: 50%;
     }
 
-    .slider::-moz-range-thumb {
-      width: 26px;
-      height: 26px;
-      background: #fff;
-      cursor: pointer;
-      border-radius: 50%;
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
     }
 
     .navbar .right {
@@ -222,7 +231,7 @@
       <a href="https://discord.gg/kNxXJZeA" target="_blank" class="icon-link">
         <img class="icon" src="https://media.discordapp.net/attachments/1119715186073411705/1122872863704219710/discord.png" alt="Discord">
       </a>
-      <a href="https://knifebay.lojavirtualnuvem.com.br/" target="_blank" class="icon-link">
+      <a href="https://knifebay.lojavirtualnuvem.com.br/" target="_blank" class "icon-link">
         <img class="icon knifebay-img" src="https://media.discordapp.net/attachments/1119715186073411705/1122878604007714816/knifeBay.png" alt="KnifeBay">
       </a>
     </div>
