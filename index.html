@@ -42,7 +42,7 @@
       width: 20px;
       height: 20px;
       vertical-align: middle;
-      margin-right: 5px;
+      margin right: 5px;
       border-radius: 50%;
     }
 
@@ -77,15 +77,33 @@
       width: 20px;
       height: 20px;
       vertical-align: middle;
-      margin-right: 5px;
+      margin right: 5px;
     }
 
-    .navbar .right {
-      display: flex;
-      align-items: center;
+    .navbar .left .switch-container {
+      margin-left: 10px;
     }
 
-      .slider {
+    .navbar .left .switch {
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      border-radius: 34px;
+      position: relative;
+    }
+
+    .navbar .left .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .navbar .left .switch .slider {
       position: absolute;
       cursor: pointer;
       top: 0;
@@ -98,7 +116,7 @@
       border-radius: 34px;
     }
 
-    .slider:before {
+    .navbar .left .switch .slider:before {
       position: absolute;
       content: "";
       height: 26px;
@@ -111,15 +129,15 @@
       border-radius: 50%;
     }
 
-    input:checked + .slider {
+    .navbar .left .switch input:checked + .slider {
       background-color: #2196F3;
     }
 
-    input:focus + .slider {
+    .navbar .left .switch input:focus + .slider {
       box-shadow: 0 0 1px #2196F3;
     }
 
-    input:checked + .slider:before {
+    .navbar .left .switch input:checked + .slider:before {
       -webkit-transform: translateX(26px);
       -ms-transform: translateX(26px);
       transform: translateX(26px);
@@ -159,7 +177,6 @@
       transform: translate(-50%, -50%);
     }
 
-
     @keyframes gradient {
       0% {
         background-position: 0% 50%;
@@ -181,7 +198,7 @@
 
     setTimeout(function () {
         // Após 1,5 Segundos, Esconde A Tela De Carregamento.
-        document.querySelector(".loader-wrapper").style.display = "none";
+        document.querySelector('.loader-wrapper').style.display = 'none';
     }, 1500);
 
     socket.on('update', (data) => {
@@ -194,8 +211,8 @@
 
       pingElement.innerText = `Ping: ${data.ping} ms`;
       uptimeElement.innerText = `Uptime: ${data.uptime}`;
-      infoElement.innerText = "Este Site Será Atualizado Assim Que Eu Concertar Meu PC, E Será Um Painel Administrativo Com O Bot aMathyzin - Escrito Por aMathyzin.";
-      infoElement.style.fontWeight = "bold"; // Adiciona a propriedade fontWeight com valor "bold"
+      infoElement.innerText = 'Este Site Será Atualizado Assim Que Eu Concertar Meu PC, E Será Um Painel Administrativo Com O Bot aMathyzin - Escrito Por aMathyzin.';
+      infoElement.style.fontWeight = 'bold'; // Adiciona a propriedade fontWeight com valor 'bold'
 
       inviteLinkElement.innerHTML = `
         <a href="https://discord.gg/UE2DcGe5" target="_blank">
@@ -221,9 +238,8 @@
 </head>
 <body>
   <div class="loader-wrapper">
-      <div class="loader"></div>
-      <div class="loader-message">
-      </div>
+    <div class="loader"></div>
+    <div class="loader-message"></div>
   </div>
   <div class="navbar">
     <div class="left">
@@ -231,6 +247,13 @@
         <img class="icon" src="https://cdn.discordapp.com/attachments/841874572118327326/1125115918486355968/channels4_profile.jpg" alt="aMathyzin">
         aMathyzin
       </span>
+      <label class="switch">
+        <input type="checkbox" id="audio-checkbox">
+        <span class="slider round"></span>
+        <audio id="myaudio">
+          <source src="https://cdn.discordapp.com/attachments/1119715186073411705/1143370347228438678/2_Minute_Timer_Lofi_320_kbps.mp3" type="audio/mp3">
+        </audio>
+      </label>
     </div>
     <div class="right">
       <a href="https://www.youtube.com/@aMathyzin" target="_blank" class="icon-link">
@@ -251,20 +274,5 @@
   </div>
   <!-- Vídeo do YouTube incorporado -->
   <iframe width="560" height="315" src="https://www.youtube.com/embed/0J4nhSur9DI" frameborder="0" allowfullscreen></iframe>
-  </iframe>
-  </div>
-  <audio id="myaudio">
-    <source src="https://cdn.discordapp.com/attachments/1119715186073411705/1143370347228438678/2_Minute_Timer_Lofi_320_kbps.mp3" type="audio/mp3">
-  </audio>
-  <script>
-    const audio = document.getElementById('myaudio');
-    const audioCheckbox = document.getElementById('audio-checkbox');
-
-    audioCheckbox.addEventListener('change', () => {
-      if (audioCheckbox.checked) {
-        audio.play();
-      } else {
-        audio.pause();
-      }
 </body>
 </html>
