@@ -33,7 +33,7 @@
       color: #ffffff;
       padding: 10px;
       display: flex;
-      justify-content: space-between;
+      justify-content: space between;
       align-items: center;
     }
 
@@ -133,6 +133,10 @@
 
     socket.on('connect', () => {
       console.log('Conectado ao servidor Socket.IO');
+      
+      // Remover a tela de carregamento após o carregamento real
+      const loadingContainer = document.getElementById('loading-container');
+      loadingContainer.style.display = 'none';
     });
 
     socket.on('update', (data) => {
@@ -167,10 +171,6 @@
           <img class="icon knifebay-img" src="https://media.discordapp.net/attachments/1119715186073411705/1122878604007714816/knifeBay.png" alt="KnifeBay">
         </a>
       `;
-      
-      // Remover a tela de carregamento após o carregamento real
-      const loadingContainer = document.getElementById('loading-container');
-      loadingContainer.style.display = 'none';
     });
   </script>
 </head>
