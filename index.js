@@ -25,14 +25,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Rota inicial do site
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.get('/downloads.html', (req, res) => {
-  res.sendFile(path.join(__dirname, 'downloads'));
+  res.sendFile(path.join(__dirname, 'downloads.html'));
 });
-
-
 
 io.on('connection', (socket) => {
   const clientIp = socket.handshake.headers['x-forwarded-for'] || socket.handshake.address;
