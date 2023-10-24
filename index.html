@@ -183,17 +183,29 @@
     max-height: 100%;
     margin: 0 auto;
     border-radius: 15px; /* Adiciona cantos arredondados */
-    animation: glow 2s linear infinite; /* Adiciona a animação de fluxo */
+    position: relative;
+    animation: rotateGlow 4s linear infinite; /* Adiciona a animação de rotação */
   }
 
-  @keyframes glow {
+  @keyframes rotateGlow {
     0% {
+      transform: rotate(0deg);
+      box-shadow: 0 0 10px rgba(116, 10, 251, 0.5);
+    }
+    25% {
+      transform: rotate(90deg);
       box-shadow: 0 0 10px rgba(116, 10, 251, 0.5);
     }
     50% {
-      box-shadow: 0 0 20px rgba(116, 10, 251, 0.7);
+      transform: rotate(180deg);
+      box-shadow: 0 0 10px rgba(116, 10, 251, 0.5);
+    }
+    75% {
+      transform: rotate(270deg);
+      box-shadow: 0 0 10px rgba(116, 10, 251, 0.5);
     }
     100% {
+      transform: rotate(360deg);
       box-shadow: 0 0 10px rgba(116, 10, 251, 0.5);
     }
   }
