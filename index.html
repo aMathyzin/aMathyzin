@@ -274,5 +274,18 @@
   </div>
   <!-- Vídeo do YouTube incorporado -->
   <iframe width="560" height="315" src="https://www.youtube.com/embed/0J4nhSur9DI" frameborder="0" allowfullscreen></iframe>
+   <script>
+    const socket = io();
+    const audio = document.getElementById('myaudio');
+    const audioCheckbox = document.getElementById('audio-checkbox');
+
+    audioCheckbox.addEventListener('change', () => {
+      if (audioCheckbox.checked) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    });
+ </script>
 </body>
 </html>
