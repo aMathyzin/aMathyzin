@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>aMathyzin</title>
   <link rel="icon" href="https://media.discordapp.net/attachments/1119715186073411705/1134190559947407481/channels4_profile2.png" type="image/x-icon">
   <meta property="og:title" content="aMathyzin - Central">
@@ -9,274 +10,8 @@
   <meta property="og:image" content="https://media.discordapp.net/attachments/1119715186073411705/1134190559947407481/channels4_profile2.png">
   <meta property="og:url" content="https://amathyzin.tech">
   <meta property="og:type" content="website">
-  <style>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 
-   .copyright-bar {
-      background-color: #000;
-      color: #fff;
-      text-align: center;
-      padding: 10px;
-    }
-    /* Loading */
-    .loader-wrapper {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.8);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 9999;
-    }
-
-    .loader {
-        border: 16px solid #f3f3f3; /* Cinzento Claro */
-        border-top: 16px solid #740AFB; /* Gradiente */
-        border-radius: 50%;
-        width: 120px;
-        height: 120px;
-        animation: spin 2s linear infinite;
-    }
-    /* Fim */
-
-    @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-    }
-
-    /* Restante do CSS do index2.html */
-    .icon {
-      width: 20px;
-      height: 20px;
-      vertical-align: middle;
-      margin right: 5px;
-      border radius: 50%;
-    }
-
-    .icon-link:hover .icon {
-      box-shadow: 0 2px 5px rgba(255, 255, 255, 0.6);
-    }
-
-    .knifebay-img {
-      width: 100px;
-      height: auto;
-    }
-
-    .navbar {
-      background-color: #000000;
-      color: #ffffff;
-      padding: 10px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .navbar .left {
-      display: flex;
-      align-items: center;
-    }
-
-    .navbar .left .logo {
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-    }
-
-    .navbar .left .logo .icon {
-      width: 20px;
-      height: 20px;
-      vertical-align: middle;
-      margin right: 5px;
-    }
-
-    .navbar .left .logo .switch-container {
-      position: relative;
-      display: flex;
-      align-items: center;
-      margin-left: 10px;
-    }
-
-    .navbar .left .logo .switch-container label {
-      position: relative;
-      display: inline-block;
-      width: 60px;
-      height: 34px;
-      margin: 0;
-    }
-
-    .navbar .left .logo .switch-container input {
-      display: none;
-    }
-
-    .slider {
-      position: absolute;
-      cursor: pointer;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: #2F063A;
-      -webkit-transition: .4s;
-      transition: .4s;
-      border-radius: 34px;
-    }
-
-    .slider:before {
-      position: absolute;
-      content: "";
-      height: 26px;
-      width: 26px;
-      left: 4px;
-      bottom: 4px;
-      background-color: white;
-      -webkit-transition: .4s;
-      transition: .4s;
-      border-radius: 50%;
-    }
-
-    input:checked + .slider {
-      background-color: #AE06DC;
-    }
-
-    input:focus + .slider {
-      box-shadow: 0 0 1px #B721F3;
-    }
-
-    input:checked + .slider:before {
-      -webkit-transform: translateX(26px);
-      -ms transform: translateX(26px);
-      transform: translateX(26px);
-    }
-
-    .navbar .right {
-      display: flex;
-      align-items: center;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(45deg, purple, black, #740AFB);
-      background-size: 400% 400%;
-      animation: gradient 15s ease infinite;
-      display: flex;
-      flex-direction: column;
-      background-color: #000;
-      color: #fff;
-      min-height: 100vh;
-      position: relative;
-    }
-
-    .content {
-      flex-grow: 1;
-      text-align: center;
-      padding: 20px;
-    }
-
-    h1, p {
-      margin: 10px;
-    }
-
-    a {
-      color: #ffffff;
-      text-decoration: none;
-    }
-
-
-
-  iframe {
-    width: 800px; /* Tamanho ajustado para 800px de largura */
-    height: 500px; /* Tamanho ajustado para 500px de altura */
-    max-width: 100%;
-    max-height: 100%;
-    margin: 0 auto;
-    border-radius: 15px; /* Adiciona cantos arredondados */
-    animation: glow 2s linear infinite; /* Adiciona a animação de fluxo */
-  }
-
-  @keyframes glow {
-    0% {
-      box-shadow: 0 0 10px rgba(116, 10, 251, 0.5);
-    }
-    50% {
-      box-shadow: 0 0 20px rgba(116, 10, 251, 0.7);
-    }
-    100% {
-      box-shadow: 0 0 10px rgba(116, 10, 251, 0.5);
-    }
-  }
-
-
-
-    @keyframes gradient {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    }
-      /* Estilos para o botão destacado */
-      .highlight-button {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #740AFB;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        font-size: 18px;
-        cursor: pointer;
-        text-decoration: none;
-        animation: pulse 1s infinite; /* Adicionamos a animação diretamente aqui */
-      }
-
-      /* Animação de destaque para o botão */
-      @keyframes pulse {
-        0% {
-          transform: scale(1);
-          box-shadow: 0 0 10px rgba(116, 10, 251, 0.5);
-        }
-        50% {
-          transform: scale(1.05);
-          box-shadow: 0 0 20px rgba(116, 10, 251, 0.7);
-        }
-        100% {
-          transform: scale(1);
-          box-shadow: 0 0 10px rgba(116, 10, 251, 0.5);
-        }
-      }
-
-  </style>
-  <script>
-
-      inviteLinkElement.innerHTML = `
-        <a href="https://discord.gg/6EF7khuct3" target="_blank">
-          <img class="icon" src="https://media.discordapp.net/attachments/1119715186073411705/1122872863704219710/discord.png" alt="Discord">
-          Discord
-        </a>
-      `;
-
-      youtubeLinkElement.innerHTML = `
-        <a href="https://www.youtube.com/@aMathyzin" target="_blank">
-          <img class="icon" src="https://cdn.discordapp.com/attachments/1119715186073411705/1122872840614580344/youtube.png" alt="YouTube">
-          YouTube
-        </a>
-      `;
-
-      knifeBayElement.innerHTML = `
-        <a href="https://knifebay.lojavirtualnuvem.com.br/" target="_blank">
-          <img class="icon knifebay-img" src="https://media.discordapp.net/attachments/1119715186073411705/1122878604007714816/knifeBay.png" alt="KnifeBay">
-        </a>
-      `;
-    });
-
-    // Esta parte do código deve estar no final do arquivo, após o conteúdo ter sido carregado
-  
-  </script>
 </head>
 <body>
   <div class="loader-wrapper">
@@ -302,7 +37,7 @@
       <a href="https://discord.gg/6EF7khuct3" target="_blank" class="icon-link">
         <img class="icon" src="https://media.discordapp.net/attachments/1119715186073411705/1122872863704219710/discord.png" alt="Discord">
       </a>
-      <a href="https://knifebay.lojavirtualnuvem.com.br/" target="_blank" class "icon-link">
+      <a href="https://knifebay.lojavirtualnuvem.com.br/" target="_blank" class="icon-link">
         <img class="icon knifebay-img" src="https://media.discordapp.net/attachments/1119715186073411705/1122878604007714816/knifeBay.png" alt="KnifeBay">
       </a>
     </div>
@@ -312,11 +47,9 @@
     <br>
     <a href="downloads" class="highlight-button">Ir para página de downloads</a>
   </div>
-
-   <div class="copyright-bar">
-   © Copyright aMathyzin 2023. Todos os direitos reservados.
+  <div class="copyright-bar">
+    © Copyright aMathyzin 2023. Todos os direitos reservados.
   </div>
-  
   <audio id="myaudio">
     <source src="https://cdn.discordapp.com/attachments/1119715186073411705/1143370347228438678/2_Minute_Timer_Lofi_320_kbps.mp3" type="audio/mp3">
   </audio>
@@ -340,6 +73,13 @@
       }, 2000);
     });
   </script>
-
+  <script>
+    // Verificar se é um dispositivo móvel
+    if (window.innerWidth <= 767) {
+      const iframe = document.getElementById("video-iframe");
+      iframe.width = "100%"; // Use toda a largura disponível
+      iframe.height = "auto"; // Altura automática proporcional à largura
+    }
+  </script>
 </body>
 </html>
