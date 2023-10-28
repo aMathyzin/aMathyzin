@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>aMathyzin</title>
+  <link rel="icon" href="https://media.discordapp.net/attachments/1119715186073411705/1134190559947407481/channels4_profile2.png" type="image/x-icon">
+  <meta property="og:title" content="aMathyzin - Home">
+  <meta property="og:description" content="⚡Downloads e Senhas Disponíveis⚡">
+  <meta property="og:image" content="https://media.discordapp.net/attachments/1119715186073411705/1134190559947407481/channels4_profile2.png">
+  <meta property="og:url" content="https://amathyzin.tech/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+  <style>
+    /* Estilos para o texto pulsante */
+    @keyframes pulse {
+      0% {
+        font-size: 36px;
+      }
+      50% {
+        font-size: 40px;
+      }
+      100% {
+        font-size: 36px;
+      }
+    }
+
+    .pulsating-text {
+      animation: pulse 1s infinite;
+      text-align: center;
+      font-size: 36px;
+      margin-top: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="loader-wrapper">
+    <div class="loader"></div>
+  </div>
+  <div class="navbar">
+    <div class="left">
+      <span class="logo">
+        <img class="icon" src="https://cdn.discordapp.com/attachments/841874572118327326/1125115918486355968/channels4_profile.jpg" alt="aMathyzin">
+        aMathyzin
+        <div class="switch-container">
+          <label class="switch">
+            <input type="checkbox" id="audio-checkbox">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </span>
+    </div>
+    <div class="right">
+      <a href="https://www.youtube.com/@aMathyzin" target="_blank" class="icon-link">
+        <img class="icon" src="https://cdn.discordapp.com/attachments/1119715186073411705/1122872840614580344/youtube.png" alt="YouTube">
+      </a>
+      <a href="https://discord.gg/6EF7khuct3" target="_blank" class="icon-link">
+        <img class="icon" src="https://media.discordapp.net/attachments/1119715186073411705/1122872863704219710/discord.png" alt="Discord">
+      </a>
+      <a href="https://knifebay.lojavirtualnuvem.com.br/" target="_blank" class="icon-link">
+        <img class="icon knifebay-img" src="https://media.discordapp.net/attachments/1119715186073411705/1122878604007714816/knifeBay.png" alt="KnifeBay">
+      </a>
+    </div>
+  </div>
+  <div class="content">
+    <div class="pulsating-text">
+      Download iniciado!
+      <br>
+      *caso o download não inicie em alguns segundos, <a href="https://seulinkdedownload.com/aMathyzin-Limpar-Armazenamento.rar" target="_blank">clique aqui</a>!
+    </div>
+  </div>
+  <div class="copyright-bar">
+    © Copyright aMathyzin 2023. Todos os direitos reservados.
+  </div>
+  <audio id="myaudio">
+    <source src="https://cdn.discordapp.com/attachments/1119715186073411705/1143370347228438678/2_Minute_Timer_Lofi_320_kbps.mp3" type="audio/mp3">
+  </audio>
+  <script>
+    const audio = document.getElementById('myaudio');
+    const audioCheckbox = document.getElementById('audio-checkbox');
+
+    audioCheckbox.addEventListener('change', () => {
+      if (audioCheckbox.checked) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(function () {
+        const loaderWrapper = document.querySelector(".loader-wrapper");
+        loaderWrapper.style.display = "none";
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
