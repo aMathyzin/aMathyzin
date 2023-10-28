@@ -5,34 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>aMathyzin</title>
   <link rel="icon" href="https://media.discordapp.net/attachments/1119715186073411705/1134190559947407481/channels4_profile2.png" type="image/x-icon">
-  <meta property="og:title" content="aMathyzin - Home">
-  <meta property="og:description" content="⚡Downloads e Senhas Disponíveis⚡">
-  <meta property="og:image" content="https://media.discordapp.net/attachments/1119715186073411705/1134190559947407481/channels4_profile2.png">
-  <meta property="og:url" content="https://amathyzin.tech/">
-  <meta property="og:type" content="website">
-  <link rel="stylesheet" type="text/css" href="styles.css">
-
-  <style>
-    /* Estilos para o texto pulsante */
-    @keyframes pulse {
-      0% {
-        font-size: 36px;
-      }
-      50% {
-        font-size: 40px;
-      }
-      100% {
-        font-size: 36px;
-      }
-    }
-
-    .pulsating-text {
-      animation: pulse 1s infinite;
-      text-align: center;
-      font-size: 36px;
-      margin-top: 100px;
-    }
-  </style>
 </head>
 <body>
   <div class="loader-wrapper">
@@ -92,7 +64,7 @@
     document.addEventListener("DOMContentLoaded", function () {
       setTimeout(function () {
         const loaderWrapper = document.querySelector(".loader-wrapper");
-        loaderWrapper.style.display = "none";
+        loaderWrapper.style display = "none";
       }, 2000);
     });
   </script>
