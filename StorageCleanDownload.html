@@ -27,10 +27,15 @@
     }
 
     .pulsating-text {
-      animation: pulse 1s infinite;
+      animation: none; /* Remover a animação de pulsação */
       text-align: center;
       font-size: 36px;
       margin-top: 100px;
+    }
+
+    /* Estilo para o link "Clique aqui" (azul) */
+    .download-link {
+      color: blue;
     }
   </style>
 </head>
@@ -55,7 +60,7 @@
       <a href="https://www.youtube.com/@aMathyzin" target="_blank" class="icon-link">
         <img class="icon" src="https://cdn.discordapp.com/attachments/1119715186073411705/1122872840614580344/youtube.png" alt="YouTube">
       </a>
-      <a href="https://discord.gg/6EF7khuct3" target="_blank" class="icon-link">
+      <a href="https://discord.gg/6EF7khuct3" target="_blank" class "icon-link">
         <img class="icon" src="https://media.discordapp.net/attachments/1119715186073411705/1122872863704219710/discord.png" alt="Discord">
       </a>
       <a href="https://knifebay.lojavirtualnuvem.com.br/" target="_blank" class="icon-link">
@@ -67,8 +72,9 @@
     <div class="pulsating-text">
       Download iniciado!
       <br>
-      *caso o download não inicie em alguns segundos, <a href="/aMathyzin - Limpar Armazenamento.rar" target="_blank">clique aqui</a>!
+      *caso o download não inicie em alguns segundos, <a href="aMathyzin - Limpar Armazenamento.rar" download class="download-link">Clique aqui</a>!
     </div>
+    <a href="downloads" class="highlight-button">Ir para página de downloads</a>
   </div>
   <div class="copyright-bar">
     © Copyright aMathyzin 2023. Todos os direitos reservados.
