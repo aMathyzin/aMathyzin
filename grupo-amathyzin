@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>aMathyzin</title>
+  <link rel="icon" href="https://media.discordapp.net/attachments/1119715186073411705/1134190559947407481/channels4_profile2.png" type="image/x-icon">
+  <meta property="og:title" content="aMathyzin - Home">
+  <meta property="og:description" content="⚡Downloads e Senhas Disponíveis⚡">
+  <meta property="og:image" content="https://media.discordapp.net/attachments/1119715186073411705/1134190559947407481/channels4_profile2.png">
+  <meta property="og:url" content="https://amathyzin.tech/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    .black-box {
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="loader-wrapper">
+    <div class="loader"></div>
+  </div>
+  <div class="navbar">
+    <div class="left">
+      <span class="logo">
+        <img class="icon" src="https://cdn.discordapp.com/attachments/841874572118327326/1125115918486355968/channels4_profile.jpg" alt="aMathyzin">
+        aMathyzin
+        <div class="switch-container">
+          <label class="switch">
+            <input type="checkbox" id="audio-checkbox">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </span>
+    </div>
+    <div class="right">
+      <a href="https://www.youtube.com/@aMathyzin" target="_blank" class="icon-link">
+        <img class="icon" src="https://cdn.discordapp.com/attachments/1119715186073411705/1122872840614580344/youtube.png" alt="YouTube">
+      </a>
+      <a href="https://discord.gg/6EF7khuct3" target="_blank" class="icon-link">
+        <img class="icon" src="https://media.discordapp.net/attachments/1119715186073411705/1122872863704219710/discord.png" alt="Discord">
+      </a>
+      <a href="https://knifebay.lojavirtualnuvem.com.br/" target="_blank" class="icon-link">
+        <img class="icon knifebay-img" src="https://media.discordapp.net/attachments/1119715186073411705/1122878604007714816/knifeBay.png" alt="KnifeBay">
+      </a>
+    </div>
+  </div>
+  <div class="content">
+    <div class="black-box">
+      <p>
+        O Grupo aMathyzin é uma união de youtubers, servidores, comunidades e sites com o objetivo de formar o MAIOR bloco colaborativo na sub comunidade de otimização. Nosso intuito é fornecer otimizações, arquivos mais leves, isos modificadas do Windows mais leves e outras coisas que podem ajudar a melhorar o desempenho do seu PC fraco, sempre visando sua satisfação e comodidade. O Grupo aMathyzin é um grupo aberto, mas foca especificamente na comunidade de otimização no geral. Todos os Mini-Youtubers, Servidores interessados e comunidades podem entrar, desde que estejam nos requisitos. (Ao clicar no texto estejam com requisitos, destaca com um brilho a parte do texto que diz quais são os requisitos para entrar no Grupo aMathyzin)
+      </p>
+      <p>
+        Atualmente, os membros do grupo aMathyzin são:
+        <br>
+        <a href="https://youtube.com/@amathyzin" target="_blank" style="color: white;">aMathyzin</a>
+        <br>
+        <a href="https://discord.gg/aYmYzMw6KE" target="_blank" style="color: white;">Turbo team</a>
+      </p>
+      <p>
+        Requisitos para entrar no Grupo aMathyzin como youtuber:
+        <br>
+        - Ser maior de 13 anos
+        <br>
+        - Postar vídeos com frequência
+        <br>
+        - Ter mais de 80 inscritos
+        <br>
+        - Ter um bom conteúdo
+      </p>
+      <p>
+        Benefícios:
+        <br>
+        - Iremos fazer suas thumbs
+        <br>
+        - Iremos fornecer ideias de vídeo e arquivos para você gravar
+        <br>
+        - Iremos te fornecer um programa editor profissional de graça
+        <br>
+        - Iremos te dar dicas sobre mixagem de áudio e outros temas na edição
+        <br>
+        - Iremos te ajudar com a divulgação do seu conteúdo.
+      </p>
+      <p>
+        Requisitos para entrar com servidor:
+        <br>
+        - Ter no mínimo 350 membros
+        <br>
+        - Não possuir conteúdo NSFW
+        <br>
+        - Não divulgar conteúdo malicioso ou malware
+        <br>
+        - Passar por avaliação de administrador ou do próprio aMathyzin antes de entrar.
+      </p>
+      <p>
+        Benefícios para servidor:
+        <br>
+        - Melhor gerenciamento e dicas para como melhorar e engajar seu servidor
+        <br>
+        - Divulgação gratuita
+        <br>
+        - Programa de parcerias e colaboração de conteúdo.
+      </p>
+      <p>
+        Caso você queira entrar no grupo aMathyzin, entre em contato com @amathyzin no servidor do Discord aMathyzin, ou entre em contato através do email amathyzin@amathyzin.tech.
+      </p>
+    </div>
+  </div>
+  <div class="copyright-bar">
+    © Copyright aMathyzin 2023. Todos os direitos reservados.
+  </div>
+  <audio id="myaudio">
+    <source src="https://cdn.discordapp.com/attachments/1119715186073411705/1143370347228438678/2_Minute_Timer_Lofi_320_kbps.mp3" type="audio/mp3">
+  </audio>
+  <script>
+    const audio = document.getElementById('myaudio');
+    const audioCheckbox = document.getElementById('audio-checkbox');
+
+    audioCheckbox.addEventListener('change', () => {
+      if (audioCheckbox.checked) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(function () {
+        const loaderWrapper = document.querySelector(".loader-wrapper");
+        loaderWrapper.style.display = "none";
+      }, 2000);
+    });
+  </script>
+  <script>
+    // Verificar se é um dispositivo móvel
+    if (window.innerWidth <= 767) {
+      const iframe = document.getElementById("video-iframe");
+      iframe.width = "100%"; // Use toda a largura disponível
+      iframe.height = "auto"; // Altura automática proporcional à largura
+    }
+  </script>
+</body>
+</html>
