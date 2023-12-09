@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -21,9 +21,8 @@
     </style>
 </head>
 <body>
-    <video id="videoContainer" autoplay loop muted>
-        <!-- Substitua "wallpaper.mp4" pelo nome do seu arquivo MP4 -->
-       <source src="https://wallpapersection.amathyzinplus.repl.co/wallpaper.mp4" type="video/mp4">
+    <video id="videoContainer" autoplay loop muted playsinline>
+        <source src="https://wallpapersection.amathyzinplus.repl.co/wallpaper.mp4" type="video/mp4">
         Seu navegador não suporta o elemento de vídeo.
     </video>
 
@@ -34,11 +33,6 @@
             videoContainer.addEventListener('ended', function () {
                 videoContainer.play(); // Reinicia o vídeo quando termina
             });
-
-            // Carregar nomes de arquivos MP4 da pasta "videos"
-            // Este exemplo assume que há apenas um arquivo MP4 na pasta
-            // Se houver vários, você precisará ajustar a lógica de seleção
-            videoContainer.src = 'wallpaper.mp4'; // Substitua pelo nome do seu arquivo MP4
         });
     </script>
 </body>
