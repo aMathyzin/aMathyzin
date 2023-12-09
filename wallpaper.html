@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,7 @@
         body {
             margin: 0;
             overflow: hidden;
+            font-family: 'Arial', sans-serif;
         }
 
         #videoContainer {
@@ -18,6 +19,49 @@
             height: 100%;
             object-fit: cover;
         }
+
+        #overlay {
+            position: fixed;
+            top: 50%;
+            right: 10%;
+            transform: translateY(-50%);
+            color: #fff;
+            text-align: right;
+            font-size: 1.5em; /* Tamanho do texto principal */
+        }
+
+        #time,
+        #date {
+            opacity: 0.8;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        #time:hover,
+        #date:hover {
+            opacity: 1;
+        }
+
+        #time {
+            font-size: 3em; /* Tamanho do texto da hora */
+            margin-bottom: 10px;
+            animation: fadeInOut 5s infinite alternate; /* Animação de fade in/out */
+        }
+
+        #date {
+            font-size: 2em; /* Tamanho do texto da data */
+            animation: shine 5s infinite alternate; /* Animação de brilho */
+        }
+
+        @keyframes fadeInOut {
+            0% { opacity: 0.8; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes shine {
+            0% { opacity: 0.8; }
+            50% { opacity: 1; text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); }
+            100% { opacity: 0.8; }
+        }
     </style>
 </head>
 <body>
@@ -26,13 +70,36 @@
         Seu navegador não suporta o elemento de vídeo.
     </video>
 
+    <div id="overlay">
+        <div id="time"></div>
+        <div id="date"></div>
+    </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const videoContainer = document.getElementById('videoContainer');
+            const timeElement = document.getElementById('time');
+            const dateElement = document.getElementById('date');
 
             videoContainer.addEventListener('ended', function () {
                 videoContainer.play(); // Reinicia o vídeo quando termina
             });
+
+            function updateDateTime() {
+                const now = new Date();
+                const options = { hour: '2-digit', minute: '2-digit', hour12: true };
+                const timeString = now.toLocaleTimeString('en-US', options);
+
+                const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                const dateString = now.toLocaleDateString('pt-BR', dateOptions);
+
+                timeElement.textContent = timeString;
+                dateElement.textContent = dateString;
+            }
+
+            // Atualizar data e hora a cada segundo
+            setInterval(updateDateTime, 1000);
+            updateDateTime(); // Atualizar imediatamente após o carregamento da página
         });
     </script>
 </body>
