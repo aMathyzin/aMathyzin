@@ -1,0 +1,45 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallpaper Animado</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #videoContainer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <video id="videoContainer" autoplay loop muted>
+        <!-- Substitua "wallpaper.mp4" pelo nome do seu arquivo MP4 -->
+       <source src="https://wallpapersection.amathyzinplus.repl.co/wallpaper.mp4" type="video/mp4">
+        Seu navegador não suporta o elemento de vídeo.
+    </video>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const videoContainer = document.getElementById('videoContainer');
+
+            videoContainer.addEventListener('ended', function () {
+                videoContainer.play(); // Reinicia o vídeo quando termina
+            });
+
+            // Carregar nomes de arquivos MP4 da pasta "videos"
+            // Este exemplo assume que há apenas um arquivo MP4 na pasta
+            // Se houver vários, você precisará ajustar a lógica de seleção
+            videoContainer.src = 'wallpaper.mp4'; // Substitua pelo nome do seu arquivo MP4
+        });
+    </script>
+</body>
+</html>
