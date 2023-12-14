@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,40 +11,87 @@
   <meta property="og:url" content="https://amathyzin.tech/">
   <meta property="og:type" content="website">
   <link rel="stylesheet" type="text/css" href="styles.css">
-  <iframe src="grupo" style="display: none;"></iframe>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .sidebar {
+      width: 200px;
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #fff;
+      display: block;
+      padding: 10px 0;
+      transition: background 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #555;
+    }
+
+    .content {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .content iframe {
+      width: 100%;
+      height: 500px;
+    }
+
+    .highlight-button {
+      display: block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .highlight-button:hover {
+      background-color: #2980b9;
+    }
+
+    .copyright-bar {
+      margin-top: 20px;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-  <div class="loader-wrapper">
-    <div class="loader"></div>
-  </div>
-  <div class="wrapper">
-    <div class="navbar">
-      <div class="logo-container">
-        <img class="icon" src="https://cdn.discordapp.com/attachments/841874572118327326/1125115918486355968/channels4_profile.jpg" alt="aMathyzin">
-        <span class="logo-text">aMathyzin</span>
-      </div>
-      <div class="switch-container">
-        <label class="switch">
-          <input type="checkbox" id="audio-checkbox">
-          <span class="slider"></span>
-        </label>
-      </div>
-    </div>
+  <div class="container">
     <div class="sidebar">
-      <div class="sidebar-item">
-        <span class="arrow" id="downloads-arrow">&#9654;</span>
-        <span class="sidebar-title" id="downloads-title">Downloads</span>
-        <div class="sidebar-content" id="downloads-content">
-          <!-- Conteúdo da aba Downloads aqui -->
-          <a href="downloads">Ir para página de downloads</a>
-        </div>
-      </div>
-      <!-- Adicione mais itens de barra lateral conforme necessário -->
+      <h2>Menu</h2>
+      <a href="#">Opção 1</a>
+      <a href="#">Opção 2</a>
+      <a href="#">Opção 3</a>
+      <a href="downloads" class="highlight-button">Downloads</a>
     </div>
     <div class="content">
+      <div class="loader-wrapper">
+        <div class="loader"></div>
+      </div>
       <iframe width="800" height="500" src="https://www.youtube.com/embed/VADHdVQGWB4" frameborder="0" allowfullscreen></iframe>
       <br>
-      <a href="downloads" class="highlight-button">Ir para página de downloads</a>
+      <!-- Removido o botão "Ir para página de downloads" -->
     </div>
   </div>
   <div class="copyright-bar">
@@ -71,14 +118,6 @@
         const loaderWrapper = document.querySelector(".loader-wrapper");
         loaderWrapper.style.display = "none";
       }, 2000);
-    });
-  </script>
-  <script>
-    const downloadsArrow = document.getElementById('downloads-arrow');
-    const downloadsContent = document.getElementById('downloads-content');
-
-    downloadsArrow.addEventListener('click', () => {
-      downloadsContent.classList.toggle('show');
     });
   </script>
 </body>
