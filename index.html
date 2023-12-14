@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,41 +11,41 @@
   <meta property="og:url" content="https://amathyzin.tech/">
   <meta property="og:type" content="website">
   <link rel="stylesheet" type="text/css" href="styles.css">
-<iframe src="grupo" style="display: none;"></iframe>
+  <iframe src="grupo" style="display: none;"></iframe>
 </head>
 <body>
   <div class="loader-wrapper">
     <div class="loader"></div>
   </div>
-  <div class="navbar">
-    <div class="left">
-      <span class="logo">
+  <div class="wrapper">
+    <div class="navbar">
+      <div class="logo-container">
         <img class="icon" src="https://cdn.discordapp.com/attachments/841874572118327326/1125115918486355968/channels4_profile.jpg" alt="aMathyzin">
-        aMathyzin
-        <div class="switch-container">
-          <label class="switch">
-            <input type="checkbox" id="audio-checkbox">
-            <span class="slider"></span>
-          </label>
+        <span class="logo-text">aMathyzin</span>
+      </div>
+      <div class="switch-container">
+        <label class="switch">
+          <input type="checkbox" id="audio-checkbox">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="sidebar-item">
+        <span class="arrow" id="downloads-arrow">&#9654;</span>
+        <span class="sidebar-title" id="downloads-title">Downloads</span>
+        <div class="sidebar-content" id="downloads-content">
+          <!-- Conteúdo da aba Downloads aqui -->
+          <a href="downloads">Ir para página de downloads</a>
         </div>
-      </span>
+      </div>
+      <!-- Adicione mais itens de barra lateral conforme necessário -->
     </div>
-    <div class="right">
-      <a href="https://www.youtube.com/@aMathyzin" target="_blank" class="icon-link">
-        <img class="icon" src="https://cdn.discordapp.com/attachments/1119715186073411705/1122872840614580344/youtube.png" alt="YouTube">
-      </a>
-      <a href="https://discord.gg/6EF7khuct3" target="_blank" class="icon-link">
-        <img class="icon" src="https://media.discordapp.net/attachments/1119715186073411705/1122872863704219710/discord.png" alt="Discord">
-      </a>
-      <a href="https://knifebay.lojavirtualnuvem.com.br/" target="_blank" class="icon-link">
-        <img class="icon knifebay-img" src="https://media.discordapp.net/attachments/1119715186073411705/1122878604007714816/knifeBay.png" alt="KnifeBay">
-      </a>
+    <div class="content">
+      <iframe width="800" height="500" src="https://www.youtube.com/embed/VADHdVQGWB4" frameborder="0" allowfullscreen></iframe>
+      <br>
+      <a href="downloads" class="highlight-button">Ir para página de downloads</a>
     </div>
-  </div>
-  <div class="content">
-    <iframe width="800" height="500" src="https://www.youtube.com/embed/VADHdVQGWB4" frameborder="0" allowfullscreen></iframe>
-    <br>
-    <a href="downloads" class="highlight-button">Ir para página de downloads</a>
   </div>
   <div class="copyright-bar">
     © Copyright aMathyzin 2023. Todos os direitos reservados.
@@ -74,12 +74,12 @@
     });
   </script>
   <script>
-    // Verificar se é um dispositivo móvel
-    if (window.innerWidth <= 767) {
-      const iframe = document.getElementById("video-iframe");
-      iframe.width = "100%"; // Use toda a largura disponível
-      iframe.height = "auto"; // Altura automática proporcional à largura
-    }
+    const downloadsArrow = document.getElementById('downloads-arrow');
+    const downloadsContent = document.getElementById('downloads-content');
+
+    downloadsArrow.addEventListener('click', () => {
+      downloadsContent.classList.toggle('show');
+    });
   </script>
 </body>
 </html>
