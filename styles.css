@@ -1,3 +1,52 @@
+/* Barra Lateral */
+.sidebar {
+  width: 200px;
+  background-color: #2F063A;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.sidebar-item {
+  padding: 10px;
+  cursor: pointer;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-item:hover {
+  background-color: #4A0E5B;
+}
+
+.arrow {
+  margin-right: 10px;
+}
+
+.sidebar-title {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.sidebar-content {
+  display: none;
+  flex-direction: column;
+  margin-left: 10px;
+  color: #fff;
+}
+
+.sidebar-content a {
+  color: #fff;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+.sidebar-content.show {
+  display: flex;
+}
+
+
 /* Loader */
 .loader-wrapper {
   position: fixed;
