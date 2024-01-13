@@ -11,7 +11,13 @@
   <meta property="og:url" content="https://amathyzin.tech/">
   <meta property="og:type" content="website">
   <link rel="stylesheet" type="text/css" href="styles.css">
-<iframe src="grupo" style="display: none;"></iframe>
+  <style>
+    /* Adicionei um estilo para tornar o vídeo responsivo */
+    #video-iframe {
+      width: 100%;
+      height: auto;
+    }
+  </style>
 </head>
 <body>
   <div class="loader-wrapper">
@@ -37,9 +43,10 @@
       <a href="https://discord.gg/6EF7khuct3" target="_blank" class="icon-link">
         <img class="icon" src="https://media.discordapp.net/attachments/1119715186073411705/1122872863704219710/discord.png" alt="Discord">
       </a>
+    </div>
   </div>
   <div class="content">
-    <iframe width="800" height="500" src="https://www.youtube.com/embed/VADHdVQGWB4" frameborder="0" allowfullscreen></iframe>
+    <iframe id="video-iframe" src="https://www.youtube.com/embed/VADHdVQGWB4" frameborder="0" allowfullscreen></iframe>
     <br>
     <a href="downloads" class="highlight-button">Ir para página de downloads</a>
   </div>
