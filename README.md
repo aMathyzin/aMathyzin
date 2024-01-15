@@ -31,7 +31,7 @@ Este projeto é licenciado sob os termos da [Licença MIT](LICENSE).
 
 ## Direitos Autorais
 
-© Copyright aMathyzin 2023. Todos os direitos reservados.
+© Copyright aMathyzin 2024. Todos os direitos reservados.
 
 ---
 
