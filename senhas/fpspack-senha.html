@@ -13,52 +13,7 @@
   <link rel="stylesheet" type="text/css" href="../styles.css">
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f0f0f0;
-    }
-
-    .navbar, .content, .suggestions, .highlight-button, .suggestion-button, .pulsating-text {
-      text-align: center;
-    }
-
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #333;
-      color: white;
-      padding: 10px;
-    }
-
-    .content, .suggestions {
-      padding: 20px;
-    }
-
-    .highlight-button, .suggestion-button {
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-      display: inline-block;
-      color: white;
-      margin-top: 20px;
-    }
-
-    .highlight-button {
-      background-color: #007bff;
-    }
-
-    .suggestion-button {
-      background-color: #28a745;
-    }
-
-    .suggestions img {
-      width: 50px;
-      height: 50px;
-    }
-
+    /* Estilos para o texto pulsante */
     @keyframes pulse {
       0% {
         font-size: 36px;
@@ -73,6 +28,8 @@
 
     .pulsating-text {
       animation: pulse 1s infinite;
+      text-align: center;
+      font-size: 36px;
       margin-top: 100px;
     }
   </style>
@@ -112,12 +69,6 @@
     </div>
     <br>
     <a href="downloads" class="highlight-button">Voltar para downloads</a>
-  </div>
-    <div class="suggestions">
-    <h2>Você também pode gostar:</h2>
-    <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="Ícone de sugestão">
-    <p>Explore mais conteúdos exclusivos para aprimorar sua experiência.</p>
-    <a href="#" class="suggestion-button">Saber Mais</a>
   </div>
   <div class="copyright-bar">
     © Copyright aMathyzin 2023. Todos os direitos reservados.
