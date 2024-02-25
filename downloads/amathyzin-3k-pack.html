@@ -5,11 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Mobirise v5.8.14, mobirise.com">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" href="../icon.png" type="image/x-icon">
   <meta name="description" content="Deseja otimizar seu computador? Aqui é o lugar certo pra você! Segurança e eficiência garantidas!">
   <title>aMathyzin - Início</title>
-  <link rel="icon" href="./icon.png" type="image/x-icon">
+  <link rel="icon" href="../icon.png" type="image/x-icon">
   <meta property="og:title" content="aMathyzin - Home">
   <meta property="og:description" content="⚡Downloads e Senhas Disponíveis⚡">
   <meta property="og:image" content="../icon.png">
@@ -17,9 +16,22 @@
   <meta property="og:type" content="website">
   <link rel="stylesheet" type="text/css" href="../styles.css">
   <style>
-    .download-section {
-      text-align: center;
+    .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
       padding: 20px;
+    }
+    .video-tutorial {
+      flex: 1;
+      padding-right: 20px;
+    }
+    .download-section {
+      flex: 1;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 5px;
+      text-align: center;
     }
     .download-button {
       background-color: #4CAF50;
@@ -34,6 +46,20 @@
     }
     .download-button:hover {
       background-color: #45a049;
+    }
+    .file-icon {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+      }
+      .video-tutorial, .download-section {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 20px;
+      }
     }
   </style>
 </head>
@@ -64,14 +90,16 @@
     </div>
   </div>
   <div class="content">
-    <!-- Substituído o vídeo pelo download -->
+    <div class="video-tutorial">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/VADHdVQGWB4" frameborder="0" allowfullscreen></iframe>
+    </div>
     <div class="download-section">
+      <div class="file-icon">&#128190;</div> <!-- Example icon -->
       <h2>Download do Arquivo</h2>
       <p>ArquivoExemplo.zip - 2.5 MB</p>
+      <p>Descrição adicional sobre o arquivo, o que ele contém, instruções especiais, etc.</p>
       <a href="URL_DO_ARQUIVO_PARA_DOWNLOAD" class="download-button">Download</a>
     </div>
-    <br>
-    <a href="downloads" class="highlight-button">Ir para página de downloads</a>
   </div>
   <div style="height: 30px;"></div>
   <div class="copyright-bar">
@@ -102,9 +130,10 @@
   </script>
   <script>
     if (window.innerWidth <= 767) {
-      const iframe = document.getElementById("video-iframe");
-      iframe.width = "100%";
-      iframe.height = "auto";
+      .video-tutorial iframe, .download-section {
+        width: 100%;
+        height: auto;
+      }
     }
   </script>
 </body>
