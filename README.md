@@ -2,7 +2,7 @@
 
 Bem-vindo à página inicial do aMathyzin! Este é o repositório para nossa segunda página, onde disponibilizamos downloads e senhas.
 
-![aMathyzin Logo](https://media.discordapp.net/attachments/1119715186073411705/1134190559947407481/channels4_profile2.png)
+![aMathyzin Logo](./icon.png)
 
 ## Visão Geral
 
