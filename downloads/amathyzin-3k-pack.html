@@ -97,7 +97,7 @@
       <div class="file-icon">&#128190;</div> <!-- Example icon -->
       <h2>Download do Arquivo</h2>
       <p>aMathyzin 3k Pack.zip - 2.7 MB</p>
-      <p>Pack de Otimização especial dos 3.000 inscritos no canal aMathyzin! Pack focado em melhorar o desempenho geral do pc para jogos! Assista o tutorial para saber como utiliza-lo da melhor maneira</p>
+      <p>Pack de Otimização especial dos 3.000 inscritos no canal aMathyzin! Pack focado em melhorar o desempenho geral do pc para jogos! Assista o tutorial para saber como utiliza-lo da melhor maneira.</p>
       <a href="../arquivos/projeto3k.zip" class="download-button" download="aMathyzin 3k Pack.zip">Download</a>
     </div>
   </div>
@@ -119,22 +119,38 @@
         audio.pause();
       }
     });
-  </script>
-  <script>
+
     document.addEventListener("DOMContentLoaded", function () {
       setTimeout(function () {
         const loaderWrapper = document.querySelector(".loader-wrapper");
         loaderWrapper.style.display = "none";
       }, 2000);
     });
-  </script>
-  <script>
-    if (window.innerWidth <= 767) {
-      .video-tutorial iframe, .download-section {
-        width: 100%;
-        height: auto;
-      }
+
+    // Função para iniciar o download
+    function iniciarDownload(url) {
+      fetch(url)
+        .then(response => response.blob())
+        .then(blob => {
+          // Cria um URL para o Blob
+          const blobUrl = window.URL.createObjectURL(blob);
+          const link = document.createElement('a');
+          link.href = blobUrl;
+          link.download = 'aMathyzin 3k Pack.zip'; // Nome do arquivo para download
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          window.URL.revokeObjectURL(blobUrl); // Limpa o URL do Blob
+        })
+        .catch(e => console.error('Download falhou:', e));
     }
+
+    // Adiciona o evento de clique ao botão de download
+    document.querySelector('.download-button').addEventListener('click', function(e) {
+      e.preventDefault(); // Previne o comportamento padrão do link
+      const url = this.href; // Pega a URL do arquivo a ser baixado
+      iniciarDownload(url); // Inicia o download
+    });
   </script>
 </body>
 </html>
