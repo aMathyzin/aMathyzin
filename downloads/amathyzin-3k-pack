@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v5.8.14, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
+  <meta name="description" content="Deseja otimizar seu computador? Aqui é o lugar certo pra você! Segurança e eficiência garantidas!">
+  <title>aMathyzin - Início</title>
+  <link rel="icon" href="./icon.png" type="image/x-icon">
+  <meta property="og:title" content="aMathyzin - Home">
+  <meta property="og:description" content="⚡Downloads e Senhas Disponíveis⚡">
+  <meta property="og:image" content="./icon.png">
+  <meta property="og:url" content="https://amathyzin.tech/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    .download-section {
+      text-align: center;
+      padding: 20px;
+    }
+    .download-button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .download-button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="loader-wrapper">
+    <div class="loader"></div>
+  </div>
+  <div class="navbar">
+    <div class="left">
+      <span class="logo">
+        <img class="icon" src="https://amathyzin.tech/icon.png" alt="aMathyzin">
+        aMathyzin
+        <div class="switch-container">
+          <label class="switch">
+            <input type="checkbox" id="audio-checkbox">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </span>
+    </div>
+    <div class="right">
+      <a href="https://www.youtube.com/@aMathyzin" target="_blank" class="icon-link">
+        <img class="icon" src="./youtube.png" alt="YouTube">
+      </a>
+      <a href="https://amathyzin.tech/discord" target="_blank" class="icon-link">
+        <img class="icon" src="./discord.png" alt="Discord">
+      </a>
+    </div>
+  </div>
+  <div class="content">
+    <!-- Substituído o vídeo pelo download -->
+    <div class="download-section">
+      <h2>Download do Arquivo</h2>
+      <p>ArquivoExemplo.zip - 2.5 MB</p>
+      <a href="URL_DO_ARQUIVO_PARA_DOWNLOAD" class="download-button">Download</a>
+    </div>
+    <br>
+    <a href="downloads" class="highlight-button">Ir para página de downloads</a>
+  </div>
+  <div style="height: 30px;"></div>
+  <div class="copyright-bar">
+    © Copyright aMathyzin 2024. Todos os direitos reservados.
+  </div>
+  <audio id="myaudio">
+    <source src="https://cdn.discordapp.com/attachments/1119715186073411705/1143370347228438678/2_Minute_Timer_Lofi_320_kbps.mp3" type="audio/mp3">
+  </audio>
+  <script>
+    const audio = document.getElementById('myaudio');
+    const audioCheckbox = document.getElementById('audio-checkbox');
+
+    audioCheckbox.addEventListener('change', () => {
+      if (audioCheckbox.checked) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(function () {
+        const loaderWrapper = document.querySelector(".loader-wrapper");
+        loaderWrapper.style.display = "none";
+      }, 2000);
+    });
+  </script>
+  <script>
+    if (window.innerWidth <= 767) {
+      const iframe = document.getElementById("video-iframe");
+      iframe.width = "100%";
+      iframe.height = "auto";
+    }
+  </script>
+</body>
+</html>
