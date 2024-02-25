@@ -22,12 +22,11 @@
       align-items: flex-start;
       padding: 20px;
     }
-    .video-tutorial {
+    .video-tutorial, .download-section {
       flex: 1;
       padding-right: 20px;
     }
     .download-section {
-      flex: 1;
       border: 1px solid #ccc;
       padding: 20px;
       border-radius: 5px;
@@ -47,21 +46,20 @@
     .download-button:hover {
       background-color: #45a049;
     }
-    .file-icon {
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
-    .progress-container {
+    .progress-bar-container {
       width: 100%;
-      background-color: #ddd;
-    }
-    #progress-bar {
-      width: 0%;
+      background-color: #e0e0e0;
+      margin-top: 20px;
       height: 20px;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .progress-bar {
+      height: 100%;
       background-color: #4CAF50;
-      text-align: center;
-      color: white;
-      line-height: 20px;
+      width: 0%;
+      border-radius: 5px;
+      transition: width 0.4s ease;
     }
     @media (max-width: 768px) {
       .content {
@@ -106,13 +104,13 @@
       <iframe width="560" height="315" src="https://www.youtube.com/embed/VADHdVQGWB4" frameborder="0" allowfullscreen></iframe>
     </div>
     <div class="download-section">
-      <div class="file-icon">&#128190;</div>
+      <div class="file-icon">&#128190;</div> <!-- Example icon -->
       <h2>Download do Arquivo</h2>
       <p>aMathyzin 3k Pack.zip - 2.7 MB</p>
       <p>Pack de Otimização especial dos 3.000 inscritos no canal aMathyzin! Pack focado em melhorar o desempenho geral do pc para jogos! Assista o tutorial para saber como utiliza-lo da melhor maneira.</p>
-      <button id="download-button" class="download-button">Download</button>
-      <div class="progress-container">
-        <div id="progress-bar">0%</div>
+      <button onclick="iniciarDownload('../arquivos/projeto3k.zip')" class="download-button">Download</button>
+      <div class="progress-bar-container">
+        <div class="progress-bar" id="progress-bar"></div>
       </div>
     </div>
   </div>
@@ -126,6 +124,7 @@
   <script>
     const audio = document.getElementById('myaudio');
     const audioCheckbox = document.getElementById('audio-checkbox');
+
     audioCheckbox.addEventListener('change', () => {
       if (audioCheckbox.checked) {
         audio.play();
@@ -134,30 +133,45 @@
       }
     });
 
-    document.addEventListener("DOMContentLoaded", () => {
-      setTimeout(() => {
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(function () {
         const loaderWrapper = document.querySelector(".loader-wrapper");
         loaderWrapper.style.display = "none";
       }, 2000);
     });
 
-    document.getElementById('download-button').addEventListener('click', function(e) {
-      e.preventDefault();
-      const progressBar = document.getElementById('progress-bar');
-      let progress = 0; // Simula o progresso do download
-      const interval = setInterval(() => {
-        if (progress >= 100) {
-          clearInterval(interval);
-          progressBar.innerHTML = "Download Completo!";
-          // Aqui você pode adicionar o código para disponibilizar o arquivo para download
-          // como mostrado anteriormente ou redirecionar o usuário, etc.
-        } else {
-          progress += 10; // Incrementa o progresso
-          progressBar.style.width = progress + '%';
-          progressBar.innerHTML = progress + '%';
+    function iniciarDownload(url) {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", url, true);
+      xhr.responseType = "blob";
+
+      xhr.onprogress = function(event) {
+        if (event.lengthComputable) {
+          var percentComplete = (event.loaded / event.total) * 100;
+          document.getElementById('progress-bar').style.width = percentComplete + '%';
         }
-      }, 1000); // Atualiza o progresso a cada 1 segundo
-    });
+      };
+
+      xhr.onload = function(event) {
+        if (this.status === 200) {
+          var blob = new Blob([this.response], { type: 'application/octet-stream' });
+          var downloadUrl = URL.createObjectURL(blob);
+          var a = document.createElement("a");
+          a.href = downloadUrl;
+          a.download = "aMathyzin 3k Pack.zip";
+          document.body.appendChild(a);
+          a.click();
+          document.getElementById('progress-bar').style.width = '100%';
+          setTimeout(function() { URL.revokeObjectURL(downloadUrl); }, 100); // Cleanup
+        }
+      };
+
+      xhr.onerror = function() {
+        console.error("The download failed.");
+      };
+
+      xhr.send();
+    }
   </script>
 </body>
 </html>
