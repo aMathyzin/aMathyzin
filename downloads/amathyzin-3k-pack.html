@@ -32,7 +32,7 @@
       border-radius: 5px;
       text-align: center;
     }
-    .download-button {
+    .download-button, .password-button {
       background-color: #4CAF50;
       color: white;
       padding: 10px 20px;
@@ -42,8 +42,9 @@
       font-size: 18px;
       text-decoration: none;
       display: inline-block;
+      margin: 5px;
     }
-    .download-button:hover {
+    .download-button:hover, .password-button:hover {
       background-color: #45a049;
     }
     .progress-bar-container {
@@ -53,6 +54,7 @@
       height: 20px;
       border-radius: 5px;
       overflow: hidden;
+      position: relative;
     }
     .progress-bar {
       height: 100%;
@@ -60,6 +62,14 @@
       width: 0%;
       border-radius: 5px;
       transition: width 0.4s ease;
+      position: relative;
+    }
+    .progress-text {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-weight: bold;
     }
     @media (max-width: 768px) {
       .content {
@@ -101,6 +111,7 @@
   </div>
   <div class="content">
     <div class="video-tutorial">
+      <h2 style="text-align:center;">Tutorial</h2>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/zpEBXXaGayg" frameborder="0" allowfullscreen></iframe>
     </div>
     <div class="download-section">
@@ -109,8 +120,10 @@
       <p>aMathyzin 3k Pack.zip - 2.7 MB</p>
       <p>Pack de Otimização especial dos 3.000 inscritos no canal aMathyzin! Pack focado em melhorar o desempenho geral do pc para jogos! Assista o tutorial para saber como utiliza-lo da melhor maneira.</p>
       <button onclick="iniciarDownload('../arquivos/projeto3k.zip')" class="download-button">Download</button>
+      <button onclick="mostrarSenha()" class="password-button">Senha</button>
       <div class="progress-bar-container">
         <div class="progress-bar" id="progress-bar"></div>
+        <div class="progress-text" id="progress-text">0%</div>
       </div>
     </div>
   </div>
@@ -149,6 +162,7 @@
         if (event.lengthComputable) {
           var percentComplete = (event.loaded / event.total) * 100;
           document.getElementById('progress-bar').style.width = percentComplete + '%';
+          document.getElementById('progress-text').innerText = percentComplete.toFixed(0) + '%';
         }
       };
 
@@ -162,6 +176,7 @@
           document.body.appendChild(a);
           a.click();
           document.getElementById('progress-bar').style.width = '100%';
+          document.getElementById('progress-text').innerText = '100%';
           setTimeout(function() { URL.revokeObjectURL(downloadUrl); }, 100); // Cleanup
         }
       };
@@ -171,6 +186,11 @@
       };
 
       xhr.send();
+    }
+
+    function mostrarSenha() {
+      alert("Entre no servidor do Discord para pegar a senha!");
+      window.location.href = "https://amathyzin.tech/discord";
     }
   </script>
 </body>
