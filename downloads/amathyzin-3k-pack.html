@@ -121,7 +121,7 @@
       <h2>Download do Arquivo</h2>
       <p>aMathyzin 3k Pack.zip - 2.7 MB</p>
       <p>Pack de Otimização especial dos 3.000 inscritos no canal aMathyzin! Pack focado em melhorar o desempenho geral do pc para jogos! Assista o tutorial para saber como utiliza-lo da melhor maneira.</p>
-      <button onclick="iniciarDownload('../arquivos/project3k.zip')" class="download-button">Download</button>
+      <button onclick="iniciarDownload('../arquivos/aMathyzin 3k Pack.zip', 'aMathyzin 3k Pack.zip')" class="download-button">Download</button>
       <button onclick="mostrarSenha()" class="password-button">Senha</button>
       <div class="progress-bar-container">
         <div class="progress-bar" id="progress-bar"></div>
@@ -151,7 +151,7 @@
       }
     });
 
-    function iniciarDownload(url) {
+    function iniciarDownload(url, nomeArquivo) {
       var xhr = new XMLHttpRequest();
       xhr.open('GET', url, true);
       xhr.responseType = 'blob';
@@ -172,13 +172,21 @@
       };
 
       xhr.onload = function() {
-        // Ao completar o download, redireciona para o URL do arquivo
+        // Ao completar o download, redireciona para o URL do arquivo com o nome especificado
         if (xhr.status === 200) {
           document.getElementById('progress-bar').style.width = '100%';
           document.getElementById('progress-text').innerText = '100%';
           setTimeout(function() {
-            window.location.href = URL.createObjectURL(xhr.response);
-          }, 1000); // Adiciona um pequeno atraso antes de redirecionar (1 segundo)
+            var blob = new Blob([xhr.response], { type: 'application/octet-stream' });
+            var url = URL.createObjectURL(blob);
+            var a = document.createElement('a');
+            a.href = url;
+            a.download = nomeArquivo;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+          }, 1000); // Adiciona um pequeno atraso antes de iniciar o download (1 segundo)
         }
       };
 
