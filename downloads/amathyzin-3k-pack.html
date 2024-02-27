@@ -72,6 +72,8 @@
       text-align: center;
       color: white;
       font-weight: bold;
+      top: 50%;
+      transform: translateY(-50%);
     }
     @media (max-width: 768px) {
       .content {
@@ -181,16 +183,16 @@
         title: 'Senha do Pack',
         text: 'Entre no servidor do Discord para pegar a senha!',
         icon: 'info',
-        showCancelButton: true,
+        showCancelButton: true, // Mostra o botão cancelar
         confirmButtonText: 'Entrar',
-        cancelButtonText: 'Cancelar',
-        footer: 'ou <a href="https://teste.teste">Pegar via Encurtador</a>',
-        background: '#333',
-        color: '#FFF',
-        backdrop: 'rgba(0,0,0,0.5)'
+        cancelButtonText: 'Cancelar', // Texto do botão cancelar
+        footer: 'ou <a href="https://teste.teste">Pegar via Encurtador</a>', // Adiciona opção do encurtador no footer
+        background: '#333', // Define a cor de fundo do popup para uma cor escura
+        color: '#FFF', // Define a cor do texto para branco
+        backdrop: 'rgba(0,0,0,0.5)' // Define a cor e opacidade do fundo da página
       }).then((result) => {
         if (result.isConfirmed) {
-          window.location.href = 'https://amathyzin.tech/discord';
+          window.location.href = 'https://amathyzin.tech/discord'; // Redireciona para o Discord ao clicar em "OK"
         }
       });
     }
