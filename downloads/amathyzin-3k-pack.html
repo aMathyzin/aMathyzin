@@ -15,6 +15,8 @@
   <meta property="og:url" content="https://amathyzin.tech/">
   <meta property="og:type" content="website">
   <link rel="stylesheet" type="text/css" href="../styles.css">
+  <!-- Inclusão do SweetAlert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <style>
     .content {
       display: flex;
@@ -134,137 +136,47 @@
   <audio id="myaudio">
     <source src="../lofi.mp3" type="audio/mp3">
   </audio>
-  <script>
-    const audio = document.getElementById('myaudio');
-    const audioCheckbox = document.getElementById('audio-checkbox');
 
-    audioCheckbox.addEventListener('change', () => {
-      if (audioCheckbox.checked) {
+  <script>
+    window.onload = () => {
+      document.querySelector('.loader-wrapper').style.display = 'none';
+    }
+
+    document.getElementById('audio-checkbox').addEventListener('change', function() {
+      var audio = document.getElementById('myaudio');
+      if (this.checked) {
         audio.play();
       } else {
         audio.pause();
       }
     });
 
-    document.addEventListener("DOMContentLoaded", function () {
-      setTimeout(function () {
-        const loaderWrapper = document.querySelector(".loader-wrapper");
-        loaderWrapper.style.display = "none";
-      }, 2000);
-    });
-
     function iniciarDownload(url) {
-      var xhr = new XMLHttpRequest();
-      xhr.open("GET", url, true);
-      xhr.responseType = "blob";
-
-      xhr.onprogress = function(event) {
-        if (event.lengthComputable) {
-          var percentComplete = (event.loaded / event.total) * 100;
-          document.getElementById('progress-bar').style.width = percentComplete + '%';
-          document.getElementById('progress-text').innerText = Math.round(percentComplete) + '%';
+      var progressBar = document.getElementById('progress-bar');
+      var progressText = document.getElementById('progress-text');
+      var width = 1;
+      var id = setInterval(frame, 20);
+      function frame() {
+        if (width >= 100) {
+          clearInterval(id);
+          window.location.href = url;
+        } else {
+          width++;
+          progressBar.style.width = width + '%';
+          progressText.innerHTML = width + '%';
         }
-      };
-
-      xhr.onload = function () {
-        if (this.status === 200) {
-          var a = document.createElement('a');
-          a.href = window.URL.createObjectURL(this.response);
-          a.download = url.split('/').pop();
-          document.body.appendChild(a);
-          a.click();
-          window.URL.revokeObjectURL(a.href);
-          document.body.removeChild(a);
-        }
-      };
-
-      xhr.send();
+      }
     }
 
     function mostrarSenha() {
-      var modal = document.getElementById("senhaModal");
-      modal.style.display = "block";
-
-      var span = document.getElementsByClassName("close")[0];
-      var agoraNao = document.querySelector(".agora-nao");
-
-      span.onclick = function() {
-        modal.style.display = "none";
-      }
-
-      agoraNao.onclick = function() {
-        modal.style.display = "none";
-      }
-
-      window.onclick = function(event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-      }
+      Swal.fire({
+        title: 'Senha Necessária!',
+        text: 'Entre no servidor do Discord para pegar a senha!',
+        icon: 'info',
+        confirmButtonText: 'OK',
+        footer: '<a href="https://amathyzin.tech/discord">Entrar no Discord</a>'
+      });
     }
   </script>
-  <div id="senhaModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <p>Entre no servidor do Discord para pegar a senha!</p>
-      <div class="modal-buttons">
-        <a href="https://amathyzin.tech/discord" target="_blank" class="modal-button">OK</a>
-        <button class="modal-button agora-nao">Agora Não</button>
-      </div>
-    </div>
-  </div>
-  <style>
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgb(0,0,0);
-      background-color: rgba(0,0,0,0.4);
-    }
-    .modal-content {
-      background-color: #fefefe;
-      margin: 15% auto;
-      padding: 20px;
-      border: 1px solid #888;
-      width: 80%;
-    }
-    .close {
-      color: #aaa;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-    }
-    .close:hover,
-    .close:focus {
-      color: black;
-      text-decoration: none;
-      cursor: pointer;
-    }
-    .modal-buttons {
-      text-align: center;
-    }
-    .modal-button {
-      padding: 10px 20px;
-      margin: 10px;
-      border-radius: 5px;
-      border: none;
-      cursor: pointer;
-    }
-    .agora-nao {
-      background-color: #f44336;
-      color: white;
-    }
-    .modal-button[href] { /* Estiliza o botão de OK especificamente */
-      background-color: #4CAF50;
-      color: white;
-      text-decoration: none;
-      display: inline-block;
-    }
-  </style>
 </body>
 </html>
