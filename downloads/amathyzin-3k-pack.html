@@ -186,6 +186,14 @@
             a.click();
             document.body.removeChild(a);
             URL.revokeObjectURL(url);
+            
+            // Exibe o popup informando que o download foi concluído
+            Swal.fire({
+              title: 'Download Concluído!',
+              text: 'Seu arquivo foi baixado com sucesso.',
+              icon: 'success',
+              confirmButtonText: 'OK'
+            });
           }, 1000); // Adiciona um pequeno atraso antes de iniciar o download (1 segundo)
         }
       };
