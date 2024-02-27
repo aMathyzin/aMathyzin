@@ -159,15 +159,7 @@
       function frame() {
         if (width >= 100) {
           clearInterval(id);
-          // Exibir popup de download concluído
-          Swal.fire({
-            title: 'Download Concluído!',
-            text: 'Seu arquivo foi baixado com sucesso.',
-            icon: 'success',
-            background: '#333',
-            color: '#FFF',
-            backdrop: 'rgba(0,0,0,0.5)'
-          });
+          window.location.href = url;
         } else {
           width++;
           progressBar.style.width = width + '%';
@@ -176,24 +168,24 @@
       }
     }
 
-    function mostrarSenha() {
-      Swal.fire({
-        title: 'Senha do Pack',
-        text: 'Entre no servidor do Discord para pegar a senha!',
-        icon: 'info',
-        showCancelButton: true, // Mostra o botão cancelar
-        confirmButtonText: 'Entrar',
-        cancelButtonText: 'Cancelar', // Texto do botão cancelar
-        footer: 'ou <a href="https://teste.teste">Pegar via Encurtador</a>', // Adiciona opção do encurtador no footer
-        background: '#333', // Define a cor de fundo do popup para uma cor escura
-        color: '#FFF', // Define a cor do texto para branco
-        backdrop: 'rgba(0,0,0,0.5)' // Define a cor e opacidade do fundo da página
-      }).then((result) => {
-        if (result.isConfirmed) {
-          window.location.href = 'https://amathyzin.tech/discord'; // Redireciona para o Discord ao clicar em "OK"
-        }
-      });
+function mostrarSenha() {
+  Swal.fire({
+    title: 'Senha do Pack',
+    text: 'Entre no servidor do Discord para pegar a senha!',
+    icon: 'info',
+    showCancelButton: true, // Mostra o botão cancelar
+    confirmButtonText: 'Entrar',
+    cancelButtonText: 'Cancelar', // Texto do botão cancelar
+    footer: 'ou <a href="https://teste.teste">Pegar via Encurtador</a>', // Adiciona opção do encurtador no footer
+    background: '#333', // Define a cor de fundo do popup para uma cor escura
+    color: '#FFF', // Define a cor do texto para branco
+    backdrop: 'rgba(0,0,0,0.5)' // Define a cor e opacidade do fundo da página
+  }).then((result) => {
+    if (result.isConfirmed) {
+      window.location.href = 'https://amathyzin.tech/discord'; // Redireciona para o Discord ao clicar em "OK"
     }
+  });
+}
   </script>
 </body>
 </html>
