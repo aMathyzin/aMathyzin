@@ -72,11 +72,17 @@
       text-align: center;
       color: white;
       font-weight: bold;
+      top: 50%;
+      transform: translateY(-50%);
     }
-    .file-size {
+    .progress-indicator {
+      position: absolute;
+      top: -25px;
+      left: 0;
+      right: 0;
+      text-align: center;
       color: #888;
       font-size: 14px;
-      margin-top: 5px;
     }
     @media (max-width: 768px) {
       .content {
@@ -124,14 +130,14 @@
     <div class="download-section">
       <div class="file-icon">&#128190;</div> <!-- Example icon -->
       <h2>Download do Arquivo</h2>
-      <p class="file-size" id="file-size">0 MB de 2.7 MB</p>
-      <p>Pack de Otimização especial dos 3.000 inscritos no canal aMathyzin! Pack focado em melhorar o desempenho geral do pc para jogos! Assista o tutorial para saber como utiliza-lo da melhor maneira.</p>
-      <button onclick="iniciarDownload('../arquivos/aMathyzin 3k Pack.zip', 'aMathyzin 3k Pack.zip')" class="download-button">Download</button>
-      <button onclick="mostrarSenha()" class="password-button">Senha</button>
+      <div class="progress-indicator" id="progress-indicator">0 MB de 2.7 MB</div>
       <div class="progress-bar-container">
         <div class="progress-bar" id="progress-bar"></div>
         <div class="progress-text" id="progress-text">0%</div>
       </div>
+      <p>Pack de Otimização especial dos 3.000 inscritos no canal aMathyzin! Pack focado em melhorar o desempenho geral do pc para jogos! Assista o tutorial para saber como utiliza-lo da melhor maneira.</p>
+      <button onclick="iniciarDownload('../arquivos/aMathyzin 3k Pack.zip', 'aMathyzin 3k Pack.zip')" class="download-button">Download</button>
+      <button onclick="mostrarSenha()" class="password-button">Senha</button>
     </div>
   </div>
   <div style="height: 30px;"></div>
@@ -177,7 +183,7 @@
           // Calcula o tamanho do arquivo em MB e atualiza a exibição
           var totalSizeMB = (event.total / (1024 * 1024)).toFixed(1);
           var downloadedSizeMB = (event.loaded / (1024 * 1024)).toFixed(1);
-          document.getElementById('file-size').innerText = downloadedSizeMB + ' MB de ' + totalSizeMB + ' MB';
+          document.getElementById('progress-indicator').innerText = downloadedSizeMB + ' MB de ' + totalSizeMB + ' MB';
         }
       };
 
