@@ -72,8 +72,6 @@
       text-align: center;
       color: white;
       font-weight: bold;
-      top: 50%;
-      transform: translateY(-50%);
     }
     @media (max-width: 768px) {
       .content {
@@ -116,12 +114,14 @@
   <div class="content">
     <div class="video-tutorial">
       <h2 style="text-align:center;">Tutorial</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/zpEBXXdMIj8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/zpEBXXaGayg" frameborder="0" allowfullscreen></iframe>
     </div>
     <div class="download-section">
-      <h2>Download</h2>
-      <p>Clique no botão abaixo para iniciar o download do Pack:</p>
-      <button onclick="iniciarDownload('https://amathyzin.tech/download')" class="download-button">Iniciar Download</button>
+      <div class="file-icon">&#128190;</div> <!-- Example icon -->
+      <h2>Download do Arquivo</h2>
+      <p>aMathyzin 3k Pack.zip - 2.7 MB</p>
+      <p>Pack de Otimização especial dos 3.000 inscritos no canal aMathyzin! Pack focado em melhorar o desempenho geral do pc para jogos! Assista o tutorial para saber como utiliza-lo da melhor maneira.</p>
+      <button onclick="iniciarDownload('../arquivos/projeto3k.zip')" class="download-button">Download</button>
       <button onclick="mostrarSenha()" class="password-button">Senha</button>
       <div class="progress-bar-container">
         <div class="progress-bar" id="progress-bar"></div>
@@ -129,9 +129,14 @@
       </div>
     </div>
   </div>
-  <audio id="myaudio" loop>
-    <source src="../musica.mp3" type="audio/mpeg">
+  <div style="height: 30px;"></div>
+  <div class="copyright-bar">
+    © Copyright aMathyzin 2024. Todos os direitos reservados.
+  </div>
+  <audio id="myaudio">
+    <source src="../lofi.mp3" type="audio/mp3">
   </audio>
+
   <script>
     window.onload = () => {
       document.querySelector('.loader-wrapper').style.display = 'none';
@@ -154,28 +159,21 @@
       function frame() {
         if (width >= 100) {
           clearInterval(id);
-          progressText.innerHTML = "Download Concluído";
-          progressBar.style.width = '100%';
-          downloadConcluido(url);
+          // Exibir popup de download concluído
+          Swal.fire({
+            title: 'Download Concluído!',
+            text: 'Seu arquivo foi baixado com sucesso.',
+            icon: 'success',
+            background: '#333',
+            color: '#FFF',
+            backdrop: 'rgba(0,0,0,0.5)'
+          });
         } else {
           width++;
           progressBar.style.width = width + '%';
           progressText.innerHTML = width + '%';
         }
       }
-    }
-
-    function downloadConcluido(url) {
-      Swal.fire({
-        title: 'Download Concluído!',
-        text: 'Seu arquivo foi baixado com sucesso.',
-        icon: 'success',
-        confirmButtonText: 'Ok'
-      }).then((result) => {
-        if (result.isConfirmed) {
-          window.location.href = url;
-        }
-      });
     }
 
     function mostrarSenha() {
