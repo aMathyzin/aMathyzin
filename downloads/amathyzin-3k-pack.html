@@ -168,7 +168,7 @@
       }
     }
 
-   function mostrarSenha() {
+function mostrarSenha() {
   Swal.fire({
     title: 'Senha Necessária!',
     text: 'Entre no servidor do Discord para pegar a senha!',
@@ -177,13 +177,15 @@
     confirmButtonText: 'OK',
     cancelButtonText: 'Cancelar', // Texto do botão cancelar
     footer: 'ou <a href="https://teste.teste">Pegar via Encurtador</a>', // Adiciona opção do encurtador no footer
+    background: '#333', // Define a cor de fundo do popup para uma cor escura
+    color: '#FFF', // Define a cor do texto para branco
+    backdrop: 'rgba(0,0,0,0.5)' // Define a cor e opacidade do fundo da página
   }).then((result) => {
     if (result.isConfirmed) {
       window.location.href = 'https://amathyzin.tech/discord'; // Redireciona para o Discord ao clicar em "OK"
     }
   });
 }
-
   </script>
 </body>
 </html>
