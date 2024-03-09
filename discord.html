@@ -57,13 +57,12 @@
       white-space: nowrap;
       overflow: hidden;
       border-right: 1px solid #ffffff;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
       padding: 10px;
     }
 
     .text-animation p {
       margin: 0;
-      animation: typing 3s steps(40) 1s forwards;
+      animation: typing 3s steps(40) 1s forwards, blink-caret .75s step-end infinite;
       overflow: hidden;
     }
 
@@ -74,6 +73,11 @@
       to {
         width: 100%;
       }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #ffffff; }
     }
 
     .skip-button {
@@ -103,7 +107,7 @@
     </div>
   </div>
   <div class="text-animation">
-    <p>Estamos te redirecionando para o Discord</p>
+    <p> </p>
   </div>
   <button class="skip-button" onclick="skipRedirect()">
     <i class="fas fa-hand-point-right hand-icon"></i> Não foi redirecionado?
@@ -113,6 +117,10 @@
     function skipRedirect() {
       window.location.href = "https://discord.gg/eEgNnUST2z";
     }
+
+    setTimeout(function() {
+      document.querySelector('.text-animation p').textContent = 'Estamos te redirecionando para o Discord';
+    }, 1000);
 
     setTimeout(function() {
       skipRedirect();
