@@ -1,0 +1,2 @@
+minimal_optimizer.exe filter=lfs diff=lfs merge=lfs -text
+MinimalOptimizer.exe filter=lfs diff=lfs merge=lfs -text
