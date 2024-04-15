@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/imgs/grupo.png" type="image/x-icon">
+    <title>Projetos Recentes</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta property="og:title" content="Portifólio aMathyzin">
+    <meta property="og:description" content="Veja os projetos recentes de aMathyzin">
+    <meta property="og:image" content="/imgs/grupo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://amathyzin.tech/portifolio/portifólio">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Portifólio aMathyzin">
+    <meta property="twitter:description" content="Veja os projetos recentes de aMathyzin">
+    <meta property="twitter:image" content="/imgs/grupo.png">
+    <meta property="twitter:url" content="https://amathyzin.tech/portifolio/portifólio">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #000000, #767676);
+            color: #fff;
+        }
+
+        .top-bar {
+            background-color: #333;
+            padding: 2px;
+            text-align: center;
+            border-radius: 0 0 15px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .site-name {
+            display: flex;
+            align-items: center;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold; /* Fonte mais grossa */
+            transition: transform 0.3s ease; /* Transição ao passar o mouse */
+        }
+
+        .site-name:hover {
+            transform: scale(1.1); /* Aumenta o tamanho ao passar o mouse */
+        }
+
+        .site-name img {
+            margin-right: 10px;
+            width: 24px;
+            height: 24px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #333;
+            border-radius: 15px;
+            margin: 20px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h2 {
+            margin-top: 10px;
+            font-size: 1.5em;
+        }
+
+        .card p {
+            font-size: 1.2em;
+        }
+
+        .github-projects {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .github-projects h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .project {
+            background-color: #333;
+            border-radius: 15px;
+            margin: 20px;
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .project:hover {
+            transform: translateY(-10px);
+        }
+
+        .project h3 {
+            margin-top: 10px;
+            font-size: 1.5em;
+        }
+
+        .project p {
+            font-size: 1.2em;
+        }
+
+        .project img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .about-me {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .about-me h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .about-me p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+
+        .skills {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 15px;
+            margin: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .skills h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .icons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .icon {
+            margin: 0 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .icon i {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .icon p {
+            font-size: 0.9em;
+        }
+
+        .icon:hover {
+            transform: scale(1.1); /* Aumenta o tamanho ao passar o mouse */
+            cursor: pointer; /* Cursor de mão ao passar o mouse */
+        }
+
+        .icon:active {
+            transform: scale(0.9); /* Diminui o tamanho ao clicar */
+        }
+
+        .social-links {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .social-links a {
+            color: #fff;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #00ffcc;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <a href="https://amathyzin.tech" class="site-name">
+            <img src="/imgs/grupo.png" alt="Ícone do Site">
+            aMathyzin
+        </a>
+        <h1>Portifólio aMathyzin</h1>
+    </div>
+
+    <div class="container">
+        <!-- Cards de projetos do YouTube -->
+        <div class="card">
+            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/GG9ORzRMSrc" frameborder="0" allowfullscreen></iframe>
+            <h2>Painel Minimal</h2>
+            <p>Painel de Otimização de Windows Minimal Optimizer</p>
+        </div>
+        <div class="card">
+            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/Pxcaxgx_j-0" frameborder="0" allowfullscreen></iframe>
+            <h2>Pack 3k</h2>
+            <p>Pack de otimização especial de 3 mil inscritos</p>
+        </div>
+    </div>
+
+    <div class="github-projects">
+        <h2>Projetos no GitHub</h2>
+        <div class="project">
+            <h3>Minimal Optimizer</h3>
+            <img src="/imgs/mbrand.png" alt="Imagem do Projeto Minimal Optimizer">
+            <p>Código fonte do Painel de otimização Minimal Optimizer no GitHub</p>
+            <a href="https://github.com/Matheusdamoda/Minimal-Optimizer/">Ver</a>
+        </div>
+        <div class="project">
+            <h3>aMathyzin 3k Pack</h3>
+            <img src="/imgs/pack3k.png" alt="Imagem do Projeto Pack 3k">
+            <p>Veja o Pack de otimização especial de 3k de inscritos no GitHub também!</p>
+            <a href="https://github.com/Matheusdamoda/Minimal-Optimizer/">Ver</a>
+        </div>
+    </div>
+
+    <div class="about-me">
+        <h2>Sobre Mim</h2>
+        <p>Eu sou um desenvolvedor e designer gráfico que cria projetos para ajudar as pessoas. Me chamo Matheus, e me esforço o máximo para fornecer uma experiência boa e segura para meus seguidores.</p>
+    </div>
+
+    <div class="skills">
+        <h2>Tenho conhecimento em:</h2>
+        <div class="icons">
+            <div class="icon">
+                <i class="fab fa-js-square"></i>
+                <p>Javascript</p>
+            </div>
+            <div class="icon">
+                <i class="fab fa-python"></i>
+                <p>Python</p>
+            </div>
+            <div class="icon">
+                <i class="fab fa-node-js"></i>
+                <p>NodeJS</p>
+            </div>
+            <div class="icon">
+                <i class="fab fa-jsfiddle"></i>
+                <p>ElectronJS</p>
+            </div>
+            <div class="icon">
+                <i class="fas fa-code"></i>
+                <p>HTML/CSS</p>
+            </div>
+            <div class="icon">
+                <i class="fas fa-terminal"></i>
+                <p>Batch Script</p>
+            </div>
+            <div class="icon">
+                <i class="fas fa-paint-brush"></i>
+                <p>Design Gráfico</p>
+            </div>
+            <div class="icon">
+                <i class="fas fa-video"></i>
+                <p>Motion Design</p>
+            </div>
+            <div class="icon">
+                <i class="fas fa-video"></i>
+                <p>Edição de vídeo</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="social-links">
+        <a href="https://github.com/Matheusdamoda">GitHub</a>
+        <a href="https://youtube.com/@amathyzin">YouTube</a>
+        <a href="#" id="email-button">Contato</a>
+    </div>
+
+    <script>
+        document.getElementById('email-button').addEventListener('click', function() {
+            Swal.fire({
+                title: 'E-mail',
+                text: 'E-mail Oficial: aMathyzin@amathyzin.tech',
+                icon: 'info',
+                background: '#1a1a1a',
+                color: '#fff',
+                confirmButtonText: 'Certo'
+            });
+        });
+    </script>
+</body>
+</html>
