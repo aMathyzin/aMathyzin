@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v5.8.14, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
+  <meta name="description" content="Deseja otimizar seu computador? Aqui é o lugar certo pra você! Segurança e eficiência garantidas!">
+  <title>aMathyzin - Início</title>
+  <link rel="icon" href="./icon.png" type="image/x-icon">
+  <meta property="og:title" content="aMathyzin - Home">
+  <meta property="og:description" content="Projeto aMathyzin. Fornecendo eficiência e desempenho para sua máquina.">
+  <meta property="og:image" content="./icon.png">
+  <meta property="og:url" content="https://amathyzin.tech/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <!-- Adicionando o arquivo do SweetAlert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <style>
+    /* Adicionei um estilo para tornar o vídeo responsivo */
+     #video-iframe {
+      width: 560px; /* Largura do vídeo */
+      height: 315px; /* Altura do vídeo */
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+    .navbar .categories {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .navbar .categories a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    .navbar .categories a:hover {
+      color: #f00; /* Altere a cor de acordo com sua preferência */
+    }
+    .navbar .categories a:active {
+      transform: scale(0.9); /* Diminua a escala ao clicar para um efeito de pressionar */
+    }
+    .box {
+      background-color: rgba(0, 0, 0, 0.7); /* Fundo preto semi-transparente */
+      border: 2px solid rgba(128, 0, 128, 0.7); /* Borda roxa escura semi-transparente */
+      border-radius: 10px; /* Suaviza as bordas */
+      padding: 20px;
+      text-align: center;
+      max-width: 400px;
+      margin: 0 auto; /* Centralizar na horizontal */
+      margin-top: 50px; /* Espaçamento superior */
+    }
+    .box img {
+      width: 100%;
+      max-width: 300px;
+      display: block;
+      margin: 0 auto 20px; /* Espaçamento inferior */
+      border-radius: 5px;
+    }
+    .box p {
+      margin-bottom: 10px;
+      color: #fff; /* Alterei a cor do texto para branco */
+    }
+    .box .link {
+      color: #fff;
+      text-decoration: underline;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    .box .link:hover {
+      color: #800080; /* Altere a cor do texto para roxo ao passar o mouse */
+    }
+    .box .link::before {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background-color: #800080; /* Cor da linha */
+      bottom: -2px;
+      left: 0;
+      transition: width 0.3s ease; /* Transição suave para a animação */
+    }
+    .box .link:hover::before {
+      width: 100%; /* Largura total ao passar o mouse */
+    }
+    /* Estilos para o modal */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: none; /* Inicialmente oculto */
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    .modal-content {
+      background-color: #222;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 80%;
+      max-height: 80%;
+      overflow: auto;
+      position: relative;
+    }
+    .close-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      color: #fff;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="loader-wrapper">
+    <div class="loader"></div>
+  </div>
+  <div class="navbar">
+    <div class="left">
+      <span class="logo">
+        <img class="icon" src="https://amathyzin.tech/icon.png" alt="aMathyzin">
+        aMathyzin
+        <div class="switch-container">
+          <label class="switch">
+            <input type="checkbox" id="audio-checkbox">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </span>
+    </div>
+    <div class="categories">
+      <a href="./downloads" class="category-link">DOWNLOADS</a>
+      <a href="./discord" class="category-link">DISCORD</a>
+    </div>
+    <div class="right">
+      <a href="https://www.youtube.com/@aMathyzin" target="_blank" class="icon-link">
+        <img class="icon" src="./youtube.png" alt="YouTube">
+      </a>
+      <a href="https://amathyzin.tech/discord" target="_blank" class="icon-link">
+        <img class="icon" src="./discord.png" alt="Discord">
+      </a>
+    </div>
+  </div>
+  <div class="content">
+    <!-- Adicionei uma caixa com o conteúdo centralizado -->
+    <div class="box">
+      <img src="./batchclick.png" alt="Imagem" class="image">
+      <p>Você precisa passar por um encurtador para baixar esse arquivo.</p>
+      <p>Escolha qual encurtador você tem preferência:</p>
+      <a href="#" class="highlight-button" target="_blank" style="margin-right: 10px;" onclick="openVIPPopup()">LinkeBR</a>
+      <a href="#" class="highlight-button" target="_blank" onclick="openVIPPopup()">EncurtadorBR</a>
+      <p>
+        <span class="link" onclick="openVideoPopup()">Não sabe passar pelo encurtador?</span>
+      </p>
+      <p>
+        <span class="link" onclick="openVIPPopup()">Baixar como usuário VIP</span>
+      </p>
+    </div>
+  </div>
+   <div style="height: 30px;"></div>
+  <div class="copyright-bar">
+    © Copyright aMathyzin 2024. Todos os direitos reservados.
+  </div>
+  <!-- Adicionando o modal -->
+  <div class="modal-overlay" id="modal-overlay" style="display: none;">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeVideoModal()">&times;</span>
+      <div id="video-container"></div>
+    </div>
+  </div>
+  <audio id="myaudio">
+    <source src="./lofi.mp3" type="audio/mp3">
+  </audio>
+  <script>
+    const audio = document.getElementById('myaudio');
+    const audioCheckbox = document.getElementById('audio-checkbox');
+
+    audioCheckbox.addEventListener('change', () => {
+      if (audioCheckbox.checked) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    });
+
+    function openVIPPopup() {
+      Swal.fire({
+        title: 'Seja um Usuário VIP!',
+        text: 'Para se tornar um usuário VIP e obter acesso a todos os programas sem passar por encurtador, entre no nosso servidor do Discord e adquira o cargo VIP!',
+        color: '#fff',
+        iconHtml: '<img src="./coroa.gif" width="160px" height="160px">', // Ícone personalizado
+        confirmButtonColor: '#8338EC',
+        background: '#222',
+        confirmButtonText: 'Entendi'
+      });
+    }
+
+    function openVideoPopup() {
+      Swal.fire({
+        title: 'Assistir ao Vídeo',
+        text: 'Tem certeza de que deseja assistir ao vídeo tutorial que irá te ensinar como passar pelo encurtador?',
+        color: '#fff',
+        icon: 'info',
+        confirmButtonColor: '#8338EC',
+        background: '#222',
+        showCancelButton: true,
+        cancelButtonText: 'Cancelar',
+        confirmButtonText: 'Assistir ao Vídeo'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          document.getElementById('modal-overlay').style.display = 'flex'; // Mostra o modal quando o botão "Assistir ao Vídeo" for clicado
+          createVideoEmbed(); // Cria a embed do vídeo
+        }
+      });
+    }
+
+    function createVideoEmbed() {
+      const videoContainer = document.getElementById('video-container');
+      const iframe = document.createElement('iframe');
+      iframe.id = 'video-iframe';
+      iframe.width = '560'; // Largura do vídeo
+      iframe.height = '315'; // Altura do vídeo
+      iframe.src = 'https://www.youtube.com/embed/VuGlnfgwYlI'; // URL do vídeo
+      iframe.frameborder = '0';
+      iframe.allowfullscreen = true;
+      videoContainer.appendChild(iframe);
+    }
+
+    function closeVideoModal() {
+      document.getElementById('modal-overlay').style.display = 'none';
+      destroyVideoEmbed(); // Destrói a embed do vídeo
+    }
+
+    function destroyVideoEmbed() {
+      const videoContainer = document.getElementById('video-container');
+      const videoIframe = document.getElementById('video-iframe');
+      if (videoIframe) {
+        videoContainer.removeChild(videoIframe);
+      }
+    }
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(function () {
+        const loaderWrapper = document.querySelector(".loader-wrapper");
+        loaderWrapper.style.display = "none";
+      }, 2000);
+    });
+  </script>
+  <script>
+    // Verificar se é um dispositivo móvel
+    if (window.innerWidth <= 767) {
+      const iframe = document.getElementById("video-iframe");
+      iframe.width = "100%"; // Use toda a largura disponível
+      iframe.height = "auto"; // Altura automática proporcional à largura
+    }
+  </script>
+</body>
+</html>
