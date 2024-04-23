@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>aMathyzin - Senha BatchClick</title>
+  <link rel="icon" href="../icon.png" type="image/x-icon">
+  <meta property="og:title" content="aMathyzin - Senhas">
+  <meta property="og:description" content="⚡Downloads e Senhas Disponíveis⚡">
+  <meta property="og:image" content="../icon.png">
+  <meta property="og:url" content="https://amathyzin.tech/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" type="text/css" href="../styles.css">
+
+  <style>
+    /* Estilos para o texto pulsante */
+    @keyframes pulse {
+      0% {
+        font-size: 36px;
+      }
+      50% {
+        font-size: 40px;
+      }
+      100% {
+        font-size: 36px;
+      }
+    }
+
+    .pulsating-text {
+      animation: pulse 1s infinite;
+      text-align: center;
+      font-size: 36px;
+      margin-top: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="loader-wrapper">
+    <div class="loader"></div>
+  </div>
+  <div class="navbar">
+    <div class="left">
+      <span class="logo">
+        <img class="icon" src="../icon.png" alt="aMathyzin">
+        aMathyzin
+        <div class="switch-container">
+          <label class="switch">
+            <input type="checkbox" id="audio-checkbox">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </span>
+    </div>
+    <div class="right">
+      <a href="https://www.youtube.com/@aMathyzin" target="_blank" class="icon-link">
+        <img class="icon" src="../youtube.png" alt="YouTube">
+      </a>
+      <a href="https://amathyzin.tech/discord" target="_blank" class="icon-link">
+        <img class="icon" src="../discord.png" alt="Discord">
+      </a>
+    </div>
+  </div>
+  <div class="content">
+    <div class="pulsating-text">
+      Senha: BatchClickBooster_V1
+    </div>
+    <br>
+    <a href="downloads" class="highlight-button">Voltar para downloads</a>
+  </div>
+  <div class="copyright-bar">
+    © Copyright aMathyzin 2023. Todos os direitos reservados.
+  </div>
+  <audio id="myaudio">
+    <source src="../lofi.mp3" type="audio/mp3">
+  </audio>
+  <script>
+    const audio = document.getElementById('myaudio');
+    const audioCheckbox = document.getElementById('audio-checkbox');
+
+    audioCheckbox.addEventListener('change', () => {
+      if (audioCheckbox.checked) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(function () {
+        const loaderWrapper = document.querySelector(".loader-wrapper");
+        loaderWrapper.style.display = "none";
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
