@@ -81,29 +81,46 @@
       bottom: 0;
       width: 100%;
     }
-    </div>
+
+    /* Adicione este estilo para a faixa de aviso */
+    .warning-bar {
+      background-color: white;
+      color: black;
+      text-align: center;
+      padding: 10px;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 999;
+    }
   </style>
 </head>
 
 <body class="gradient-bg">
+  <!-- Faixa de Aviso -->
+  <div class="warning-bar">
+    Em breve essa página receberá o modelo novo de páginas de download.
+  </div>
+
+  <!-- Restante do seu código -->
   <div class="loader-wrapper">
     <div class="loader"></div>
   </div>
   <div class="navbar">
-  <div class="left">
-    <span class="logo">
-      <a href="https://amathyzin.tech">
-        <img class="icon" src="https://amathyzin.tech/icon.png" alt="aMathyzin">
-        aMathyzin
-      </a>
-      <div class="switch-container">
-        <label class="switch">
-          <input type="checkbox" id="audio-checkbox">
-          <span class="slider"></span>
-        </label>
-      </div>
-    </span>
-  </div>
+    <div class="left">
+      <span class="logo">
+        <a href="https://amathyzin.tech">
+          <img class="icon" src="https://amathyzin.tech/icon.png" alt="aMathyzin">
+          aMathyzin
+        </a>
+        <div class="switch-container">
+          <label class="switch">
+            <input type="checkbox" id="audio-checkbox">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </span>
+    </div>
     <div class="right">
       <a href="https://www.youtube.com/@aMathyzin" target="_blank" class="icon-link">
         <img class="icon" src="../youtube.png" alt="YouTube">
