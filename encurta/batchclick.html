@@ -18,6 +18,8 @@
   <link rel="stylesheet" type="text/css" href="../styles.css">
   <!-- Adicionando o arquivo do SweetAlert -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- Adicionando Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-NpxVKeJbTcYt52moxGmvIGnQpjr8iQA8NGCaRjWtwhMK5unvfjdAA5r30cDdExGzct6ttfI9+Rh4/yKf3fEe6w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     /* Adicionei um estilo para tornar o vídeo responsivo */
      #video-iframe {
@@ -122,6 +124,13 @@
       color: #fff;
       font-size: 24px;
     }
+    .recommendation {
+      color: #fff;
+      margin-top: 10px;
+    }
+    .recommendation i {
+      margin-left: 5px;
+    }
   </style>
 </head>
 <body>
@@ -168,6 +177,7 @@
       <p>
         <span class="link" onclick="openVIPPopup()">Baixar como usuário VIP</span>
       </p>
+      <p class="recommendation">Recomendado <i class="fas fa-arrow-up"></i></p>
     </div>
   </div>
    <div style="height: 30px;"></div>
