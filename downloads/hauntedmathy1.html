@@ -15,7 +15,6 @@
   <meta property="og:url" content="https://amathyzin.tech/downloads/hauntedmathy1">
   <meta property="og:type" content="website">
   <link rel="stylesheet" type="text/css" href="../styles.css">
-  <!-- Inclusão do SweetAlert -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <style>
     .content {
@@ -29,7 +28,7 @@
       padding-right: 20px;
     }
     .download-section {
-      border: 1px solid #ff69b4; /* Cor da borda rosa */
+      border: 1px solid #ff69b4;
       background-color: rgba(0, 0, 0, 0.8);
       padding: 20px;
       border-radius: 5px;
@@ -103,7 +102,6 @@
     .file-icon-animation {
       animation: pulse 2s infinite;
     }
-    /* Define a animação de pulso */
     @keyframes pulse {
       0% {
         transform: scale(1);
@@ -114,6 +112,22 @@
       100% {
         transform: scale(1);
       }
+    }
+    .advertise-container {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .advertise-container a {
+      display: inline-block;
+      width: 100%;
+      max-width: 600px;
+      border: 1px solid #ff69b4;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .advertise-container img {
+      width: 100%;
+      height: auto;
     }
   </style>
 </head>
@@ -149,11 +163,16 @@
     <div class="video-tutorial">
       <h2 style="text-align:center;">Tutorial</h2>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/Pxcaxgx_j-0" frameborder="0" allowfullscreen></iframe>
+      <div class="advertise-container">
+        <a href="https://discord.gg/amathyzin" target="_blank">
+          <img src="https://message.style/cdn/images/ad8b11fbdb8c107a3b26fdb8d80e9ce30c893f8486834650fa0ce893e85565e0.png" alt="Anuncie Conosco">
+        </a>
+      </div>
     </div>
     <div class="download-section">
       <div class="file-icon-container">
         <img class="file-icon file-icon-animation" src="./icons/haunted.png" alt="Ícone do Arquivo">
-        <div class="pulse-glow"></div> <!-- Div de sobreposição para o efeito de brilho pulsante -->
+        <div class="pulse-glow"></div>
       </div>
       <h2>Download do Arquivo</h2>
       <p>Haunted.bat - 53,6 KB</p>
@@ -164,7 +183,7 @@
       </div>
       <p>Este é o Haunted. Feito pelo desenvolvedor Miguélin, no servidor aMathyzin, o haunted é um otimizador de windows focado em melhorar a performance em computadores fracos e fortes, focando em uma otimização principalmente para jogos competitivos. Inclui otimizações de latência, ping e mais!</p>
       <button onclick="iniciarDownload('../arquivos/Haunted.bat', 'Haunted.bat')" class="download-button">Download</button>
-      <p id="download-count">Carregando...</p> <!-- Adiciona o elemento para exibir a contagem de downloads -->
+      <p id="download-count">Carregando...</p>
     </div>
   </div>
   <div style="height: 30px;"></div>
@@ -196,19 +215,16 @@
       xhr.responseType = 'blob';
 
       xhr.onloadstart = function() {
-        // Inicia a barra de progresso
         document.getElementById('progress-bar').style.width = '0%';
         document.getElementById('progress-text').innerText = '0%';
       };
 
       xhr.onprogress = function(event) {
-        // Atualiza a barra de progresso durante o download
         if (event.lengthComputable) {
           var percentComplete = (event.loaded / event.total) * 100;
           document.getElementById('progress-bar').style.width = percentComplete + '%';
           document.getElementById('progress-text').innerText = percentComplete.toFixed(2) + '%';
 
-          // Calcula o tamanho do arquivo em MB e atualiza a exibição
           var totalSizeMB = (event.total / (1024 * 1024)).toFixed(1);
           var downloadedSizeMB = (event.loaded / (1024 * 1024)).toFixed(1);
           document.getElementById('progress-indicator').innerText = downloadedSizeMB + ' MB de ' + totalSizeMB + ' MB';
@@ -216,7 +232,6 @@
       };
 
       xhr.onload = function() {
-        // Ao completar o download, redireciona para o URL do arquivo com o nome especificado
         if (xhr.status === 200) {
           document.getElementById('progress-bar').style.width = '100%';
           document.getElementById('progress-text').innerText = '100%';
@@ -231,7 +246,6 @@
             document.body.removeChild(a);
             URL.revokeObjectURL(url);
 
-            // Exibe o popup informando que o download foi concluído
             Swal.fire({
               title: 'Download Concluído!',
               text: 'Seu arquivo foi baixado com sucesso.',
@@ -242,9 +256,8 @@
               backdrop: 'rgba(0,0,0,0.5)'
             });
 
-            // Incrementa a contagem de downloads
             incrementarContagemDownloads();
-          }, 1000); // Adiciona um pequeno atraso antes de iniciar o download (1 segundo)
+          }, 1000);
         }
       };
 
