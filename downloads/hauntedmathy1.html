@@ -1,276 +1,288 @@
-    <!DOCTYPE html>
-    <html>
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="generator" content="Mobirise v5.8.14, mobirise.com">
-      <link rel="shortcut icon" href="../icon.png" type="image/x-icon">
-      <meta name="description" content="Download do otimizador Haunted Mathy">
-      <title>aMathyzin - Haunted</title>
-      <link rel="icon" href="../icon.png" type="image/x-icon">
-      <meta property="og:title" content="Haunted - Download">
-      <meta property="og:description" content="Download do otimizador Haunted Mathy">
-      <meta property="og:image" content="../icon.png">
-      <meta property="og:url" content="https://amathyzin.tech/downloads/hauntedmathy1">
-      <meta property="og:type" content="website">
-      <link rel="stylesheet" type="text/css" href="../styles.css">
-      <!-- Inclusão do SweetAlert -->
-      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-      <style>
-        .content {
-          display: flex;
-          justify-content: space-between;
-          align-items: flex-start;
-          padding: 20px;
-        }
-        .video-tutorial, .download-section {
-          flex: 1;
-          padding-right: 20px;
-        }
-          .download-section {
-            border: 1px solid #ff69b4; /* Cor da borda rosa */
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            border-radius: 5px;
-            text-align: center;
-          }
-
-        .download-button, .password-button {
-          background-color: #8605C2;
-          color: white;
-          padding: 10px 20px;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-          font-size: 18px;
-          text-decoration: none;
-          display: inline-block;
-          margin: 5px;
-        }
-        .download-button:hover, .password-button:hover {
-          background-color: #B808E7;
-        }
-        .progress-bar-container {
-          width: 100%;
-          background-color: #7603AB;
-          margin-top: 20px;
-          margin-bottom: 20px;
-          height: 20px;
-          border-radius: 5px;
-          overflow: hidden;
-          position: relative;
-        }
-        .progress-bar {
-          height: 100%;
-          background-color: #B84BFF;
-          width: 0%;
-          border-radius: 5px;
-          transition: width 0.4s ease;
-          position: relative;
-        }
-        .progress-text {
-          position: absolute;
-          width: 100%;
-          text-align: center;
-          color: white;
-          font-weight: bold;
-          top: 50%;
-          transform: translateY(-50%);
-        }
-        .progress-indicator {
-          position: absolute;
-          top: -25px;
-          left: 0;
-          right: 0;
-          text-align: center;
-          color: #888;
-          font-size: 14px;
-        }
-        .file-icon {
-          max-width: 250px;
-          max-height: 250px;
-        }
-        @media (max-width: 768px) {
-          .content {
-            flex-direction: column;
-          }
-          .video-tutorial, .download-section {
-            width: 100%;
-            padding-right: 0;
-            margin-bottom: 20px;
-          }
-        }
-
-          .file-icon-animation {
-            animation: pulse 2s infinite;
-          }
-
-          /* Define a animação de pulso */
-          @keyframes pulse {
-            0% {
-              transform: scale(1);
-            }
-            50% {
-              transform: scale(1.1);
-            }
-            100% {
-              transform: scale(1);
-            }
-          }
-
-      </style>
-    </head>
-    <body>
-      <div class="loader-wrapper">
-        <div class="loader"></div>
-      </div>
-     <div class="navbar">
-      <div class="left">
-        <span class="logo">
-          <a href="https://amathyzin.tech">
-            <img class="icon" src="https://amathyzin.tech/icon.png" alt="aMathyzin">
-            aMathyzin
-          </a>
-          <div class="switch-container">
-            <label class="switch">
-              <input type="checkbox" id="audio-checkbox">
-              <span class="slider"></span>
-            </label>
-          </div>
-        </span>
-      </div>
-        <div class="right">
-          <a href="https://www.youtube.com/@aMathyzin" target="_blank" class="icon-link">
-            <img class="icon" src="../youtube.png" alt="YouTube">
-          </a>
-          <a href="https://amathyzin.tech/discord" target="_blank" class="icon-link">
-            <img class="icon" src="../discord.png" alt="Discord">
-          </a>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v5.8.14, mobirise.com">
+  <link rel="shortcut icon" href="../icon.png" type="image/x-icon">
+  <meta name="description" content="Download do otimizador Haunted Mathy">
+  <title>aMathyzin - Haunted</title>
+  <link rel="icon" href="../icon.png" type="image/x-icon">
+  <meta property="og:title" content="Haunted - Download">
+  <meta property="og:description" content="Download do otimizador Haunted Mathy">
+  <meta property="og:image" content="../icon.png">
+  <meta property="og:url" content="https://amathyzin.tech/downloads/hauntedmathy1">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" type="text/css" href="../styles.css">
+  <!-- Inclusão do SweetAlert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <style>
+    .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 20px;
+    }
+    .video-tutorial, .download-section {
+      flex: 1;
+      padding-right: 20px;
+    }
+    .download-section {
+      border: 1px solid #ff69b4; /* Cor da borda rosa */
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      border-radius: 5px;
+      text-align: center;
+    }
+    .download-button, .password-button {
+      background-color: #8605C2;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      text-decoration: none;
+      display: inline-block;
+      margin: 5px;
+    }
+    .download-button:hover, .password-button:hover {
+      background-color: #B808E7;
+    }
+    .progress-bar-container {
+      width: 100%;
+      background-color: #7603AB;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      height: 20px;
+      border-radius: 5px;
+      overflow: hidden;
+      position: relative;
+    }
+    .progress-bar {
+      height: 100%;
+      background-color: #B84BFF;
+      width: 0%;
+      border-radius: 5px;
+      transition: width 0.4s ease;
+      position: relative;
+    }
+    .progress-text {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .progress-indicator {
+      position: absolute;
+      top: -25px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      color: #888;
+      font-size: 14px;
+    }
+    .file-icon {
+      max-width: 250px;
+      max-height: 250px;
+    }
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+      }
+      .video-tutorial, .download-section {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+    .file-icon-animation {
+      animation: pulse 2s infinite;
+    }
+    /* Define a animação de pulso */
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="loader-wrapper">
+    <div class="loader"></div>
+  </div>
+  <div class="navbar">
+    <div class="left">
+      <span class="logo">
+        <a href="https://amathyzin.tech">
+          <img class="icon" src="https://amathyzin.tech/icon.png" alt="aMathyzin">
+          aMathyzin
+        </a>
+        <div class="switch-container">
+          <label class="switch">
+            <input type="checkbox" id="audio-checkbox">
+            <span class="slider"></span>
+          </label>
         </div>
+      </span>
+    </div>
+    <div class="right">
+      <a href="https://www.youtube.com/@aMathyzin" target="_blank" class="icon-link">
+        <img class="icon" src="../youtube.png" alt="YouTube">
+      </a>
+      <a href="https://amathyzin.tech/discord" target="_blank" class="icon-link">
+        <img class="icon" src="../discord.png" alt="Discord">
+      </a>
+    </div>
+  </div>
+  <div class="content">
+    <div class="video-tutorial">
+      <h2 style="text-align:center;">Tutorial</h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Pxcaxgx_j-0" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="download-section">
+      <div class="file-icon-container">
+        <img class="file-icon file-icon-animation" src="./icons/haunted.png" alt="Ícone do Arquivo">
+        <div class="pulse-glow"></div> <!-- Div de sobreposição para o efeito de brilho pulsante -->
       </div>
-      <div class="content">
-        <div class="video-tutorial">
-          <h2 style="text-align:center;">Tutorial</h2>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/Pxcaxgx_j-0" frameborder="0" allowfullscreen></iframe>
-        </div>
-          <div class="download-section">
-            <div class="file-icon-container">
-              <img class="file-icon file-icon-animation" src="./icons/haunted.png" alt="Ícone do Arquivo">
-              <div class="pulse-glow"></div> <!-- Div de sobreposição para o efeito de brilho pulsante -->
-            </div>
+      <h2>Download do Arquivo</h2>
+      <p>Haunted.bat - 53,6 KB</p>
+      <div class="progress-bar-container">
+        <div class="progress-bar" id="progress-bar"></div>
+        <div class="progress-text" id="progress-text">0%</div>
+        <div class="progress-indicator" id="progress-indicator">0 KB de 53,6KB MB</div>
+      </div>
+      <p>Este é o Haunted. Feito pelo desenvolvedor Miguélin, no servidor aMathyzin, o haunted é um otimizador de windows focado em melhorar a performance em computadores fracos e fortes, focando em uma otimização principalmente para jogos competitivos. Inclui otimizações de latência, ping e mais!</p>
+      <button onclick="iniciarDownload('../arquivos/Haunted.bat', 'Haunted.bat')" class="download-button">Download</button>
+      <p id="download-count">Carregando...</p> <!-- Adiciona o elemento para exibir a contagem de downloads -->
+    </div>
+  </div>
+  <div style="height: 30px;"></div>
+  <div class="copyright-bar">
+    © Copyright aMathyzin 2023-2024. Todos os direitos reservados.
+  </div>
+  <audio id="myaudio">
+    <source src="../lofi.mp3" type="audio/mp3">
+  </audio>
 
-          <h2>Download do Arquivo</h2>
-          <p>Haunted.bat - 53,6 KB</p>
-          <div class="progress-bar-container">
-            <div class="progress-bar" id="progress-bar"></div>
-            <div class="progress-text" id="progress-text">0%</div>
-            <div class="progress-indicator" id="progress-indicator">0 KB de 53,6KB MB</div>
-          </div>
-          <p>Este é o Haunted. Feito pelo desenvolvedor Miguélin, no servidor aMathyzin, o haunted é um otimizador de windows focado em melhorar a performance 
-em computadores fracos e fortes, focando em uma otimização principalmente para jogos competitivos. Inclui otimizações de latência, ping e mais!</p>
-          <button onclick="iniciarDownload('../arquivos/Haunted.bat', 'Haunted.bat')" class="download-button">Download</button>
-          <button onclick="mostrarSenha()" class="password-button">Senha</button>
-        </div>
-      </div>
-      <div style="height: 30px;"></div>
-      <div class="copyright-bar">
-        © Copyright aMathyzin 2023-2024. Todos os direitos reservados.
-      </div>
-      <audio id="myaudio">
-        <source src="../lofi.mp3" type="audio/mp3">
-      </audio>
+  <script>
+    window.onload = () => {
+      document.querySelector('.loader-wrapper').style.display = 'none';
+      atualizarContagemDownloads();
+    }
 
-      <script>
-        window.onload = () => {
-          document.querySelector('.loader-wrapper').style.display = 'none';
+    document.getElementById('audio-checkbox').addEventListener('change', function() {
+      var audio = document.getElementById('myaudio');
+      if (this.checked) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    });
+
+    function iniciarDownload(url, nomeArquivo) {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', url, true);
+      xhr.responseType = 'blob';
+
+      xhr.onloadstart = function() {
+        // Inicia a barra de progresso
+        document.getElementById('progress-bar').style.width = '0%';
+        document.getElementById('progress-text').innerText = '0%';
+      };
+
+      xhr.onprogress = function(event) {
+        // Atualiza a barra de progresso durante o download
+        if (event.lengthComputable) {
+          var percentComplete = (event.loaded / event.total) * 100;
+          document.getElementById('progress-bar').style.width = percentComplete + '%';
+          document.getElementById('progress-text').innerText = percentComplete.toFixed(2) + '%';
+
+          // Calcula o tamanho do arquivo em MB e atualiza a exibição
+          var totalSizeMB = (event.total / (1024 * 1024)).toFixed(1);
+          var downloadedSizeMB = (event.loaded / (1024 * 1024)).toFixed(1);
+          document.getElementById('progress-indicator').innerText = downloadedSizeMB + ' MB de ' + totalSizeMB + ' MB';
         }
+      };
 
-        document.getElementById('audio-checkbox').addEventListener('change', function() {
-          var audio = document.getElementById('myaudio');
-          if (this.checked) {
-            audio.play();
-          } else {
-            audio.pause();
-          }
+      xhr.onload = function() {
+        // Ao completar o download, redireciona para o URL do arquivo com o nome especificado
+        if (xhr.status === 200) {
+          document.getElementById('progress-bar').style.width = '100%';
+          document.getElementById('progress-text').innerText = '100%';
+          setTimeout(function() {
+            var blob = new Blob([xhr.response], { type: 'application/octet-stream' });
+            var url = URL.createObjectURL(blob);
+            var a = document.createElement('a');
+            a.href = url;
+            a.download = nomeArquivo;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+
+            // Exibe o popup informando que o download foi concluído
+            Swal.fire({
+              title: 'Download Concluído!',
+              text: 'Seu arquivo foi baixado com sucesso.',
+              icon: 'success',
+              background: '#333',
+              confirmButtonText: 'OK',
+              color: '#FFF',
+              backdrop: 'rgba(0,0,0,0.5)'
+            });
+
+            // Incrementa a contagem de downloads
+            incrementarContagemDownloads();
+          }, 1000); // Adiciona um pequeno atraso antes de iniciar o download (1 segundo)
+        }
+      };
+
+      xhr.send();
+    }
+
+    function atualizarContagemDownloads() {
+      fetch('https://stirring-midnight-regnosaurus.glitch.me/count')
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('download-count').innerText = `${data.count} downloads`;
+        })
+        .catch(error => {
+          console.error('Erro ao obter a contagem de downloads:', error);
         });
+    }
 
-        function iniciarDownload(url, nomeArquivo) {
-          var xhr = new XMLHttpRequest();
-          xhr.open('GET', url, true);
-          xhr.responseType = 'blob';
+    function incrementarContagemDownloads() {
+      fetch('https://stirring-midnight-regnosaurus.glitch.me/increment', {
+        method: 'POST',
+      })
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('download-count').innerText = `${data.count} downloads`;
+        })
+        .catch(error => {
+          console.error('Erro ao incrementar a contagem de downloads:', error);
+        });
+    }
+  </script>
 
-          xhr.onloadstart = function() {
-            // Inicia a barra de progresso
-            document.getElementById('progress-bar').style.width = '0%';
-            document.getElementById('progress-text').innerText = '0%';
-          };
-
-          xhr.onprogress = function(event) {
-            // Atualiza a barra de progresso durante o download
-            if (event.lengthComputable) {
-              var percentComplete = (event.loaded / event.total) * 100;
-              document.getElementById('progress-bar').style.width = percentComplete + '%';
-              document.getElementById('progress-text').innerText = percentComplete.toFixed(2) + '%';
-
-              // Calcula o tamanho do arquivo em MB e atualiza a exibição
-              var totalSizeMB = (event.total / (1024 * 1024)).toFixed(1);
-              var downloadedSizeMB = (event.loaded / (1024 * 1024)).toFixed(1);
-              document.getElementById('progress-indicator').innerText = downloadedSizeMB + ' MB de ' + totalSizeMB + ' MB';
-            }
-          };
-
-          xhr.onload = function() {
-            // Ao completar o download, redireciona para o URL do arquivo com o nome especificado
-            if (xhr.status === 200) {
-              document.getElementById('progress-bar').style.width = '100%';
-              document.getElementById('progress-text').innerText = '100%';
-              setTimeout(function() {
-                var blob = new Blob([xhr.response], { type: 'application/octet-stream' });
-                var url = URL.createObjectURL(blob);
-                var a = document.createElement('a');
-                a.href = url;
-                a.download = nomeArquivo;
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                URL.revokeObjectURL(url);
-
-                // Exibe o popup informando que o download foi concluído
-                Swal.fire({
-                  title: 'Download Concluído!',
-                  text: 'Seu arquivo foi baixado com sucesso.',
-                  icon: 'success',
-                  background: '#333',
-                  confirmButtonText: 'OK',
-                  color: '#FFF',
-                  backdrop: 'rgba(0,0,0,0.5)'
-                });
-              }, 1000); // Adiciona um pequeno atraso antes de iniciar o download (1 segundo)
-            }
-          };
-
-          xhr.send();
-        }
-
-        function mostrarSenha() {
-          Swal.fire({
-            title: 'Senha do Pack',
-            text: 'Entre no servidor do Discord para pegar a senha!',
-            icon: 'info',
-            showCancelButton: true, // Mostra o botão cancelar
-            confirmButtonText: 'Entrar',
-            cancelButtonText: 'Cancelar', // Texto do botão cancelar
-            footer: 'ou <a href="https://linkebr.com/3kpack-senha">Pegar via Encurtador</a>', // Adiciona opção do encurtador no footer
-            background: '#333', // Define a cor de fundo do popup para uma cor escura
-            color: '#FFF', // Define a cor do texto para branco
-            backdrop: 'rgba(0,0,0,0.5)' // Define a cor e opacidade do fundo da página
-          }).then((result) => {
-            if (result.isConfirmed) {
-              window.location.href = 'https://amathyzin.tech/discord'; // Redireciona para o Discord ao clicar em "OK"
-            }
-          });
-        }
-      </script>
-    </body>
-    </html>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(function () {
+        const loaderWrapper = document.querySelector(".loader-wrapper");
+        loaderWrapper.style.display = "none";
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
