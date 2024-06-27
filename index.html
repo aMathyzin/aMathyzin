@@ -7,61 +7,116 @@
   <meta name="generator" content="Mobirise v5.8.14, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
-  <meta name="description" content="zTweaks Optimizer!">
-  <link rel="icon" href="https://amathyzin.tech/icon.png" type="image/x-icon">
-  <meta property="og:title" content="GET ZTWEAKS NOW">
-  <meta property="og:description" content="GET ZTWEAKS NOW">
-  <meta property="og:image" content="https://amathyzin.tech/icon.png">
+  <meta name="description" content="Deseja otimizar seu computador? Aqui é o lugar certo pra você! Segurança e eficiência garantidas!">
+  <title>aMathyzin - Início</title>
+  <link rel="icon" href="./icon.png" type="image/x-icon">
+  <meta property="og:title" content="aMathyzin - Home">
+  <meta property="og:description" content="Projeto aMathyzin. Fornecendo eficiência e desempenho para sua máquina.">
+  <meta property="og:image" content="./icon.png">
   <meta property="og:url" content="https://amathyzin.tech/">
   <meta property="og:type" content="website">
   <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>ZTWEAKS</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            text-align: center;
-            padding: 50px;
-        }
-        .container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 2s;
-        }
-        .icon {
-            font-size: 50px;
-            color: #4CAF50;
-            margin-bottom: 20px;
-            animation: bounce 2s infinite;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-30px); }
-            60% { transform: translateY(-15px); }
-        }
-    </style>
+  <style>
+    /* Adicionei um estilo para tornar o vídeo responsivo */
+     #video-iframe {
+      width: 1280px;
+      height: 720px;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+    .navbar .categories {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .navbar .categories a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    .navbar .categories a:hover {
+      color: #f00; /* Altere a cor de acordo com sua preferência */
+    }
+    .navbar .categories a:active {
+      transform: scale(0.9); /* Diminua a escala ao clicar para um efeito de pressionar */
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <i class="fas fa-rocket icon"></i>
-        <h1>New Optimizer!</h1>
-        <p>Experience the ultimate performance boost for your Windows system.</p>
-        <p>Check it out: <a href="https://ztweaks.gg" target="_blank">https://ztweaks.gg</a></p>
-        <p>Features include:</p>
-        <ul>
-            <li><i class="fas fa-tachometer-alt"></i> Faster boot times</li>
-            <li><i class="fas fa-shield-alt"></i> Enhanced security</li>
-            <li><i class="fas fa-cogs"></i> Customizable settings</li>
-            <li><i class="fas fa-sync-alt"></i> Automatic updates</li>
-        </ul>
+  <div class="loader-wrapper">
+    <div class="loader"></div>
+  </div>
+  <div class="navbar">
+    <div class="left">
+      <span class="logo">
+        <img class="icon" src="https://amathyzin.tech/icon.png" alt="aMathyzin">
+        aMathyzin
+        <div class="switch-container">
+          <label class="switch">
+            <input type="checkbox" id="audio-checkbox">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </span>
     </div>
+    <div class="categories">
+      <a href="./downloads" class="category-link">DOWNLOADS</a>
+      <a href="./discord" class="category-link">DISCORD</a>
+    </div>
+    <div class="right">
+      <a href="https://www.youtube.com/@aMathyzin" target="_blank" class="icon-link">
+        <img class="icon" src="./youtube.png" alt="YouTube">
+      </a>
+      <a href="https://amathyzin.tech/discord" target="_blank" class="icon-link">
+        <img class="icon" src="./discord.png" alt="Discord">
+      </a>
+    </div>
+  </div>
+  <div class="content">
+    <iframe id="video-iframe" src="https://www.youtube.com/embed/ciHfcpppItg" frameborder="0" allowfullscreen></iframe>
+    <br>
+    <a href="./aMathyzin/portifolio" class="highlight-button">Ver Portifólio</a>
+  </div>
+   <div style="height: 30px;"></div>
+  <div class="copyright-bar">
+    © Copyright aMathyzin 2024. Todos os direitos reservados.
+  </div>
+  <audio id="myaudio">
+    <source src="./lofi.mp3" type="audio/mp3">
+  </audio>
+  <script>
+    const audio = document.getElementById('myaudio');
+    const audioCheckbox = document.getElementById('audio-checkbox');
+
+    audioCheckbox.addEventListener('change', () => {
+      if (audioCheckbox.checked) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(function () {
+        const loaderWrapper = document.querySelector(".loader-wrapper");
+        loaderWrapper.style.display = "none";
+      }, 2000);
+    });
+  </script>
+  <script>
+    // Verificar se é um dispositivo móvel
+    if (window.innerWidth <= 767) {
+      const iframe = document.getElementById("video-iframe");
+      iframe.width = "100%"; // Use toda a largura disponível
+      iframe.height = "auto"; // Altura automática proporcional à largura
+    }
+  </script>
 </body>
 </html>
