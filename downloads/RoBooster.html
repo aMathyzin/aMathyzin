@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v5.8.14, mobirise.com">
+  <link rel="shortcut icon" href="../icon.png" type="image/x-icon">
+  <meta name="description" content="Download do otimizador RoBooster para Roblox">
+  <title>aMathyzin - RoBooster</title>
+  <link rel="icon" href="../icon.png" type="image/x-icon">
+  <meta property="og:title" content="Haunted - Download">
+  <meta property="og:description" content="Download do otimizador RoBooster">
+  <meta property="og:image" content="../icon.png">
+  <meta property="og:url" content="https://amathyzin.tech/downloads/RoBooster.html">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" type="text/css" href="../styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <style>
+    .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 20px;
+    }
+    .video-tutorial, .download-section {
+      flex: 1;
+      padding-right: 20px;
+    }
+    .download-section {
+      border: 1px solid #ff69b4;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      border-radius: 5px;
+      text-align: center;
+    }
+    .download-button, .password-button {
+      background-color: #8605C2;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      text-decoration: none;
+      display: inline-block;
+      margin: 5px;
+    }
+    .download-button:hover, .password-button:hover {
+      background-color: #B808E7;
+    }
+    .progress-bar-container {
+      width: 100%;
+      background-color: #7603AB;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      height: 20px;
+      border-radius: 5px;
+      overflow: hidden;
+      position: relative;
+    }
+    .progress-bar {
+      height: 100%;
+      background-color: #B84BFF;
+      width: 0%;
+      border-radius: 5px;
+      transition: width 0.4s ease;
+      position: relative;
+    }
+    .progress-text {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .progress-indicator {
+      position: absolute;
+      top: -25px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      color: #888;
+      font-size: 14px;
+    }
+    .file-icon {
+      max-width: 250px;
+      max-height: 250px;
+    }
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+      }
+      .video-tutorial, .download-section {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+    .file-icon-animation {
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    .advertise-container {
+      margin-top: 20px;
+      text-align: center;
+    }
+     .advertise-container a {
+      display: inline-block;
+      width: 100%;
+      max-width: 600px;
+      border: 1px solid #ff69b4;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .advertise-container img {
+      width: 100%;
+      height: 150px;
+    }
+  </style>
+</head>
+<body>
+  <div class="loader-wrapper">
+    <div class="loader"></div>
+  </div>
+  <div class="navbar">
+    <div class="left">
+      <span class="logo">
+        <a href="https://amathyzin.tech">
+          <img class="icon" src="https://amathyzin.tech/icon.png" alt="aMathyzin">
+          aMathyzin
+        </a>
+        <div class="switch-container">
+          <label class="switch">
+            <input type="checkbox" id="audio-checkbox">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </span>
+    </div>
+    <div class="right">
+      <a href="https://www.youtube.com/@aMathyzin" target="_blank" class="icon-link">
+        <img class="icon" src="../youtube.png" alt="YouTube">
+      </a>
+      <a href="https://amathyzin.tech/discord" target="_blank" class="icon-link">
+        <img class="icon" src="../discord.png" alt="Discord">
+      </a>
+    </div>
+  </div>
+  <div class="content">
+    <div class="video-tutorial">
+      <h2 style="text-align:center;">Tutorial</h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ciHfcpppItg" frameborder="0" allowfullscreen></iframe>
+      <div class="advertise-container">
+        <a href="https://www.mykeysshop.com/software.html" target="_blank">
+          <img src="https://www.mykeysshop.com/static/logo.c7911ba7.png" alt="Anuncie Conosco">
+        </a>
+      </div>
+    </div>
+    <div class="download-section">
+      <div class="file-icon-container">
+        <img class="file-icon file-icon-animation" src="./icons/haunted.png" alt="Ícone do Arquivo">
+        <div class="pulse-glow"></div>
+      </div>
+      <h2>Download do Arquivo</h2>
+      <p>RoBooster.rar - 9Mb</p>
+      <div class="progress-bar-container">
+        <div class="progress-bar" id="progress-bar"></div>
+        <div class="progress-text" id="progress-text">0%</div>
+        <div class="progress-indicator" id="progress-indicator">0 KB de 9 MB</div>
+      </div>
+      <p>Este é o RoBooster. Um otimizador feito para o Roblox utilizando o inicializador BloxStraper. Ele foca em melhorar a performance do seu jogo ao máximo realizando otimizações. Para utiliza-lo, você precisa ter o BloxStraper instalado no seu pc.</p>
+      <button onclick="iniciarDownload('../arquivos/Roblox.rar', 'RoBooster.rar')" class="download-button">Download</button>
+      <p id="download-count">Carregando...</p>
+    </div>
+  </div>
+  <div style="height: 30px;"></div>
+  <div class="copyright-bar">
+    © Copyright aMathyzin 2023-2024. Todos os direitos reservados.
+  </div>
+  <audio id="myaudio">
+    <source src="../lofi.mp3" type="audio/mp3">
+  </audio>
+
+  <script>
+    window.onload = () => {
+      document.querySelector('.loader-wrapper').style.display = 'none';
+      atualizarContagemDownloads();
+    }
+
+    document.getElementById('audio-checkbox').addEventListener('change', function() {
+      var audio = document.getElementById('myaudio');
+      if (this.checked) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    });
+
+    function iniciarDownload(url, nomeArquivo) {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', url, true);
+      xhr.responseType = 'blob';
+
+      xhr.onloadstart = function() {
+        document.getElementById('progress-bar').style.width = '0%';
+        document.getElementById('progress-text').innerText = '0%';
+      };
+
+      xhr.onprogress = function(event) {
+        if (event.lengthComputable) {
+          var percentComplete = (event.loaded / event.total) * 100;
+          document.getElementById('progress-bar').style.width = percentComplete + '%';
+          document.getElementById('progress-text').innerText = percentComplete.toFixed(2) + '%';
+
+          var totalSizeMB = (event.total / (1024 * 1024)).toFixed(1);
+          var downloadedSizeMB = (event.loaded / (1024 * 1024)).toFixed(1);
+          document.getElementById('progress-indicator').innerText = downloadedSizeMB + ' MB de ' + totalSizeMB + ' MB';
+        }
+      };
+
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          document.getElementById('progress-bar').style.width = '100%';
+          document.getElementById('progress-text').innerText = '100%';
+          setTimeout(function() {
+            var blob = new Blob([xhr.response], { type: 'application/octet-stream' });
+            var url = URL.createObjectURL(blob);
+            var a = document.createElement('a');
+            a.href = url;
+            a.download = nomeArquivo;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+
+            Swal.fire({
+              title: 'Download Concluído!',
+              text: 'Seu arquivo foi baixado com sucesso.',
+              icon: 'success',
+              background: '#333',
+              confirmButtonText: 'OK',
+              color: '#FFF',
+              backdrop: 'rgba(0,0,0,0.5)'
+            });
+
+            incrementarContagemDownloads();
+          }, 1000);
+        }
+      };
+
+      xhr.send();
+    }
+
+    function atualizarContagemDownloads() {
+      fetch('https://stirring-midnight-regnosaurus.glitch.me/count')
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('download-count').innerText = `${data.count} downloads`;
+        })
+        .catch(error => {
+          console.error('Erro ao obter a contagem de downloads:', error);
+        });
+    }
+
+    function incrementarContagemDownloads() {
+      fetch('https://stirring-midnight-regnosaurus.glitch.me/increment', {
+        method: 'POST',
+      })
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('download-count').innerText = `${data.count} downloads`;
+        })
+        .catch(error => {
+          console.error('Erro ao incrementar a contagem de downloads:', error);
+        });
+    }
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(function () {
+        const loaderWrapper = document.querySelector(".loader-wrapper");
+        loaderWrapper.style.display = "none";
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
