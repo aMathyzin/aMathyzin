@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const images = [
     { src: 'freelasells.png', url: 'https://freelasells.shop', glowColor: 'rgba(226, 220, 227, 0.5)' },
-    { src: 'template1.jpg', url: 'https://site2.com', glowColor: 'rgba(221, 51, 255, 0.5)' },
     { src: 'anuncie.png', url: 'https://amathyzin.tech/test', glowColor: 'rgba(0, 108, 255, 0.5)' }
     
   ]; 
