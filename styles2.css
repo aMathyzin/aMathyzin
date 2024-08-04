@@ -138,7 +138,7 @@
   max-width: 1200px;
   margin: 50px auto;
   text-align: center;
-  position: relative; /* Adicionado para garantir o posicionamento correto das setas */
+  position: relative;
 }
 
 .projects h2 {
@@ -219,7 +219,7 @@
   align-items: center;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 10; /* Adicionando z-index para garantir que as setas fiquem acima dos projetos */
+  z-index: 10;
 }
 
 .scroll-buttons .scroll-button {
@@ -459,41 +459,41 @@ body {
 
 .discord-content {
   display: flex;
-  flex-direction: row; /* Ajusta para exibir os itens em linha */
-  align-items: center; /* Alinha verticalmente */
-  justify-content: center; /* Alinha horizontalmente */
-  gap: 20px; /* Espaçamento entre o ícone e o botão */
+  flex-direction: row; 
+  align-items: center;
+  justify-content: center; 
+  gap: 20px;
 }
 
 .discord-icon {
-  font-size: 10em; /* Ajuste o tamanho do ícone */
-  color: #7289da; /* Cor do ícone do Discord */
-  margin: 0; /* Remove qualquer margem extra */
+  font-size: 10em;
+  color: #7289da;
+  margin: 0;
 }
 
 .discord-button-container {
   display: flex;
-  flex-direction: column; /* Alinha os itens em uma coluna */
+  flex-direction: column; 
   align-items: center;
-  gap: 20px; /* Espaçamento entre o ícone e o botão */
+  gap: 20px; 
 }
 
 .discord-button {
   display: inline-block;
-  background-color: #7289da; /* Cor de fundo do botão */
+  background-color: #7289da; 
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   text-align: center;
-  font-size: 1.5em; /* Tamanho do texto do botão */
+  font-size: 1.5em;
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s;
 }
 
 .discord-button:hover {
-  background-color: #5b6eae; /* Cor de fundo do botão ao passar o mouse */
+  background-color: #5b6eae; 
 }
 
 /* Rocket Wrapper */
@@ -528,3 +528,156 @@ body {
     transform: scale(1) translateY(-60px);
   }
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+
+/* Estilos para as áreas de anúncio */
+.cod-left, .cod-right {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 160px;
+  height: auto;
+  z-index: 1; 
+  background-color: transparent; 
+}
+
+.cod-left {
+  left: 0;
+}
+
+.cod-right {
+  right: 0;
+}
+
+.cod-left a, .cod-right a {
+  display: block;
+  cursor: pointer;
+  position: relative;
+}
+
+.cod-left img, .cod-right img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Regras de mídia para anúncios responsivos */
+@media (max-width: 1200px) {
+  .cod-left, .cod-right {
+    width: 120px;
+  }
+}
+
+@media (max-width: 992px) {
+  .cod-left, .cod-right {
+    width: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cod-left, .cod-right {
+    display: none;
+  }
+}
+
+.loader-wrapper {
+  z-index: 1000; 
+}
+
+.navbar {
+  z-index: 100;
+}
+
+/* Ajuste o z-index do conteúdo principal para garantir que ele fique acima dos anúncios */
+.content, .about-me, .subscribe-section, .discord-section, .projects, .footer-info, .copyright-bar {
+  position: relative;
+  z-index: 2; 
+}
+
+/* Efeito de brilho pulsante */
+.cod-left a::before, .cod-right a::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: transparent;
+  z-index: -1;
+  border-radius: 5px; 
+  box-shadow: 0 0 10px var(--glow-color); 
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px var(--glow-color);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--glow-color);
+  }
+  100% {
+    box-shadow: 0 0 10px var(--glow-color);
+  }
+}
+
+/* Estilos para o botão "Anuncie conosco" */
+.cod-left button, .cod-right button {
+  display: block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #7d7d7d;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 12px;
+}
+
+.cod-left button:hover, .cod-right button:hover {
+  background-color: #0056b3;
+}
+
+/* CSS para o menu personalizado de clique direito */
+.custom-context-menu {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  width: 200px;
+  background-color: #1f1f1f;
+  border: 1px solid #bb86fc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+.custom-context-menu ul {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.custom-context-menu li {
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #bb86fc;
+}
+
+.custom-context-menu li:hover {
+  background-color: #3700b3;
+  color: white;
+}
+
+.custom-context-menu li i {
+  margin-right: 10px;
+}
+
