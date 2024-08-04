@@ -32,6 +32,7 @@
   <link rel="icon" href="./icon.png" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="styles2.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="ad-script.js" defer></script>
 </head>
 
 <body>
@@ -65,6 +66,14 @@
       </a>
     </div>
   </div>
+
+  <div class="cod-left" id="cod-left">
+    <!-- A imagem será adicionada aqui pelo JavaScript -->
+  </div>
+  <div class="cod-right" id="cod-right">
+    <!-- A imagem será adicionada aqui pelo JavaScript -->
+  </div>
+
   <div class="content">
     <iframe id="video-iframe" src="https://www.youtube.com/embed/ciHfcpppItg" frameborder="0" allowfullscreen></iframe>
     <br>
@@ -72,7 +81,7 @@
   </div>
   <div class="about-me">
     <h2>Sobre Mim</h2>
-    <p>Olá! Sou o aMathyzin, um entusiasta de otimização que trabalha nesse cenário há mais de 2 anos. No meu canal do YouTube, compartilho dicas, truques e ferramentas exclusivas para ajudar você a obter o máximo de sua máquina.</p>
+    <p>Olá! Sou o aMathyzin, um entusiasta de otimização que trabalha nesse cenário há mais de 2 anos. No meu canal do YouTube, compartilho dicas, truques e ferramentas exclusivas para ajudar você a obter o máximo de sua máquina. O projeto aMathyzin é focado em fornecer todas as ferramentas necessárias para tunar seu sistema Windows gratuitamente, sendo todas feitas por nós, que somos desenvolvedores independentes.</p>
   </div>
   <div class="subscribe-section">
     <h2>Inscreva-se para mais Otimizações!</h2>
@@ -142,17 +151,50 @@
   <div class="copyright-bar">
     © Copyright aMathyzin 2024. Todos os direitos reservados.
   </div>
-  <audio id="myaudio">
-    <source src="./lofi.mp3" type="audio/mp3">
-  </audio>
-  <div class="background-rocket-container">
-    <!-- Adicione quantos ícones quiser -->
-    <i class="fas fa-rocket"></i>
-    <i class="fas fa-rocket"></i>
-    <i class="fas fa-rocket"></i>
-    <i class="fas fa-rocket"></i>
-    <i class="fas fa-rocket"></i>
   </div>
+  </div>
+  <div class="custom-context-menu" id="custom-context-menu">
+    <ul>
+      <li id="open-youtube"><i class="fab fa-youtube"></i>Abrir Canal do YouTube</li>
+    </ul>
+  </div>
+
+  <script>
+    // Adicionando eventos de contexto personalizado
+    document.addEventListener('contextmenu', function (event) {
+      event.preventDefault();
+      const contextMenu = document.getElementById('custom-context-menu');
+      contextMenu.style.top = `${event.clientY}px`;
+      contextMenu.style.left = `${event.clientX}px`;
+      contextMenu.style.display = 'block';
+    });
+
+    document.addEventListener('click', function () {
+      const contextMenu = document.getElementById('custom-context-menu');
+      contextMenu.style.display = 'none';
+    });
+
+    document.getElementById('open-youtube').addEventListener('click', function () {
+      window.open('https://www.youtube.com/@aMathyzin', '_blank');
+    });
+
+    // Garantir que o evento de contexto personalizado seja aplicado a todo o documento
+    document.body.addEventListener('contextmenu', function (event) {
+      event.preventDefault();
+      const contextMenu = document.getElementById('custom-context-menu');
+      contextMenu.style.top = `${event.clientY}px`;
+      contextMenu.style.left = `${event.clientX}px`;
+      contextMenu.style.display = 'block';
+    });
+
+    // Fechar o menu de contexto personalizado ao clicar fora dele
+    document.addEventListener('click', function (event) {
+      const contextMenu = document.getElementById('custom-context-menu');
+      if (event.button !== 2) { // Exclui clique direito do fechamento do menu
+        contextMenu.style.display = 'none';
+      }
+    });
+  </script>
   <script>
     const audio = document.getElementById('myaudio');
     const audioCheckbox = document.getElementById('audio-checkbox');
@@ -172,11 +214,10 @@
       }, 2000);
     });
 
-    // Verificar se é um dispositivo móvel
     if (window.innerWidth <= 767) {
       const iframe = document.getElementById("video-iframe");
-      iframe.width = "100%"; // Use toda a largura disponível
-      iframe.height = "auto"; // Altura automática proporcional à largura
+      iframe.width = "100%"; 
+      iframe.height = "auto"; 
     }
 
     const scrollLeftButton = document.getElementById('scroll-left');
@@ -215,25 +256,23 @@
 
     document.addEventListener("DOMContentLoaded", function () {
       setTimeout(function () {
-        loaderWrapper.style.opacity = "0"; // Fade out do loader
+        loaderWrapper.style.opacity = "0"; 
         setTimeout(function () {
-          loaderWrapper.style.display = "none"; // Remove o loader do DOM
-        }, 1000); // Tempo do fade out
+          loaderWrapper.style.display = "none"; 
+        }, 1000); 
 
-        // Mostrar o foguete
+     
         rocketWrapper.style.display = "flex";
         setTimeout(function () {
-          rocketWrapper.style.opacity = "0"; // Fade out do foguete
+          rocketWrapper.style.opacity = "0";
           setTimeout(function () {
-            rocketWrapper.style.display = "none"; // Remove o foguete do DOM
-          }, 1000); // Tempo do fade out
-        }, 2000); // Tempo que o foguete fica visível
-      }, 2000); // Tempo inicial do loader
+            rocketWrapper.style.display = "none"; 
+          }, 1000); 
+        }, 2000); 
+      }, 2000); 
     });
   </script>
   <script src="https://apis.google.com/js/platform.js"></script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5624731249541141"
-     crossorigin="anonymous"></script>
 </body>
 
 </html>
