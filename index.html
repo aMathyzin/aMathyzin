@@ -195,6 +195,9 @@
       }
     });
   </script>
+  <audio id="myaudio">
+    <source src="./lofi.mp3" type="audio/mp3">
+  </audio>
   <script>
     const audio = document.getElementById('myaudio');
     const audioCheckbox = document.getElementById('audio-checkbox');
@@ -206,6 +209,8 @@
         audio.pause();
       }
     });
+  </script>
+  <script>
 
     document.addEventListener("DOMContentLoaded", function () {
       setTimeout(function () {
