@@ -225,6 +225,21 @@
       <li id="open-youtube"><i class="fab fa-youtube"></i>Abrir Canal do YouTube</li>
     </ul>
   </div>
+  <audio id="myaudio">
+    <source src="../lofi.mp3" type="audio/mp3">
+  </audio>
+  <script>
+    const audio = document.getElementById('myaudio');
+    const audioCheckbox = document.getElementById('audio-checkbox');
+
+    audioCheckbox.addEventListener('change', () => {
+      if (audioCheckbox.checked) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    });
+  </script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var subscribeButton = document.getElementById('subscribe-button');
@@ -314,7 +329,6 @@
   <script src="./js/geral.js"></script>
   <script src="./js/loader.js"></script>
   <script src="./js/rightmouse.js"></script>
-  <script src="./js/audio.js"></script>
   <script src="https://apis.google.com/js/platform.js"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5624731249541141"
     crossorigin="anonymous"></script>
