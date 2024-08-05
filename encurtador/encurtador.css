@@ -1,0 +1,440 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #121212;
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #1e1e1e;
+  position: relative; /* Garante que a navbar esteja acima dos anúncios */
+  z-index: 3; /* Z-index alto para garantir que fique acima dos anúncios */
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.navbar .categories a,
+.navbar .right a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.navbar .categories a:hover,
+.navbar .right a:hover {
+  color: #ff4500;
+}
+
+.navbar .switch-container {
+  margin-left: 20px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 20px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #ff4500;
+}
+
+input:checked + .slider:before {
+  transform: translateX(14px);
+}
+
+/* Loader Wrapper */
+.loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #121212;
+  z-index: 1000;
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #ff4500;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Rocket Wrapper */
+.rocket-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #121212;
+  z-index: 1000;
+  transition: opacity 1s ease;
+}
+
+.rocket-wrapper i {
+  font-size: 80px;
+  color: #ff4500;
+  animation: rocket-fly 2s ease-in-out;
+}
+
+@keyframes rocket-fly {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    transform: scale(1.2) translateY(-30px);
+  }
+  100% {
+    transform: scale(1) translateY(-60px);
+  }
+}
+
+.shortener-content {
+  text-align: center;
+  padding: 20px;
+  margin: 0 180px; /* Espaço para os anúncios laterais */
+}
+
+.shortener-content h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.shortener-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.highlight-button {
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.highlight-button:hover {
+  background-color: #cc0000;
+}
+
+.subscribe-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#countdown {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Copyright Bar */
+.copyright-bar {
+  text-align: center;
+  padding: 10px;
+  background-color: #1f1f1f;
+  color: #e63e00;
+  position: fixed;
+  bottom: 0;
+  left: 0; /* Alinhado ao lado esquerdo */
+  width: calc(100% - 320px); /* Subtrai a largura total dos anúncios laterais */
+  z-index: 2; /* Garante que fique acima do conteúdo, mas abaixo dos anúncios */
+}
+
+.custom-context-menu {
+  display: none;
+  position: absolute;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.custom-context-menu ul {
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.custom-context-menu ul li {
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.custom-context-menu ul li:hover {
+  background-color: #333;
+}
+
+.custom-context-menu ul li i {
+  margin-right: 10px;
+}
+
+/* Footer Info Section */
+.footer-info {
+  max-width: 100%;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #1f1f1f;
+  color: #fff;
+  border-top: 1px solid #ff4500;
+  margin-left: 180px; /* Espaço para os anúncios laterais */
+  margin-right: 180px; /* Espaço para os anúncios laterais */
+}
+
+.footer-info-item {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.footer-info-item i {
+  margin-right: 10px;
+  color: #ff4500;
+}
+
+.footer-info-item a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-info-item a:hover {
+  color: #ff4500;
+}
+
+#countdown {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.progress-wrapper {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background-color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0; /* Inicialmente a largura é 0 */
+  background-color: #ff4500;
+  transition: width 1s linear;
+}
+
+#time {
+  font-weight: bold;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.cod-left, .cod-right {
+  position: fixed;
+  top: 80px; /* Ajustado para garantir que fique abaixo da navbar */
+  width: 10vw; /* Usando unidade relativa para ajustar com base na largura da viewport */
+  max-width: 120px; /* Tamanho máximo do anúncio */
+  height: auto;
+  background-color: transparent;
+  z-index: 2; /* Garantir que fique acima do conteúdo, mas abaixo da navbar */
+  transform: translateY(0);
+}
+
+.cod-left {
+  left: 0;
+}
+
+.cod-right {
+  right: 0;
+}
+
+.cod-left a, .cod-right a {
+  display: block;
+  cursor: pointer;
+  position: relative;
+}
+
+.cod-left img, .cod-right img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Ajuste o tamanho do anúncio para se adaptar a diferentes larguras de janela */
+@media (max-width: 1200px) {
+  .cod-left, .cod-right {
+    width: 12vw;
+  }
+}
+
+@media (max-width: 992px) {
+  .cod-left, .cod-right {
+    width: 15vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .cod-left, .cod-right {
+    display: none; /* Ocultar os anúncios em telas menores */
+  }
+}
+
+/* Efeito de brilho pulsante */
+.cod-left a::before, .cod-right a::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: transparent;
+  z-index: -1;
+  border-radius: 5px;
+  box-shadow: 0 0 10px var(--glow-color);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px var(--glow-color);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--glow-color);
+  }
+  100% {
+    box-shadow: 0 0 10px var(--glow-color);
+  }
+}
+
+/* Estilos para o botão "Anuncie conosco" */
+.cod-left button, .cod-right button {
+  display: block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #7d7d7d;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 12px;
+}
+
+.cod-left button:hover, .cod-right button:hover {
+  background-color: #0056b3;
+}
+
+/* Ajuste geral para garantir que o conteúdo da página não fique sobreposto */
+.content, .about-me, .navbar, .subscribe-section, .discord-section, .projects, .footer-info, .copyright-bar {
+  position: relative;
+  z-index: 1; /* Ajustado para garantir que fique abaixo dos anúncios */
+}
+
+/* Ajusta o layout da página para acomodar os anúncios laterais */
+.shortener-content, .footer-info, .copyright-bar {
+  margin-left: 180px; /* Espaço para os anúncios laterais */
+  margin-right: 180px; /* Espaço para os anúncios laterais */
+}
+
+@media (max-width: 1200px) {
+  .shortener-content, .footer-info, .copyright-bar {
+    margin-left: 140px; /* Ajuste conforme necessário */
+    margin-right: 140px; /* Ajuste conforme necessário */
+  }
+}
+
+@media (max-width: 992px) {
+  .shortener-content, .footer-info, .copyright-bar {
+    margin-left: 110px; /* Ajuste conforme necessário */
+    margin-right: 110px; /* Ajuste conforme necessário */
+  }
+}
+
+@media (max-width: 768px) {
+  .shortener-content, .footer-info, .copyright-bar {
+    margin: 0; /* Remove a margem quando os anúncios não são exibidos */
+  }
+}
