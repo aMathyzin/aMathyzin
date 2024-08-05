@@ -281,6 +281,23 @@
   <script src="https://apis.google.com/js/platform.js"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5624731249541141"
      crossorigin="anonymous"></script>
+  <script>
+    // Define googlefc and the controlled messaging function on the Window.
+    window.googlefc = window.googlefc || {};
+    googlefc.controlledMessagingFunction = async (message) => {
+      // Determine if the user is a subscriber asynchronously.
+      const isSubscriber = await determineIfUserIsSubscriber();
+
+      if (isSubscriber) {
+        // If the user is a subscriber, don't show any messages.
+        message.proceed(false);
+      } else {
+        // Otherwise, show messages as usual.
+        message.proceed(true);
+      }
+    }
+  </script>
+
 </body>
 
 </html>
