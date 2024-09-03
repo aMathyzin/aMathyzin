@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário 2024 - aMathyzin</title>
+    <script src="https://cdn.tailwindcss.com"></script> <!-- Importando Tailwind CSS -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #1A0029; /* Fundo igual ao do formulário */
+        }
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .overlay-text {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 5rem;
+            font-family: Arial, sans-serif;
+            z-index: 1000;
+            pointer-events: none;
+            background: linear-gradient(to right, #D1C4E9, #4A148C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .audio-controls {
+            position: absolute;
+            bottom: 120px; /* Colocando os controles de áudio acima do texto */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: rgba(255, 255, 255, 0.1); /* Fundo translúcido */
+            padding: 8px 12px;
+            border-radius: 9999px; /* Bordas arredondadas */
+            backdrop-blur-md;
+        }
+    </style>
+</head>
+<body>
+    <iframe src="https://fm.addxt.com/form/?vf=1FAIpQLSeMM55nseZXz85a8p7IdoV7Xc5kq_McS2tNawE_vwKP3ichEg"></iframe>
+    <div class="overlay-text">aMathyzin</div>
+
+    <!-- Controles de Áudio -->
+    <div class="audio-controls">
+        <button id="playPauseBtn" class="text-white bg-purple-700 hover:bg-purple-800 rounded-full p-2">
+            <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-5.197-3.3A1 1 0 008 8.659v6.682a1 1 0 001.555.832l5.197-3.299a1 1 0 000-1.664z" />
+            </svg>
+            <svg id="pauseIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6" />
+            </svg>
+        </button>
+        <input type="range" id="volumeSlider" class="w-24 h-2 bg-gray-200 rounded-lg cursor-pointer" min="0" max="1" step="0.01" value="1">
+    </div>
+
+    <audio id="audioPlayer" src="https://amathyzin.tech/lofi.mp3"></audio> <!-- Substitua "sua-musica.mp3" pelo caminho do seu arquivo MP3 -->
+
+    <script>
+        const audioPlayer = document.getElementById('audioPlayer');
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        const playIcon = document.getElementById('playIcon');
+        const pauseIcon = document.getElementById('pauseIcon');
+        const volumeSlider = document.getElementById('volumeSlider');
+
+        playPauseBtn.addEventListener('click', () => {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+                playIcon.classList.add('hidden');
+                pauseIcon.classList.remove('hidden');
+            } else {
+                audioPlayer.pause();
+                playIcon.classList.remove('hidden');
+                pauseIcon.classList.add('hidden');
+            }
+        });
+
+        volumeSlider.addEventListener('input', (e) => {
+            audioPlayer.volume = e.target.value;
+        });
+    </script>
+</body>
+</html>
