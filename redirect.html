@@ -6,15 +6,19 @@
     <title>Redirecionamento</title>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var referrer = document.referrer;
-            var targetUrl = "http://localhost:3000#true";
-            var fallbackUrl = "https://fir3.net/robooster-redir";
+            // Adiciona um pequeno atraso para garantir que o document.referrer seja capturado corretamente
+            setTimeout(function() {
+                var referrer = document.referrer;
+                console.log("Referrer: ", referrer); // Adiciona esta linha para depurar
+                var targetUrl = "http://localhost:3000#true";
+                var fallbackUrl = "https://fir3.net/robooster-redir";
 
-            if (referrer === "https://fir3.net/robooster-redir") {
-                window.location.href = targetUrl;
-            } else {
-                window.location.href = fallbackUrl;
-            }
+                if (referrer === "https://fir3.net/robooster-redir") {
+                    window.location.href = targetUrl;
+                } else {
+                    window.location.href = fallbackUrl;
+                }
+            }, 100); // Atraso de 100 milissegundos
         });
     </script>
 </head>
