@@ -3,8 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0;url=http://localhost:3000#true">
     <title>Redirecionamento</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var referrer = document.referrer;
+            var targetUrl = "http://localhost:3000#true";
+            var fallbackUrl = "https://fir3.net/robooster-redir";
+
+            if (referrer === "https://fir3.net/robooster-redir") {
+                window.location.href = targetUrl;
+            } else {
+                window.location.href = fallbackUrl;
+            }
+        });
+    </script>
 </head>
 <body>
     <h1>Redirecionando...</h1>
