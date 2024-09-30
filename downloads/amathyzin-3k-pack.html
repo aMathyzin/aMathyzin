@@ -1,59 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v5.8.14, mobirise.com">
-  <link rel="shortcut icon" href="../icon.png" type="image/x-icon">
-  <meta name="description" content="Deseja otimizar seu computador? Aqui é o lugar certo pra você! Segurança e eficiência garantidas!">
   <title>aMathyzin - 3k Pack</title>
-  <link rel="icon" href="../icon.png" type="image/x-icon">
+  <meta name="description" content="Download do pack especial de 3.000 Inscritos do aMathyzin! Segurança e eficiência garantidas.">
+  <meta name="keywords" content="3k pack, aMathyzin, pack de desempenho, otimização de PC, download pack, 3.000 inscritos, aMathyzin pack">
+  <meta name="author" content="aMathyzin">
+  <meta name="robots" content="index, follow">
   <meta property="og:title" content="aMathyzin 3k Pack Download">
   <meta property="og:description" content="Download do pack especial de 3.000 Inscritos do aMathyzin!">
-  <meta property="og:image" content="../icon.png">
-  <meta property="og:url" content="https://amathyzin.tech/">
+  <meta property="og:image" content="https://amathyzin.com/icon.png">
+  <meta property="og:url" content="https://amathyzin.com/">
   <meta property="og:type" content="website">
-  <link rel="stylesheet" type="text/css" href="../styles.css">
-  <!-- Inclusão do SweetAlert -->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="aMathyzin 3k Pack Download">
+  <meta name="twitter:description" content="Download do pack especial de 3.000 Inscritos do aMathyzin! Segurança e eficiência garantidas.">
+  <meta name="twitter:image" content="../icon.png">
+  <link rel="icon" href="https://amathyzin.com/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="../styles2.css"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" async> <!-- Link para Font Awesome -->
+  <script async src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <style>
-    .content {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding: 20px;
-    }
-    .video-tutorial, .download-section {
-      flex: 1;
-      padding-right: 20px;
-    }
-    .download-section {
-  border: 1px solid #ff69b4; /* Cor da borda rosa */
-  background-color: rgba(0, 0, 0, 0.8); /* Cor preta com 80% de opacidade */
-  padding: 20px;
-  border-radius: 5px;
-  text-align: center;
-}
-
-    .download-button, .password-button {
-      background-color: #8605C2;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 18px;
-      text-decoration: none;
-      display: inline-block;
-      margin: 5px;
-    }
-    .download-button:hover, .password-button:hover {
-      background-color: #B808E7;
-    }
+    /* Estilos adicionais para a barra de progresso */
     .progress-bar-container {
       width: 100%;
-      background-color: #7603AB;
+      background-color: #FF69B4; /* Cor do fundo da barra */
       margin-top: 20px;
       margin-bottom: 20px;
       height: 20px;
@@ -63,11 +36,10 @@
     }
     .progress-bar {
       height: 100%;
-      background-color: #B84BFF;
-      width: 0%;
+      background-color: #c72b79; /* Cor da barra de progresso (Rosa) */
+      width: 0%; /* Inicialmente 0% */
       border-radius: 5px;
       transition: width 0.4s ease;
-      position: relative;
     }
     .progress-text {
       position: absolute;
@@ -87,19 +59,118 @@
       color: #888;
       font-size: 14px;
     }
-    .file-icon {
-      max-width: 250px;
-      max-height: 250px;
+    .description-box {
+      background-color: rgba(0, 0, 0, 0.8);
+      border: 1px solid #ff69b4;
+      border-radius: 5px;
+      padding: 20px;
+      margin-top: 10px; 
+      color: #fff;
+      text-align: center; /* Centraliza o texto horizontalmente */
+      max-width: 730px; 
+      width: 100%; 
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+      margin-left: auto; 
+      margin-right: auto; 
     }
+    .description-box h3 {
+      display: flex;
+      justify-content: center; /* Centraliza horizontalmente */
+      align-items: center; /* Centraliza verticalmente */
+      color: #FF69B4; /* Cor rosa para o título */
+      font-size: 1.5em;
+    }
+    .description-box h3 i {
+      margin-right: 10px;
+      color: #FF69B4; /* Ícone rosa */
+    }
+    .warning {
+      color: #FFCC00; /* Cor amarela */
+      margin-bottom: 10px; /* Espaçamento inferior */
+    }
+    .important {
+      color: #FF5733; /* Cor vermelha para destacar o aviso */
+      margin-bottom: 10px; /* Espaçamento inferior */
+      font-weight: bold;
+    }
+    .file-icon {
+      max-width: 250px; /* Limita a largura máxima */
+      max-height: 250px; /* Limita a altura máxima */
+      width: auto; /* Mantém a proporção */
+      height: auto; /* Mantém a proporção */
+    }
+    .tutorial-title {
+      color: #FF69B4; /* Cor rosa para o título */
+      display: flex; /* Usando flexbox para o título e o ícone */
+      align-items: center; /* Alinha o ícone e o texto verticalmente */
+      justify-content: center; /* Centraliza o conteúdo horizontalmente */
+      margin-bottom: 20px; /* Espaçamento inferior */
+      font-size: 1.5em; /* Tamanho do título */
+    }
+    .tutorial-title i {
+      margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+    }
+    .description-title {
+      color: #FF69B4; /* Cor rosa para o título na descrição */
+      display: flex; /* Usando flexbox para o título e o ícone */
+      align-items: center; /* Alinha o ícone e o texto verticalmente */
+      justify-content: center; /* Centraliza o conteúdo horizontalmente */
+      margin-bottom: 20px; /* Espaçamento inferior */
+      font-size: 1.5em; /* Tamanho do título */
+    }
+    .description-title i {
+      margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+    }
+    .terms-container {
+      margin-top: 15px;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      padding: 5px;
+      border-radius: 5px;
+      /* Animação de brilho pulsante */
+      animation: pulse 1.5s infinite;
+      box-shadow: 0 0 15px rgba(255, 105, 180, 0.7), 0 0 25px rgba(255, 105, 180, 0.5), 0 0 35px rgba(255, 105, 180, 0.3);
+    }
+    .terms-container.no-animation {
+      animation: none; /* Remove a animação */
+      box-shadow: none; /* Remove o brilho */
+    }
+    .terms-container label {
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .terms-container input[type="checkbox"] {
+      margin-right: 5px;
+    }
+    .download-button:disabled {
+      background-color: #888; /* Cor do botão desabilitado */
+      cursor: not-allowed; /* Cursor de não permitido */
+    }
+
+    /* Animação de pulso */
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+      }
+      50% {
+        box-shadow: 0 0 20px rgba(255, 105, 180, 0.7);
+      }
+      100% {
+        box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+      }
+    }
+
+    /* Media Queries para Responsividade */
     @media (max-width: 768px) {
-      .content {
+      .download-page-content {
         flex-direction: column;
       }
-      .video-tutorial, .download-section {
-        width: 100%;
-        padding-right: 0;
-        margin-bottom: 20px;
-      }
+    }
+
+    .download-button:disabled {
+      background-color: #888; /* Cor do botão desabilitado */
+      cursor: not-allowed; /* Cursor de não permitido */
     }
   </style>
 </head>
@@ -107,149 +178,198 @@
   <div class="loader-wrapper">
     <div class="loader"></div>
   </div>
- <div class="navbar">
-  <div class="left">
-    <span class="logo">
-      <a href="https://amathyzin.tech">
-        <img class="icon" src="https://amathyzin.tech/icon.png" alt="aMathyzin">
-        aMathyzin
-      </a>
-      <div class="switch-container">
-        <label class="switch">
-          <input type="checkbox" id="audio-checkbox">
-          <span class="slider"></span>
-        </label>
-      </div>
-    </span>
-  </div>
-    <div class="right">
-      <a href="https://www.youtube.com/@aMathyzin" target="_blank" class="icon-link">
-        <img class="icon" src="../youtube.png" alt="YouTube">
-      </a>
-      <a href="https://amathyzin.tech/discord" target="_blank" class="icon-link">
-        <img class="icon" src="../discord.png" alt="Discord">
-      </a>
+
+<!-- Navbar -->
+<div class="navbar">
+  <div class="logo" style="display: flex; align-items: center;">
+    <a href="https://amathyzin.com" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+      <img class="icon" src="https://amathyzin.com/icon.png" alt="aMathyzin" style="vertical-align: middle;">
+      <span style="margin-left: 5px;">aMathyzin</span>
+    </a>
+    <div class="switch-container" style="margin-left: 10px;">
+      <label class="switch">
+        <input type="checkbox" id="audio-checkbox">
+        <span class="slider"></span>
+      </label>
     </div>
   </div>
-  <div class="content">
-    <div class="video-tutorial">
-      <h2 style="text-align:center;">Tutorial</h2>
+  <div class="categories">
+    <a href="https://amathyzin.com/downloads" class="category-link">DOWNLOADS</a>
+    <a href="https://amathyzin.com/discord" class="category-link">DISCORD</a>
+  </div>
+  <div class="right">
+    <a href="https://www.youtube.com/@aMathyzin" target="_blank" class="icon-link">
+      <i class="fab fa-youtube"></i>
+    </a>
+    <a href="https://amathyzin.com/discord" target="_blank" class="icon-link">
+      <i class="fab fa-discord"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Conteúdo -->
+<div class="content">
+  <div class="download-page-content" style="display: flex; justify-content: space-between; align-items: flex-start; padding: 20px;">
+    <div class="video-tutorial" style="flex: 1; padding-right: 20px; text-align: center;">
+      <h2 class="tutorial-title"><i class="fas fa-video"></i> Tutorial</h2>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/Pxcaxgx_j-0" frameborder="0" allowfullscreen></iframe>
+
+      <!-- Caixa de informação abaixo do vídeo -->
+      <div class="description-box">
+        <h3><i class="fas fa-info-circle"></i>Sobre o 3k Pack</h3>
+        <p>Este pack é uma otimização especial para os 3.000 inscritos do canal aMathyzin, focado em melhorar o desempenho geral do PC para jogos. Certifique-se de assistir o vídeo para obter instruções detalhadas sobre o uso.</p>
+        <br>
+        <p class="important"><i class="fas fa-exclamation-triangle"></i> O pack é gratuito e protegido por uma licença proprietária. Qualquer tentativa de venda é estritamente proibida!</p>
+      </div>
     </div>
-    <div class="download-section">
-      <img class="file-icon" src="./icons/3kpack.png" alt="Ícone do Arquivo">
+
+    <div class="download-section" style="flex: 1; border: 1px solid #ff69b4; background-color: rgba(0, 0, 0, 0.8); padding: 20px; border-radius: 5px; text-align: center;">
+      <div class="file-icon-container">
+        <img class="file-icon" src="./icons/3kpack.png" alt="Ícone do Arquivo">
+      </div>
       <h2>Download do Arquivo</h2>
       <p>aMathyzin 3k Pack.zip - 5.6 MB</p>
+
+      <!-- Barra de Progresso -->
       <div class="progress-bar-container">
         <div class="progress-bar" id="progress-bar"></div>
         <div class="progress-text" id="progress-text">0%</div>
-        <div class="progress-indicator" id="progress-indicator">0 MB de 2.7 MB</div>
+        <div class="progress-indicator" id="progress-indicator">0 MB de 5.6 MB</div>
       </div>
-      <p>Otimização especial dos 3.000 inscritos no canal aMathyzin! Pack focado em melhorar o desempenho geral do pc para jogos! Assista o tutorial para saber como utiliza-lo da melhor maneira.</p>
-      <button onclick="iniciarDownload('../arquivos/aMathyzin 3k Pack.zip', 'aMathyzin 3k Pack.zip')" class="download-button">Download</button>
-      <button onclick="mostrarSenha()" class="password-button">Senha</button>
+
+      <!-- Descrição -->
+      <div class="description-text" style="color: #FF69B4; font-size: 14px; margin-top: 10px;">
+        Este é o pack especial de 3.000 inscritos do aMathyzin, focado em melhorar o desempenho geral do PC para jogos. Assista ao tutorial acima para saber como utilizá-lo.
+      </div>
+
+      <!-- Caixa para aceitar os termos -->
+      <div class="terms-container" id="terms-container">
+        <label>
+          <input type="checkbox" id="terms-checkbox">
+          Eu aceito os <a href="https://amathyzin.com/termos" target="_blank" style="color: #ff69b4;">Termos de Serviço</a>
+        </label>
+      </div>
+
+      <!-- Botão de Download -->
+      <button onclick="iniciarDownload('../arquivos/aMathyzin 3k Pack.zip', 'aMathyzin 3k Pack.zip')" class="highlight-button download-button" id="download-button" disabled>Download</button>
     </div>
   </div>
-  <div style="height: 30px;"></div>
-  <div class="copyright-bar">
-    © Copyright aMathyzin 2024. Todos os direitos reservados.
+</div>
+
+<!-- Footer -->
+<div class="footer-info">
+  <div class="footer-info-item">
+    <i class="fas fa-envelope"></i>
+    <a href="mailto:amathyzin@amathyzin.com">amathyzin@amathyzin.com</a>
   </div>
-  <audio id="myaudio">
-    <source src="../lofi.mp3" type="audio/mp3">
-  </audio>
+  <div class="footer-info-item">
+    <i class="fab fa-discord"></i>
+    <a href="https://amathyzin.com/discord" target="_blank">Servidor Discord</a>
+  </div>
+  <div class="footer-info-item">
+    <i class="fab fa-youtube"></i>
+    <a href="https://www.youtube.com/@aMathyzin" target="_blank">Canal YouTube</a>
+  </div>
+  <div class="footer-info-item">
+    <i class="fas fa-file-contract"></i>
+    <a href="../termos">Termos de Serviço</a>
+  </div>
+</div>
+<div class="copyright-bar">
+  © Copyright aMathyzin 2024. Todos os direitos reservados.
+</div>
 
-  <script>
-    window.onload = () => {
-      document.querySelector('.loader-wrapper').style.display = 'none';
+<!-- Script para controle de áudio -->
+<audio id="myaudio">
+  <source src="../lofi.mp3" type="audio/mp3">
+</audio>
+<script>
+  // Controle de áudio
+  const audio = document.getElementById('myaudio');
+  const audioCheckbox = document.getElementById('audio-checkbox');
+  audioCheckbox.addEventListener('change', () => {
+    if (audioCheckbox.checked) {
+      audio.play();
+    } else {
+      audio.pause();
     }
+  });
 
-    document.getElementById('audio-checkbox').addEventListener('change', function() {
-      var audio = document.getElementById('myaudio');
-      if (this.checked) {
-        audio.play();
-      } else {
-        audio.pause();
+  // Ocultação do loader após carregamento completo
+  document.addEventListener("DOMContentLoaded", function () {
+    const loaderWrapper = document.querySelector(".loader-wrapper");
+    loaderWrapper.style.display = "none"; // Esconde o loader após o carregamento
+  });
+
+  // Habilitar o botão de download ao marcar o checkbox e remover a animação do brilho
+  document.getElementById('terms-checkbox').addEventListener('change', function() {
+    const downloadButton = document.getElementById('download-button');
+    const termsContainer = document.getElementById('terms-container');
+    
+    downloadButton.disabled = !this.checked; // Habilita ou desabilita o botão com base no checkbox
+    
+    if (this.checked) {
+      termsContainer.classList.add('no-animation');
+    } else {
+      termsContainer.classList.remove('no-animation');
+    }
+  });
+
+  // Script para o progresso do download
+  function iniciarDownload(url, nomeArquivo) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.responseType = 'blob';
+
+    xhr.onloadstart = function() {
+      document.getElementById('progress-bar').style.width = '0%';
+      document.getElementById('progress-text').innerText = '0%';
+      document.getElementById('progress-indicator').innerText = '0 MB de 5.6 MB';
+    };
+
+    xhr.onprogress = function(event) {
+      if (event.lengthComputable) {
+        var percentComplete = (event.loaded / event.total) * 100;
+        document.getElementById('progress-bar').style.width = percentComplete + '%';
+        document.getElementById('progress-text').innerText = percentComplete.toFixed(2) + '%';
+
+        var totalSize = (event.total / (1024 * 1024)).toFixed(1);
+        var downloadedSize = (event.loaded / (1024 * 1024)).toFixed(1);
+        document.getElementById('progress-indicator').innerText = downloadedSize + ' MB de ' + totalSize + ' MB';
       }
-    });
+    };
 
-    function iniciarDownload(url, nomeArquivo) {
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', url, true);
-      xhr.responseType = 'blob';
+    xhr.onload = function() {
+      if (xhr.status === 200) {
+        document.getElementById('progress-bar').style.width = '100%';
+        document.getElementById('progress-text').innerText = '100%';
 
-      xhr.onloadstart = function() {
-        // Inicia a barra de progresso
-        document.getElementById('progress-bar').style.width = '0%';
-        document.getElementById('progress-text').innerText = '0%';
-      };
-
-      xhr.onprogress = function(event) {
-        // Atualiza a barra de progresso durante o download
-        if (event.lengthComputable) {
-          var percentComplete = (event.loaded / event.total) * 100;
-          document.getElementById('progress-bar').style.width = percentComplete + '%';
-          document.getElementById('progress-text').innerText = percentComplete.toFixed(2) + '%';
+        setTimeout(function() {
+          var blob = new Blob([xhr.response], { type: 'application/octet-stream' });
+          var url = URL.createObjectURL(blob);
+          var a = document.createElement('a');
+          a.href = url;
+          a.download = nomeArquivo;
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(url);
           
-          // Calcula o tamanho do arquivo em MB e atualiza a exibição
-          var totalSizeMB = (event.total / (1024 * 1024)).toFixed(1);
-          var downloadedSizeMB = (event.loaded / (1024 * 1024)).toFixed(1);
-          document.getElementById('progress-indicator').innerText = downloadedSizeMB + ' MB de ' + totalSizeMB + ' MB';
-        }
-      };
+          Swal.fire({
+            title: 'Download Concluído!',
+            text: 'Seu arquivo foi baixado com sucesso.',
+            icon: 'success',
+            background: '#333',
+            confirmButtonText: 'OK',
+            color: '#FFF',
+            backdrop: 'rgba(0,0,0,0.5)'
+          });
+        }, 1000);
+      }
+    };
 
-      xhr.onload = function() {
-        // Ao completar o download, redireciona para o URL do arquivo com o nome especificado
-        if (xhr.status === 200) {
-          document.getElementById('progress-bar').style.width = '100%';
-          document.getElementById('progress-text').innerText = '100%';
-          setTimeout(function() {
-            var blob = new Blob([xhr.response], { type: 'application/octet-stream' });
-            var url = URL.createObjectURL(blob);
-            var a = document.createElement('a');
-            a.href = url;
-            a.download = nomeArquivo;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-            
-            // Exibe o popup informando que o download foi concluído
-            Swal.fire({
-              title: 'Download Concluído!',
-              text: 'Seu arquivo foi baixado com sucesso.',
-              icon: 'success',
-              background: '#333',
-              confirmButtonText: 'OK',
-              color: '#FFF',
-              backdrop: 'rgba(0,0,0,0.5)'
-            });
-          }, 1000); // Adiciona um pequeno atraso antes de iniciar o download (1 segundo)
-        }
-      };
-
-      xhr.send();
-    }
-
-    function mostrarSenha() {
-      Swal.fire({
-        title: 'Senha do Pack',
-        text: 'Entre no servidor do Discord para pegar a senha!',
-        icon: 'info',
-        showCancelButton: true, // Mostra o botão cancelar
-        confirmButtonText: 'Entrar',
-        cancelButtonText: 'Cancelar', // Texto do botão cancelar
-        footer: 'ou <a href="https://linkebr.com/3kpack-senha">Pegar via Encurtador</a>', // Adiciona opção do encurtador no footer
-        background: '#333', // Define a cor de fundo do popup para uma cor escura
-        color: '#FFF', // Define a cor do texto para branco
-        backdrop: 'rgba(0,0,0,0.5)' // Define a cor e opacidade do fundo da página
-      }).then((result) => {
-        if (result.isConfirmed) {
-          window.location.href = 'https://amathyzin.tech/discord'; // Redireciona para o Discord ao clicar em "OK"
-        }
-      });
-    }
-  </script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5624731249541141"
-     crossorigin="anonymous"></script>
+    xhr.send();
+  }
+</script>
 </body>
 </html>
