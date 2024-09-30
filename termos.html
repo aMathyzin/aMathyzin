@@ -1,29 +1,203 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v5.8.14, mobirise.com">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
-  <meta name="description" content="Leia nossos termos de serviço para entender as condições de uso do site aMathyzin.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>aMathyzin - Termos de Serviço</title>
-  <link rel="icon" href="./icon.png" type="image/x-icon">
-  <meta property="og:title" content="aMathyzin - Termos de Serviço">
-  <meta property="og:description" content="Leia nossos termos de serviço para entender as condições de uso do site aMathyzin.">
-  <meta property="og:image" content="./icon.png">
-  <meta property="og:url" content="https://amathyzin.tech/termos">
-  <meta property="og:type" content="website">
-  <link rel="stylesheet" type="text/css" href="styles2.css">
+  <link rel="icon" href="https://amathyzin.com/icon.png" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
 
+    .navbar {
+      background-color: #1e1e1e;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      color: #bb86fc;
+      font-size: 1.5em;
+    }
+
+    .logo img {
+      width: 40px;
+      margin-right: 10px;
+    }
+
+    .categories, .right {
+      display: flex;
+      align-items: center;
+    }
+
+    .category-link {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #f0f0f0;
+      font-size: 1em;
+      transition: color 0.3s ease;
+    }
+
+    .category-link:hover {
+      color: #bb86fc;
+    }
+
+    .icon-link {
+      margin-left: 15px;
+      font-size: 1.2em;
+      color: #f0f0f0;
+      transition: color 0.3s ease;
+    }
+
+    .icon-link:hover {
+      color: #bb86fc;
+    }
+
+    .switch-container {
+      margin-left: 15px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      height: 20px;
+    }
+
+    .switch input {
+      display: none;
+    }
+
+    .slider {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 14px;
+      width: 14px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      border-radius: 50%;
+      transition: transform 0.3s;
+    }
+
+    input:checked + .slider {
+      background-color: #bb86fc;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(20px);
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #1e1e1e;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      border-radius: 8px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #9b59b6;
+      margin-bottom: 20px;
+    }
+
+    p, a {
+      color: #b3b3b3;
+    }
+
+    .accordion-section {
+      margin: 10px 0;
+      border-bottom: 1px solid #2e2e2e;
+      padding: 10px 0;
+    }
+
+    .accordion-header {
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      padding: 10px 0;
+      font-weight: bold;
+      color: #9b59b6;
+      transition: color 0.3s ease;
+    }
+
+    .accordion-header i {
+      transition: transform 0.3s ease;
+    }
+
+    .accordion-content {
+      display: none;
+      padding: 10px 0;
+      color: #b3b3b3;
+    }
+
+    .accordion-header.active i {
+      transform: rotate(180deg);
+    }
+
+    .accordion-header:hover {
+      color: #bb86fc;
+    }
+
+    .footer-info {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .footer-info-item {
+      margin: 10px;
+    }
+
+    .footer-info-item a {
+      text-decoration: none;
+      color: #9b59b6;
+      transition: color 0.3s ease;
+    }
+
+    .footer-info-item a:hover {
+      color: #bb86fc;
+    }
+
+    .copyright-bar {
+      text-align: center;
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #1e1e1e;
+      font-size: 0.9em;
+      color: #b3b3b3;
+    }
+  </style>
+</head>
 <body>
+
   <div class="navbar">
     <div class="logo">
-      <img class="icon" src="https://amathyzin.tech/icon.png" alt="aMathyzin">
+      <img class="icon" src="https://amathyzin.com/icon.png" alt="aMathyzin">
       aMathyzin
       <div class="switch-container">
         <label class="switch">
@@ -40,46 +214,126 @@
       <a href="https://www.youtube.com/@aMathyzin" target="_blank" class="icon-link">
         <i class="fab fa-youtube"></i>
       </a>
-      <a href="https://amathyzin.tech/discord" target="_blank" class="icon-link">
+      <a href="https://amathyzin.com/discord" target="_blank" class="icon-link">
         <i class="fab fa-discord"></i>
       </a>
     </div>
   </div>
+
   <div class="content">
     <h1>Termos de Serviço</h1>
-    <p>Última atualização: 01/08/2024 </p>
+    <p><strong>Última atualização:</strong> 30/09/2024</p>
 
-    <h2>1. Aceitação dos Termos</h2>
-    <p>Ao acessar e usar o site aMathyzin, você concorda com os seguintes termos e condições. Se você não concorda com qualquer um desses termos, por favor, não use nosso site.</p>
+    <div class="accordion-section">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        1. Aceitação dos Termos <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="accordion-content">
+        <p>Ao acessar e usar o site aMathyzin, você concorda com os seguintes termos e condições. Se você não concorda com qualquer um desses termos, por favor, não use nosso site.</p>
+      </div>
+    </div>
 
-    <h2>2. Modificações</h2>
-    <p>Reservamo-nos o direito de modificar estes termos a qualquer momento. As alterações serão publicadas nesta página, e seu uso continuado do site constitui aceitação das alterações.</p>
+    <div class="accordion-section">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        2. Modificações <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="accordion-content">
+        <p>Reservamo-nos o direito de modificar estes termos a qualquer momento. As alterações serão publicadas nesta página, e seu uso continuado do site constitui aceitação das alterações.</p>
+      </div>
+    </div>
 
-    <h2>3. Uso do Site</h2>
-    <p>Você concorda em usar o site apenas para fins legais e de acordo com todas as leis e regulamentos aplicáveis. É proibido usar o site de qualquer maneira que possa danificar, desativar, sobrecarregar ou prejudicar o site ou interferir no uso de qualquer outra parte.</p>
+    <div class="accordion-section">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        3. Uso do Site <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="accordion-content">
+        <p>Você concorda em usar o site apenas para fins legais e de acordo com todas as leis e regulamentos aplicáveis. É proibido usar o site de qualquer maneira que possa danificar, desativar, sobrecarregar ou prejudicar o site ou interferir no uso de qualquer outra parte.</p>
+      </div>
+    </div>
 
-    <h2>4. Propriedade Intelectual</h2>
-    <p>Todo o conteúdo do site aMathyzin, incluindo textos, gráficos, logos e imagens, é de propriedade exclusiva do aMathyzin e da equipe do Grupo aMathyzin e está protegido por leis de propriedade intelectual. Você não pode reproduzir, distribuir ou modificar qualquer conteúdo sem nossa permissão.</p>
+    <div class="accordion-section">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        4. Propriedade Intelectual <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="accordion-content">
+        <p>Todo o conteúdo do site aMathyzin, incluindo textos, gráficos, logos e imagens, é de propriedade exclusiva do aMathyzin e da equipe do Grupo aMathyzin e está protegido por leis de propriedade intelectual.</p>
+      </div>
+    </div>
 
-    <h2>5. Limitação de Responsabilidade</h2>
-    <p>O nosso site é fornecido "como está" e não garantimos a precisão, integridade ou utilidade das informações contidas no site. Não seremos responsáveis por qualquer dano decorrente do uso de ferramentas providas por nós ou da incapacidade de usar o site.</p>
+    <div class="accordion-section">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        5. Limitação de Responsabilidade <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="accordion-content">
+        <p>O nosso site é fornecido "como está" e não garantimos a precisão, integridade ou utilidade das informações contidas no site. Não seremos responsáveis por qualquer dano decorrente do uso de ferramentas providas por nós ou da incapacidade de usar o site.</p>
+      </div>
+    </div>
 
-    <h2>6. Links Externos</h2>
-    <p>Nosso site pode conter links para sites de terceiros. Não somos responsáveis pelo conteúdo de sites externos e o uso de qualquer site externo é de sua responsabilidade.</p>
+    <div class="accordion-section">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        6. Links Externos <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="accordion-content">
+        <p>Nosso site pode conter links para sites de terceiros. Não somos responsáveis pelo conteúdo de sites externos e o uso de qualquer site externo é de sua responsabilidade.</p>
+      </div>
+    </div>
 
-    <h2>7. Anuncios</h2>
-    <p>Nosso site pode conter iserção de anuncios de anunciantes e/ou produtos/serviços/etc patrocinados. O Grupo aMathyzin não endosa nem tem nenhum vínculo com os anunciantes, sendo a veiculação de anúncios sua única atuação. Não temos nenhum vínculo administrativo com nenhum dos anunciantes. Não nos responsabilizamos pelo conteúdo apresentado por anunciantes ou patrocinadores. Após a visualização fora de site, é de total responsabilidade do anunciante.</p>
+    <div class="accordion-section">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        7. Anúncios <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="accordion-content">
+        <p>Nosso site pode conter inserção de anúncios de anunciantes e/ou produtos patrocinados. Não temos nenhum vínculo administrativo com os anunciantes e não nos responsabilizamos pelo conteúdo apresentado por eles.</p>
+      </div>
+    </div>
+
+    <!-- NOVOS TERMOS -->
+
+    <div class="accordion-section">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        8. Uso de Programas e Ferramentas <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="accordion-content">
+        <p>Os programas, packs e ferramentas de otimização disponibilizados no site aMathyzin são oferecidos "como estão". A equipe do aMathyzin não se responsabiliza por qualquer problema técnico ou mau uso dos programas. É de sua responsabilidade garantir que o uso dessas ferramentas esteja de acordo com suas necessidades e sistemas.</p>
+      </div>
+    </div>
+
+    <div class="accordion-section">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        9. Apresentações no YouTube <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="accordion-content">
+        <p>A maioria dos programas e ferramentas oferecidos no site aMathyzin são apresentados no canal do YouTube "aMathyzin". Todo o conteúdo educacional e informativo disponibilizado no canal é para fins de demonstração e uso responsável.</p>
+      </div>
+    </div>
+
+    <div class="accordion-section">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        10. Suporte e Comunidade <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="accordion-content">
+        <p>O suporte técnico para os programas e ferramentas fornecidos pelo aMathyzin é oferecido por meio do servidor do Discord e via e-mail. Qualquer suporte prestado pela comunidade é voluntário e não há garantias de resolução de problemas.</p>
+      </div>
+    </div>
+
+    <!-- FIM DOS NOVOS TERMOS -->
+
+    <div class="accordion-section">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        11. Contato <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="accordion-content">
+        <p>Se você tiver dúvidas sobre estes Termos de Serviço, entre em contato conosco através do e-mail <a href="mailto:amathyzin@amathyzin.com">amathyzin@amathyzin.com</a>.</p>
+      </div>
+    </div>
   </div>
-    
-    <h2>8. Contato</h2>
-    <p>Se você tiver dúvidas sobre estes Termos de Serviço, entre em contato conosco através do e-mail <a href="mailto:amathyzin@amathyzin.tech">amathyzin@amathyzin.tech</a>.</p>
-  </div>
+
   <div class="footer-info">
     <div class="footer-info-item">
-      <i class="fas fa-envelope"></i> <a href="mailto:amathyzin@amathyzin.tech">amathyzin@amathyzin.tech</a>
+      <i class="fas fa-envelope"></i> <a href="mailto:amathyzin@amathyzin.com">amathyzin@amathyzin.com</a>
     </div>
     <div class="footer-info-item">
-      <i class="fab fa-discord"></i> <a href="https://amathyzin.tech/discord" target="_blank">Servidor do Discord</a>
+      <i class="fab fa-discord"></i> <a href="https://amathyzin.com/discord" target="_blank">Servidor do Discord</a>
     </div>
     <div class="footer-info-item">
       <i class="fab fa-youtube"></i> <a href="https://www.youtube.com/@aMathyzin" target="_blank">Canal do YouTube</a>
@@ -88,22 +342,21 @@
       <i class="fas fa-file-contract"></i> <a href="./termos" target="_blank">Termos de Serviço</a>
     </div>
   </div>
+
   <div class="copyright-bar">
     © Copyright aMathyzin 2024. Todos os direitos reservados.
   </div>
+
   <script>
-    const audio = document.getElementById('myaudio');
-    const audioCheckbox = document.getElementById('audio-checkbox');
-
-    audioCheckbox.addEventListener('change', () => {
-      if (audioCheckbox.checked) {
-        audio.play();
+    function toggleAccordion(element) {
+      const content = element.nextElementSibling;
+      element.classList.toggle("active");
+      if (content.style.display === "block") {
+        content.style.display = "none";
       } else {
-        audio.pause();
+        content.style.display = "block";
       }
-    });
+    }
   </script>
-  <script src="https://apis.google.com/js/platform.js"></script>
 </body>
-
 </html>
