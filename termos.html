@@ -347,6 +347,22 @@
     © Copyright aMathyzin 2024. Todos os direitos reservados.
   </div>
 
+  <audio id="myaudio">
+    <source src="https://amathyzin.com/lofi.mp3" type="audio/mp3"> <!-- Verifique se o arquivo está no local correto -->
+  </audio>
+  <script>
+    // Controle de áudio
+    const audio = document.getElementById('myaudio');
+    const audioCheckbox = document.getElementById('audio-checkbox');
+    audioCheckbox.addEventListener('change', () => {
+      if (audioCheckbox.checked) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    });
+    </script>
+
   <script>
     function toggleAccordion(element) {
       const content = element.nextElementSibling;
