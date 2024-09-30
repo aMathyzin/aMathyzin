@@ -56,7 +56,6 @@
 .navbar .logo .icon {
   width: 40px;
   margin-right: 10px;
-  animation: pulse 1.5s infinite;
 }
 
 @keyframes pulse {
