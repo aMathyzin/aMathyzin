@@ -1,57 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v5.8.14, mobirise.com">
-  <link rel="shortcut icon" href="../icon.png" type="image/x-icon">
-  <meta name="description" content="Download do otimizador Haunted Mathy">
-  <title>aMathyzin - Haunted</title>
-  <link rel="icon" href="../icon.png" type="image/x-icon">
-  <meta property="og:title" content="Haunted - Download">
-  <meta property="og:description" content="Download do otimizador Haunted Mathy">
-  <meta property="og:image" content="../icon.png">
-  <meta property="og:url" content="https://amathyzin.tech/downloads/hauntedmathy1">
+  <title>Haunted - Otimizador de Windows para Máxima Performance</title>
+  
+  <!-- Meta Tags de Descrição -->
+  <meta name="description" content="Baixe o Haunted, o melhor otimizador de Windows focado em fornecer a máxima performance para melhorar a jogabilidade e desempenho do seu PC. Página oficial de download do Haunted.">
+  
+  <!-- Meta Tags para SEO -->
+  <meta name="keywords" content="Haunted, Otimizador de Windows, aumentar FPS no Windows, otimização de PC, otimização para jogos, melhorar desempenho no Windows, download Haunted, otimização latência e ping">
+  <meta name="author" content="aMathyzin">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph Meta Tags para Redes Sociais -->
+  <meta property="og:title" content="Haunted - Otimizador de Windows para Máxima Performance">
+  <meta property="og:description" content="O Haunted é um otimizador de Windows que ajuda a melhorar o desempenho do seu PC, focando em melhorar FPS e otimizar jogos. Baixe agora!">
+  <meta property="og:image" content="https://amathyzin.com/downloads/icons/haunted.png">
+  <meta property="og:url" content="https://amathyzin.com/downloads/haunted">
   <meta property="og:type" content="website">
-  <link rel="stylesheet" type="text/css" href="../styles.css">
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Haunted - Otimizador de Windows para Máxima Performance">
+  <meta name="twitter:description" content="Baixe o Haunted, o otimizador de Windows focado em aumentar FPS e otimizar a jogabilidade. Página oficial de download.">
+  <meta name="twitter:image" content="https://amathyzin.com/downloads/icons/haunted.png">
+  
+  <!-- Link para favicon e outros recursos -->
+  <link rel="icon" href="https://amathyzin.com/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="../styles2.css"> <!-- Link para o estilo base --> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" async> <!-- Link para Font Awesome -->
+  <script async src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <style>
-    .content {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding: 20px;
-    }
-    .video-tutorial, .download-section {
-      flex: 1;
-      padding-right: 20px;
-    }
-    .download-section {
-      border: 1px solid #ff69b4;
-      background-color: rgba(0, 0, 0, 0.8);
-      padding: 20px;
-      border-radius: 5px;
-      text-align: center;
-    }
-    .download-button, .password-button {
-      background-color: #8605C2;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 18px;
-      text-decoration: none;
-      display: inline-block;
-      margin: 5px;
-    }
-    .download-button:hover, .password-button:hover {
-      background-color: #B808E7;
-    }
+    /* Estilos adicionais para a barra de progresso */
     .progress-bar-container {
       width: 100%;
-      background-color: #7603AB;
+      background-color: #FF69B4; /* Cor do fundo da barra */
       margin-top: 20px;
       margin-bottom: 20px;
       height: 20px;
@@ -61,11 +46,10 @@
     }
     .progress-bar {
       height: 100%;
-      background-color: #B84BFF;
-      width: 0%;
+      background-color: #c72b79; /* Cor da barra de progresso (Rosa) */
+      width: 0%; /* Inicialmente 0% */
       border-radius: 5px;
       transition: width 0.4s ease;
-      position: relative;
     }
     .progress-text {
       position: absolute;
@@ -85,49 +69,101 @@
       color: #888;
       font-size: 14px;
     }
-    .file-icon {
-      max-width: 250px;
-      max-height: 250px;
-    }
-    @media (max-width: 768px) {
-      .content {
-        flex-direction: column;
-      }
-      .video-tutorial, .download-section {
-        width: 100%;
-        padding-right: 0;
-        margin-bottom: 20px;
-      }
-    }
-    .file-icon-animation {
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.1);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-    .advertise-container {
-      margin-top: 20px;
-      text-align: center;
-    }
-     .advertise-container a {
-      display: inline-block;
-      width: 100%;
-      max-width: 600px;
+    .description-box {
+      background-color: rgba(0, 0, 0, 0.8);
       border: 1px solid #ff69b4;
       border-radius: 5px;
-      overflow: hidden;
+      padding: 20px;
+      margin-top: 10px; /* Reduzido para ficar mais próximo do vídeo */
+      color: #fff;
+      text-align: left;
+      max-width: 730px; /* Largura máxima compatível com o vídeo */
+      width: 100%; /* Largura total em telas menores */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+      margin-left: auto; /* Centraliza a caixa */
+      margin-right: auto; /* Centraliza a caixa */
     }
-    .advertise-container img {
-      width: 100%;
-      height: 150px;
+    .warning {
+      color: #FFCC00; /* Cor amarela */
+      margin-bottom: 10px; /* Espaçamento inferior */
+    }
+    .important {
+      color: #FF5733; /* Cor vermelha */
+      margin-bottom: 10px; /* Espaçamento inferior */
+    }
+    .file-icon {
+      max-width: 250px; /* Limita a largura máxima */
+      max-height: 250px; /* Limita a altura máxima */
+      width: auto; /* Mantém a proporção */
+      height: auto; /* Mantém a proporção */
+    }
+    .tutorial-title {
+      color: #FF69B4; /* Cor rosa para o título */
+      display: flex; /* Usando flexbox para o título e o ícone */
+      align-items: center; /* Alinha o ícone e o texto verticalmente */
+      justify-content: center; /* Centraliza o conteúdo horizontalmente */
+      margin-bottom: 20px; /* Espaçamento inferior */
+      font-size: 1.5em; /* Tamanho do título */
+    }
+    .tutorial-title i {
+      margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+    }
+    .description-title {
+      color: #FF69B4; /* Cor rosa para o título na descrição */
+      display: flex; /* Usando flexbox para o título e o ícone */
+      align-items: center; /* Alinha o ícone e o texto verticalmente */
+      justify-content: center; /* Centraliza o conteúdo horizontalmente */
+      margin-bottom: 20px; /* Espaçamento inferior */
+      font-size: 1.5em; /* Tamanho do título */
+    }
+    .description-title i {
+      margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+    }
+    .terms-container {
+      margin-top: 15px;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      padding: 5px;
+      border-radius: 5px;
+      /* Animação de brilho pulsante */
+      animation: pulse 1.5s infinite;
+      box-shadow: 0 0 15px rgba(255, 105, 180, 0.7), 0 0 25px rgba(255, 105, 180, 0.5), 0 0 35px rgba(255, 105, 180, 0.3);
+    }
+    .terms-container.no-animation {
+      animation: none; /* Remove a animação */
+      box-shadow: none; /* Remove o brilho */
+    }
+    .terms-container label {
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .terms-container input[type="checkbox"] {
+      margin-right: 5px;
+    }
+    .download-button:disabled {
+      background-color: #888; /* Cor do botão desabilitado */
+      cursor: not-allowed; /* Cursor de não permitido */
+    }
+
+    /* Animação de pulso */
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+      }
+      50% {
+        box-shadow: 0 0 20px rgba(255, 105, 180, 0.7);
+      }
+      100% {
+        box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+      }
+    }
+
+    /* Media Queries para Responsividade */
+    @media (max-width: 768px) {
+      .download-page-content {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
@@ -135,177 +171,233 @@
   <div class="loader-wrapper">
     <div class="loader"></div>
   </div>
-  <div class="navbar">
-    <div class="left">
-      <span class="logo">
-        <a href="https://amathyzin.tech">
-          <img class="icon" src="https://amathyzin.tech/icon.png" alt="aMathyzin">
-          aMathyzin
-        </a>
-        <div class="switch-container">
-          <label class="switch">
-            <input type="checkbox" id="audio-checkbox">
-            <span class="slider"></span>
-          </label>
-        </div>
-      </span>
-    </div>
-    <div class="right">
-      <a href="https://www.youtube.com/@aMathyzin" target="_blank" class="icon-link">
-        <img class="icon" src="../youtube.png" alt="YouTube">
-      </a>
-      <a href="https://amathyzin.tech/discord" target="_blank" class="icon-link">
-        <img class="icon" src="../discord.png" alt="Discord">
-      </a>
+
+<!-- Navbar -->
+<div class="navbar">
+  <div class="logo" style="display: flex; align-items: center;"> <!-- Adicionado flexbox para centralizar -->
+    <a href="https://amathyzin.com" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+      <img class="icon" src="https://amathyzin.com/icon.png" alt="Logotipo do aMathyzin" style="vertical-align: middle;" loading="lazy">
+      <span style="margin-left: 5px;">aMathyzin</span> <!-- Adiciona espaçamento entre o ícone e o texto -->
+    </a>
+    <div class="switch-container" style="margin-left: 10px;"> <!-- Espaçamento entre o link e o botão switch -->
+      <label class="switch">
+        <input type="checkbox" id="audio-checkbox">
+        <span class="slider"></span>
+      </label>
     </div>
   </div>
-  <div class="content">
-    <div class="video-tutorial">
-      <h2 style="text-align:center;">Tutorial</h2>
+  <div class="categories">
+    <a href="https://amathyzin.com/downloads" class="category-link">DOWNLOADS</a>
+    <a href="https://amathyzin.com/discord" class="category-link">DISCORD</a>
+  </div>
+  <div class="right">
+    <a href="https://www.youtube.com/@aMathyzin" target="_blank" class="icon-link">
+      <i class="fab fa-youtube"></i>
+    </a>
+    <a href="https://amathyzin.com/discord" target="_blank" class="icon-link">
+      <i class="fab fa-discord"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Conteúdo -->
+<div class="content">
+  <div class="download-page-content" style="display: flex; justify-content: space-between; align-items: flex-start; padding: 20px;">
+    <div class="video-tutorial" style="flex: 1; padding-right: 20px; text-align: center;"> <!-- Centraliza o texto -->
+      <h2 class="tutorial-title"><i class="fas fa-video"></i>Tutorial</h2>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/ciHfcpppItg" frameborder="0" allowfullscreen></iframe>
-      <div class="advertise-container">
-        <a href="https://www.mykeysshop.com/software.html" target="_blank">
-          <img src="https://www.mykeysshop.com/static/logo.c7911ba7.png" alt="Anuncie Conosco">
-        </a>
+      
+      <!-- Nova Caixa de Descrição -->
+      <div class="description-box">
+        <h3 class="description-title"><i class="fas fa-info-circle"></i>Sobre o Haunted</h3>
+        <p>O Haunted é um programa simples feito para otimizar seu windows de forma rápida e eficiente.</p>
+        
+        <p>No vídeo acima, é ensinado a como utilizá-lo da melhor forma.</p>
+
+        <p class="important"><i class="fas fa-exclamation-circle"></i>Todos os direitos são reservados ao Grupo aMathyzin e ao autor @based_miguelin.</p>
+        
+        <p class="warning"><i class="fas fa-ban"></i>O Haunted é um programa gratuito. Fica completamente proíbido vende-lo.</p>
       </div>
     </div>
-    <div class="download-section">
+    <div class="download-section" style="flex: 1; border: 1px solid #ff69b4; background-color: rgba(0, 0, 0, 0.8); padding: 20px; border-radius: 5px; text-align: center;">
       <div class="file-icon-container">
-        <img class="file-icon file-icon-animation" src="./icons/haunted.png" alt="Ícone do Arquivo">
-        <div class="pulse-glow"></div>
+        <img class="file-icon" src="https://amathyzin.com/downloads/icons/haunted.png" alt="Ícone do RoBooster" loading="lazy">
       </div>
       <h2>Download do Arquivo</h2>
       <p>Haunted.bat - 53,6 KB</p>
+
+      <!-- Barra de Progresso -->
       <div class="progress-bar-container">
         <div class="progress-bar" id="progress-bar"></div>
         <div class="progress-text" id="progress-text">0%</div>
-        <div class="progress-indicator" id="progress-indicator">0 KB de 53,6KB MB</div>
+        <div class="progress-indicator" id="progress-indicator">0 KB de 9 MB</div>
       </div>
-      <p>Este é o Haunted. Feito pelo desenvolvedor Miguélin, no servidor aMathyzin, o haunted é um otimizador de windows focado em melhorar a performance em computadores fracos e fortes, focando em uma otimização principalmente para jogos competitivos. Inclui otimizações de latência, ping e mais!</p>
-      <button onclick="iniciarDownload('../arquivos/Haunted.bat', 'Haunted.bat')" class="download-button">Download</button>
-      <p id="download-count">Carregando...</p>
+
+      <!-- Descrição Adicionada -->
+      <div class="description-text" style="color: #FF69B4; font-size: 14px; margin-top: 10px;">
+        Este é o Haunted. Feito pelo desenvolvedor Miguélin, no servidor aMathyzin, o haunted é um otimizador de windows focado em melhorar a performance em computadores fracos e fortes, focando em uma otimização principalmente para jogos competitivos. Inclui otimizações de latência, ping e mais!
+      </div>
+
+      <!-- Caixa para aceitar os termos -->
+      <div class="terms-container" id="terms-container">
+        <label>
+          <input type="checkbox" id="terms-checkbox">
+          Eu aceito os <a href="https://amathyzin.com/termos" target="_blank" style="color: #ff69b4;">Termos de Serviço</a>
+        </label>
+      </div>
+
+      <!-- Botão de Download desabilitado por padrão -->
+      <button onclick="iniciarDownload('../arquivos/Haunted.bat', 'Haunted.bat')" class="highlight-button download-button" id="download-button" disabled>Download</button>
     </div>
   </div>
-  <div style="height: 30px;"></div>
-  <div class="copyright-bar">
-    © Copyright aMathyzin 2023-2024. Todos os direitos reservados.
+</div>
+
+<!-- Footer -->
+<div class="footer-info">
+  <div class="footer-info-item">
+    <i class="fas fa-envelope"></i>
+    <a href="mailto:amathyzin@amathyzin.com">amathyzin@amathyzin.com</a>
   </div>
-  <audio id="myaudio">
-    <source src="../lofi.mp3" type="audio/mp3">
-  </audio>
+  <div class="footer-info-item">
+    <i class="fab fa-discord"></i>
+    <a href="https://amathyzin.com/discord" target="_blank">Servidor Discord</a>
+  </div>
+  <div class="footer-info-item">
+    <i class="fab fa-youtube"></i>
+    <a href="https://www.youtube.com/@aMathyzin" target="_blank">Canal YouTube</a>
+  </div>
+  <div class="footer-info-item">
+    <i class="fas fa-file-contract"></i>
+    <a href="../termos">Termos de Serviço</a>
+  </div>
+</div>
+<div class="copyright-bar">
+  © Copyright aMathyzin 2024. Todos os direitos reservados.
+</div>
 
-  <script>
-    window.onload = () => {
-      document.querySelector('.loader-wrapper').style.display = 'none';
-      atualizarContagemDownloads();
-    }
-
-    document.getElementById('audio-checkbox').addEventListener('change', function() {
-      var audio = document.getElementById('myaudio');
-      if (this.checked) {
-        audio.play();
-      } else {
-        audio.pause();
-      }
-    });
-
-    function iniciarDownload(url, nomeArquivo) {
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', url, true);
-      xhr.responseType = 'blob';
-
-      xhr.onloadstart = function() {
-        document.getElementById('progress-bar').style.width = '0%';
-        document.getElementById('progress-text').innerText = '0%';
-      };
-
-      xhr.onprogress = function(event) {
-        if (event.lengthComputable) {
-          var percentComplete = (event.loaded / event.total) * 100;
-          document.getElementById('progress-bar').style.width = percentComplete + '%';
-          document.getElementById('progress-text').innerText = percentComplete.toFixed(2) + '%';
-
-          var totalSizeMB = (event.total / (1024 * 1024)).toFixed(1);
-          var downloadedSizeMB = (event.loaded / (1024 * 1024)).toFixed(1);
-          document.getElementById('progress-indicator').innerText = downloadedSizeMB + ' MB de ' + totalSizeMB + ' MB';
-        }
-      };
-
-      xhr.onload = function() {
-        if (xhr.status === 200) {
-          document.getElementById('progress-bar').style.width = '100%';
-          document.getElementById('progress-text').innerText = '100%';
-          setTimeout(function() {
-            var blob = new Blob([xhr.response], { type: 'application/octet-stream' });
-            var url = URL.createObjectURL(blob);
-            var a = document.createElement('a');
-            a.href = url;
-            a.download = nomeArquivo;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-
-            Swal.fire({
-              title: 'Download Concluído!',
-              text: 'Seu arquivo foi baixado com sucesso.',
-              icon: 'success',
-              background: '#333',
-              confirmButtonText: 'OK',
-              color: '#FFF',
-              backdrop: 'rgba(0,0,0,0.5)'
-            });
-
-            incrementarContagemDownloads();
-          }, 1000);
-        }
-      };
-
-      xhr.send();
-    }
-
-    function atualizarContagemDownloads() {
-      fetch('https://stirring-midnight-regnosaurus.glitch.me/count')
-        .then(response => response.json())
-        .then(data => {
-          document.getElementById('download-count').innerText = `${data.count} downloads`;
-        })
-        .catch(error => {
-          console.error('Erro ao obter a contagem de downloads:', error);
-        });
-    }
-
-    function incrementarContagemDownloads() {
-      fetch('https://stirring-midnight-regnosaurus.glitch.me/increment', {
-        method: 'POST',
-      })
-        .then(response => response.json())
-        .then(data => {
-          document.getElementById('download-count').innerText = `${data.count} downloads`;
-        })
-        .catch(error => {
-          console.error('Erro ao incrementar a contagem de downloads:', error);
-        });
-    }
-  </script>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      setTimeout(function () {
-        const loaderWrapper = document.querySelector(".loader-wrapper");
-        loaderWrapper.style.display = "none";
-      }, 2000);
-    });
-  </script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5624731249541141"
-     crossorigin="anonymous"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G9THBMJ1TZ"></script>
+<!-- Script para controle de áudio -->
+<audio id="myaudio">
+  <source src="https://amathyzin.com/lofi.mp3" type="audio/mp3"> <!-- Verifique se o arquivo está no local correto -->
+</audio>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // Controle de áudio
+  const audio = document.getElementById('myaudio');
+  const audioCheckbox = document.getElementById('audio-checkbox');
+  audioCheckbox.addEventListener('change', () => {
+    if (audioCheckbox.checked) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  });
 
-  gtag('config', 'G-G9THBMJ1TZ');
+  // Ocultação do loader após carregamento completo
+  document.addEventListener("DOMContentLoaded", function () {
+    const loaderWrapper = document.querySelector(".loader-wrapper");
+    loaderWrapper.style.display = "none"; // Esconde o loader após o carregamento
+  });
+
+  // Habilitar o botão de download ao marcar o checkbox e remover a animação do brilho
+  document.getElementById('terms-checkbox').addEventListener('change', function() {
+    const downloadButton = document.getElementById('download-button');
+    const termsContainer = document.getElementById('terms-container');
+    
+    downloadButton.disabled = !this.checked; // Habilita ou desabilita o botão com base no checkbox
+    
+    if (this.checked) {
+      // Remove a animação e o brilho da caixa de termos
+      termsContainer.classList.add('no-animation');
+    } else {
+      // Adiciona a animação de volta caso desmarque o checkbox
+      termsContainer.classList.remove('no-animation');
+    }
+  });
+
+  // Script para o progresso do download
+  function iniciarDownload(url, nomeArquivo) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.responseType = 'blob';
+
+    // Quando o download começa
+    xhr.onloadstart = function() {
+      document.getElementById('progress-bar').style.width = '0%';
+      document.getElementById('progress-text').innerText = '0%';
+      document.getElementById('progress-indicator').innerText = '0 KB de ...'; // Inicializa o texto
+    };
+
+    // Durante o progresso do download
+    xhr.onprogress = function(event) {
+      if (event.lengthComputable) {
+        // Calcula a porcentagem completada
+        var percentComplete = (event.loaded / event.total) * 100;
+
+        // Atualiza a barra de progresso em porcentagem
+        document.getElementById('progress-bar').style.width = percentComplete + '%';
+        document.getElementById('progress-text').innerText = percentComplete.toFixed(2) + '%';
+
+        // Converte o tamanho do arquivo baixado e total para KB, MB, ou GB
+        var totalSize = formatFileSize(event.total);
+        var downloadedSize = formatFileSize(event.loaded);
+
+        // Atualiza o indicador de tamanho baixado e total
+        document.getElementById('progress-indicator').innerText = `${downloadedSize} baixados de ${totalSize}`;
+      }
+    };
+
+    // Quando o download é concluído
+    xhr.onload = function() {
+      if (xhr.status === 200 && xhr.response.size > 0) {
+        document.getElementById('progress-bar').style.width = '100%';
+        document.getElementById('progress-text').innerText = '100%';
+        document.getElementById('progress-indicator').innerText = formatFileSize(xhr.response.size) + ' baixados de ' + formatFileSize(xhr.response.size);
+
+        setTimeout(function() {
+          // Converte a resposta para um arquivo
+          var blob = new Blob([xhr.response], { type: 'application/octet-stream' });
+          var url = URL.createObjectURL(blob);
+          var a = document.createElement('a');
+          a.href = url;
+          a.download = nomeArquivo;
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(url);
+
+          // Mensagem de download concluído
+          Swal.fire({
+            title: 'Download Concluído!',
+            text: 'Seu arquivo foi baixado com sucesso.',
+            icon: 'success',
+            background: '#333',
+            confirmButtonText: 'OK',
+            color: '#FFF',
+            backdrop: 'rgba(0,0,0,0.5)'
+          });
+        }, 1000);
+      } else {
+        Swal.fire({
+          title: 'Erro no Download!',
+          text: 'Não foi possível baixar o arquivo. Tente novamente mais tarde.',
+          icon: 'error',
+          background: '#333',
+          confirmButtonText: 'OK',
+          color: '#FFF',
+          backdrop: 'rgba(0,0,0,0.5)'
+        });
+      }
+    };
+
+    xhr.send();
+  }
+
+  // Função para formatar o tamanho do arquivo
+  function formatFileSize(bytes) {
+    const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+    if (bytes === 0) return '0 Bytes';
+    const i = Math.floor(Math.log(bytes) / Math.log(1024));
+    return parseFloat((bytes / Math.pow(1024, i)).toFixed(2)) + ' ' + sizes[i];
+  }
 </script>
 </body>
 </html>
