@@ -237,6 +237,11 @@
         videoContainer.removeChild(videoIframe);
       }
     }
+
+    window.addEventListener("load", () => {
+    document.querySelector(".loader-wrapper").style.display = "none";
+    });
+
   </script>
 </body>
 </html>
