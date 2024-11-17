@@ -389,5 +389,25 @@
     return parseFloat((bytes / Math.pow(1024, i)).toFixed(2)) + ' ' + sizes[i];
   }
 </script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    Swal.fire({
+      title: "O RoBooster MUDOU!",
+      text: "Esta versão do RoBooster está desatualizada. Por favor, baixe a nova versão para continuar.",
+      icon: "warning",
+      background: "#333",
+      color: "#FFF",
+      confirmButtonText: "IR PARA O NOVO ROBOOSTER",
+      backdrop: "rgba(0,0,0,0.8)",
+      allowOutsideClick: false,
+      allowEscapeKey: false,
+      allowEnterKey: false,
+    }).then(() => {
+      window.location.href = "https://amathyzin.com/downloads/robooster2";
+    });
+  });
+</script>
+
 </body>
 </html>
