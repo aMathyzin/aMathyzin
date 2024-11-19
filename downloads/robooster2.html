@@ -178,6 +178,41 @@
       display: inline-block;
       margin: 5px;
     }
+/* Apenas para a página de download do robooster 2 */
+  .animated-button {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* Efeito de hover (mouse sobre o botão) */
+  .animated-button:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao botão */
+  }
+
+  /* Efeito ao clicar no botão */
+  .animated-button:active {
+    transform: scale(0.95); /* Reduz ligeiramente o tamanho */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Diminui a sombra */
+  }
+
+  /* Efeito de gradiente animado no hover */
+  .animated-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+    transform: skewX(-45deg);
+    transition: left 0.4s ease;
+  }
+
+  .animated-button:hover::before {
+    left: 100%;
+  }
   </style>
 </head>
 <body>
@@ -278,6 +313,33 @@
       <a href="https://github.com/aMathyzin/RoBooster-2" class="highlight-button github-button" target="_blank" style="display: inline-block; margin-top: 10px; text-decoration: none; color: #fff; background-color: #333; padding: 10px 20px; border-radius: 5px;">
         <i class="fab fa-github"></i> Ver no GitHub
       </a>
+<!-- Linha divisória -->
+<div style="border-top: 2px solid #FF69B4; margin: 30px 0;"></div>
+
+<!-- Nova Seção de Download -->
+<div class="additional-downloads" style="text-align: center;">
+  <h3 style="color: #FF69B4; margin-bottom: 20px;">Baixe as Dependências!</h3>
+
+  <!-- Botões lado a lado -->
+  <div style="display: flex; justify-content: center; gap: 20px;">
+    <!-- Botão para BloxStrap -->
+    <div style="display: flex; align-items: center;">
+      <img src="https://bloxstraplabs.com/img/Bloxstrap.png" alt="BloxStrap" style="width: 50px; height: 50px; margin-right: 10px;">
+      <a href="https://bloxstraplabs.com/" target="_blank" class="animated-button" style="background: linear-gradient(45deg, #8A2BE2, #1E90FF); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-size: 16px; font-weight: bold;">
+        Download BloxStrap
+      </a>
+    </div>
+
+    <!-- Botão para .NET -->
+    <div style="display: flex; align-items: center;">
+      <img src="https://amathyzin.com/images/square.png" alt=".NET" style="width: 50px; height: 50px; margin-right: 10px;">
+      <a href="https://dotnet.microsoft.com/en-us/download" target="_blank" class="animated-button" style="background: linear-gradient(45deg, #1E90FF, #8A2BE2); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-size: 16px; font-weight: bold;">
+        Download .NET
+      </a>
+    </div>
+  </div>
+</div>
+
     </div>
   </div>
 </div>
